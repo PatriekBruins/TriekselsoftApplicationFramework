@@ -1,0 +1,749 @@
+== Classes overview
+
+This project contains 25 classes and 12 interfaces.
+
+.Classes list
+[cols="<.<1d,<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Classes |Interfaces
+
+|<<AppConfigJSON.lvclass>>
+|<<INewImage.lvclass>>
+
+|<<AppConfigMGI.lvclass>>
+|<<ICreateDestroy.lvclass>>
+
+|<<Application.lvclass>>
+|<<IPersistentData.lvclass>>
+
+|<<MasterGUI.lvclass>>
+|<<IAuthorizationUpdated.lvclass>>
+
+|<<TAFBaseGUI.lvclass>>
+|<<IApplicationConfiguration.lvclass>>
+
+|<<BusBase.lvclass>>
+|<<IAuthorization.lvclass>>
+
+|<<TraceWindow.lvclass>>
+|<<ITAFGUIActions.lvclass>>
+
+|<<UserManager.lvclass>>
+|<<ITAFObject.lvclass>>
+
+|<<FrontPanelControl.lvclass>>
+|<<ITAFTextViewer.lvclass>>
+
+|<<FlexPanelDefault.lvclass>>
+|<<IDockGUI.lvclass>>
+
+|<<Footer.lvclass>>
+|<<IFrontPanel.lvclass>>
+
+|<<FooterTriekselSoft.lvclass>>
+|<<IInterface.lvclass>>
+
+|<<HeaderTriekselSoft.lvclass>>
+|
+
+|<<JSONTextViewer.lvclass>>
+|
+
+|<<UsedInTestClass.lvclass>>
+|
+
+|<<ButtonCollection.lvclass>>
+|
+
+|<<VerticalButtonBar.lvclass>>
+|
+
+|<<Mockup_ConfigurationManager.lvclass>>
+|
+
+|<<Mockup_QualificationScreen.lvclass>>
+|
+
+|<<Mockup_ServiceScreen.lvclass>>
+|
+
+|<<Mockup_UserManager.lvclass>>
+|
+
+|<<DemoApplication.lvclass>>
+|
+
+|<<TemplateGUI.lvclass>>
+|
+
+|<<ErrorCreationTAF.lvclass>>
+|
+
+|<<BusAuthorizationUpdated.lvclass>>
+|
+|===
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+interface "INewImage" {
+{method} +SetImage()
+
+}
+
+
+interface "ICreateDestroy" {
+{method} +Create()
+{method} +Destroy()
+
+}
+"IInterface" <|.. "ICreateDestroy"
+
+
+
+interface "IPersistentData" {
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+
+}
+"IInterface" <|.. "IPersistentData"
+
+
+
+interface "IAuthorizationUpdated" {
+{method} +AuthorizationUpdated()
+
+}
+"IInterface" <|.. "IAuthorizationUpdated"
+
+
+
+interface "IApplicationConfiguration" {
+{static} {method} +ApplicationConfigurationName --constant()
+{method} +Create()
+{method} +GetObjectConfiguration()
+{method} +GetObjectConfigurationString()
+{method} +SetObjectConfiguration()
+{method} +SetObjectConfigurationString()
+{method} +GetAllObjectData()
+{method} +GetObjectExternalInterfaces()
+{method} +Open()
+{method} +SetApplicationBasePath()
+{method} +GetConfigurationBasePath()
+{method} +GetExternalInterfaceString()
+{method} +ListConfigurations()
+{method} +GetConfigurationString()
+{method} +SetConfigurationString()
+{method} +GetObjectData()
+
+}
+"IInterface" <|.. "IApplicationConfiguration"
+
+
+
+interface "IAuthorization" {
+{method} +EvaluateAuthorizationExpression()
+{method} +SetCondition()
+{method} +SetEvaluations()
+
+}
+"IInterface" <|.. "IAuthorization"
+
+
+
+interface "ITAFGUIActions" {
+{method} +ExecuteButtonAction()
+{method} +GetFrontPanel()
+
+}
+"IFrontPanel" <|.. "ITAFGUIActions"
+
+
+
+interface "ITAFObject" {
+{method} +ConfigureExternalInterfaces()
+{method} +Create()
+{method} +Destroy()
+{method} +GetExternalInterfaces()
+{method} +GetName()
+{method} +GetPersistentConfiguration()
+{method} +SetExternalInterfaces()
+{method} +SetName()
+{method} +SetPersistentConfiguration()
+
+}
+"ICreateDestroy" <|.. "ITAFObject"
+"IPersistentData" <|.. "ITAFObject"
+
+
+
+interface "ITAFTextViewer" {
+{method} +UpdateText()
+
+}
+"IFrontPanel" <|.. "ITAFTextViewer"
+
+
+
+interface "IDockGUI" {
+{method} +DockGUI()
+
+}
+"IInterface" <|.. "IDockGUI"
+
+
+
+interface "IFrontPanel" {
+{method} +GetFrontPanel()
+
+}
+"IInterface" <|.. "IFrontPanel"
+
+
+
+class "AppConfigJSON" {
+{field} -Ref : U32
+{static} {method} #AppConfigJSON_New()
+{static} {method} #AppConfigJSON_GetAttributes()
+{static} {method} +AppConfigJSON_Create()
+{method} +Destroy()
+{method} +GetObjectConfiguration()
+{method} +SetObjectConfiguration()
+{method} +Open()
+{method} +Create()
+{method} +GetAllObjectData()
+{method} +GetObjectExternalInterfaces()
+{method} +SetApplicationBasePath()
+{method} +GetConfigurationBasePath()
+{method} +GetObjectConfigurationString()
+{method} +SetObjectConfigurationString()
+{method} +GetExternalInterfaceString()
+{method} +GetConfigurationString()
+{method} +ListConfigurations()
+{method} +SetConfigurationString()
+{method} +GetObjectData()
+
+}
+"IApplicationConfiguration" <|.. "AppConfigJSON"
+
+
+
+class "AppConfigMGI" {
+{field} -Ref : U32
+{static} {method} #AppConfigMGI_New()
+{static} {method} #AppConfigMGI_GetAttributes()
+{static} {method} +AppConfigMGI_Create()
+{method} +Destroy()
+{method} +GetObjectConfiguration()
+{method} +SetObjectConfiguration()
+{method} +Open()
+{method} +Create()
+{method} +GetAllObjectData()
+{method} +GetObjectExternalInterfaces()
+{method} +SetApplicationBasePath()
+{method} +GetConfigurationBasePath()
+{method} +GetObjectConfigurationString()
+{method} +SetObjectConfigurationString()
+{method} +GetExternalInterfaceString()
+{method} +GetConfigurationString()
+{method} +ListConfigurations()
+{method} +SetConfigurationString()
+{method} +GetObjectData()
+
+}
+"IApplicationConfiguration" <|.. "AppConfigMGI"
+
+
+
+class "Application" {
+{field} -Ref : U32
+{static} {method} #GetApplicationReference()
+{static} {method} #Application_GetInstance()
+{static} {method} #RouteExternalInterfaces()
+{static} {method} #Application_New()
+{static} {method} #Application_GetAttributes()
+{static} {method} +Application_Init()
+{static} {method} +Application_CleanUp()
+{static} {method} +AddObject()
+{static} {method} +SetInterfaceConfiguration()
+{static} {method} +GetBasePath()
+{static} {method} +ObtainObjectsFromCluster()
+{static} {method} +GetObjectFromMemory()
+{static} {method} +CreateObject()
+{static} {method} +ObtainObject()
+{static} {method} +GetObjectConfiguration()
+{static} {method} +LoadAllPersistentData()
+{static} {method} +GetAllObjectsOfType()
+{static} {method} +GetConfigurationBasePath()
+{static} {method} +GetExistingObject()
+{static} {method} +SetObject()
+{static} {method} +DestroyAll()
+{static} {method} +PreloadObjects2()
+{static} {method} +CreateObjects()
+{static} {method} +SetExternalInterfaces()
+{static} {method} +SetExternalInterface()
+{static} {method} +SaveAllPersistentData()
+{static} {method} +GetClassLocation()
+{method} #Do_SetApplicationConfiguration()
+{method} #Do_GetObjectConfiguration()
+
+}
+
+
+class "MasterGUI" {
+{field} -Ref : U32
+{static} {method} #StartMainGUI()
+{static} {method} #DockVI()
+{static} {method} #RequestDestroy()
+{static} {method} #MainGUI()
+{static} {method} #StopMainGUI()
+{static} {method} #MasterGUI_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #MasterGUI_GetAttributes()
+{static} {method} #MasterGUI_SendAndReceive()
+{static} {method} -MasterGUI_MainGUIActive()
+{static} {method} +MasterGUI_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} #SetLayout()
+{method} #RefreshTafMenu()
+{method} #DockMainPanel()
+{method} #DockSubPanel()
+{method} #AddTAFMenu()
+{method} #DockSubPanelFromFrontPanel()
+{method} #PreTAFMenuHook()
+{method} #PostTAFMenuHook()
+{method} #DockStaticSubpanels()
+{method} #ExecuteMenu()
+{method} #ReadMainPanel()
+{method} #WriteMainPanel()
+{method} #ReadWindowsTitle()
+{method} #WriteMenu()
+{method} #ReadMenu()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +ExecuteButtonAction()
+{method} #Layout()
+{method} +Create()
+{method} +Destroy()
+{method} +IsGUIRunning()
+{method} +StartGUI()
+{method} +DockGUI()
+{method} +GetFrontPanel()
+
+}
+"TAFBaseGUI" <|-- "MasterGUI"
+"IAuthorizationUpdated" <|.. "MasterGUI"
+"IDockGUI" <|.. "MasterGUI"
+"ITAFGUIActions" <|.. "MasterGUI"
+
+
+
+class "TAFBaseGUI" {
+{field} -Ref : U32
+{static} {method} #UnknownAction()
+{static} {method} #TAFBaseGUI_New()
+{static} {method} #TAFBaseGUI_GetAttributes()
+{static} {method} +TAFBaseGUI_Create()
+{method} +Create()
+{method} +SetName()
+{method} +GetName()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +Destroy()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +GetFrontPanel()
+
+}
+"ITAFObject" <|.. "TAFBaseGUI"
+
+
+
+class "BusBase.lvlib:BusBase" {
+{field} -Ref : U32
+{static} {method} #StartMainGUI()
+{static} {method} #RequestDestroy()
+{static} {method} #MainGUI()
+{static} {method} #StopMainGUI()
+{static} {method} #BusBase_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #BusBase_GetAttributes()
+{static} {method} #BusBase_SendAndReceive()
+{static} {method} -BusBase_MainGUIActive()
+{static} {method} +BusBase_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} #ReadTargetClasses()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +ExecuteButtonAction()
+{method} +GetFrontPanel()
+{method} +Create()
+{method} +Destroy()
+{method} +IsGUIRunning()
+
+}
+"TAFBaseGUI" <|-- "BusBase.lvlib:BusBase"
+"ITAFGUIActions" <|.. "BusBase.lvlib:BusBase"
+
+
+
+class "TraceWindow.lvlib:TraceWindow" {
+{field} -Ref : U32
+{static} {method} #StartMainGUI()
+{static} {method} #RequestDestroy()
+{static} {method} #MainGUI()
+{static} {method} #StopMainGUI()
+{static} {method} #TraceWindow_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #TraceWindow_GetAttributes()
+{static} {method} #TraceWindow_SendAndReceive()
+{static} {method} -TraceWindow_MainGUIActive()
+{static} {method} +TraceWindow_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} #ReadTraceQueue()
+{method} +WriteTraceQueue()
+{method} #ReadOpenAtClosure()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +ExecuteButtonAction()
+{method} +GetFrontPanel()
+{method} +Create()
+{method} +Destroy()
+{method} +IsGUIRunning()
+
+}
+"TAFBaseGUI" <|-- "TraceWindow.lvlib:TraceWindow"
+"ITAFGUIActions" <|.. "TraceWindow.lvlib:TraceWindow"
+
+
+
+class "UserMananger.lvlib:UserManager" {
+{field} -Ref : U32
+{static} {method} #MainGUI()
+{static} {method} #StartMainGUI()
+{static} {method} #RequestDestroy()
+{static} {method} #StopMainGUI()
+{static} {method} #UserManager_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #UserManager_GetAttributes()
+{static} {method} #UserManager_SendAndReceive()
+{static} {method} -UserManager_MainGUIActive()
+{static} {method} +UserManager_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +ExecuteButtonAction()
+{method} +SetExternalInterfaces()
+{method} +Create()
+{method} +Destroy()
+{method} +IsGUIRunning()
+{method} +GetFrontPanel()
+{method} +SetEvaluations()
+{method} +EvaluateAuthorizationExpression()
+
+}
+"TAFBaseGUI" <|-- "UserMananger.lvlib:UserManager"
+"IAuthorization" <|.. "UserMananger.lvlib:UserManager"
+"ITAFGUIActions" <|.. "UserMananger.lvlib:UserManager"
+
+
+
+class "FrontPanelControl" {
+{field} -VIRef : kLVObjVI
+{static} {method} +Create()
+{method} +InsertIntoSubPanel()
+{method} +OpenFrontPanel()
+{method} +OpenBlockDiagram()
+
+}
+
+
+class "FlexPanelDefault" {
+{field} -None : Boolean
+{method} +GetFrontPanel()
+
+}
+"TAFBaseGUI" <|-- "FlexPanelDefault"
+"ITAFGUIActions" <|.. "FlexPanelDefault"
+
+
+
+class "Footer" {
+{field} -None : Boolean
+{static} {method} +FooterGUI()
+{method} +GetFrontPanel()
+
+}
+"TAFBaseGUI" <|-- "Footer"
+"ITAFGUIActions" <|.. "Footer"
+
+
+
+class "FooterTriekselSoft" {
+{field} -None : Boolean
+{static} {method} +FooterGUI()
+{method} +GetFrontPanel()
+
+}
+"TAFBaseGUI" <|-- "FooterTriekselSoft"
+"ITAFGUIActions" <|.. "FooterTriekselSoft"
+
+
+
+class "HeaderTriekselSoft" {
+{field} -None : Boolean
+{method} +GetFrontPanel()
+
+}
+"TAFBaseGUI" <|-- "HeaderTriekselSoft"
+"ITAFGUIActions" <|.. "HeaderTriekselSoft"
+
+
+
+class "JSONTextViewer.lvlib:JSONTextViewer" {
+{field} -Ref : U32
+{static} {method} #StartMainGUI()
+{static} {method} #RequestDestroy()
+{static} {method} #MainGUI()
+{static} {method} #StopMainGUI()
+{static} {method} #JSONTextViewer_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #JSONTextViewer_GetAttributes()
+{static} {method} #JSONTextViewer_SendAndReceive()
+{static} {method} -JSONTextViewer_MainGUIActive()
+{static} {method} +JSONTextViewer_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} #ReadJSONText()
+{method} #ReadID()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +ExecuteButtonAction()
+{method} +GetFrontPanel()
+{method} +Create()
+{method} +Destroy()
+{method} +IsGUIRunning()
+{method} +UpdateText()
+{method} #Save()
+
+}
+"TAFBaseGUI" <|-- "JSONTextViewer.lvlib:JSONTextViewer"
+"ITAFGUIActions" <|.. "JSONTextViewer.lvlib:JSONTextViewer"
+"ITAFTextViewer" <|.. "JSONTextViewer.lvlib:JSONTextViewer"
+
+
+
+class "UsedInTestClass" {
+{field} -Ref : U32
+{static} {method} #Process()
+{static} {method} #StartProcess()
+{static} {method} #StopProcess()
+{static} {method} #ProcessRepository()
+{static} {method} #UsedInTestClass_New()
+{static} {method} #UsedInTestClass_GetAttributes()
+{static} {method} +UsedInTestClass_Create()
+{static} {method} +ControlProcessWindow()
+{method} +Create()
+{method} +Destroy()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +SetImage()
+{method} +RequestImage()
+{method} +GetName()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +ExecuteButtonAction()
+
+}
+"INewImage" <|.. "UsedInTestClass"
+"ITAFGUIActions" <|.. "UsedInTestClass"
+"ITAFObject" <|.. "UsedInTestClass"
+
+
+
+class "ButtonCollection" {
+{field} -ButtonDefinitions : Array of Cluster
+{field} -Buttons : Cluster
+{field} -Active : Cluster
+{field} -ActiveIndex : I32
+{static} {method} +Load()
+{static} {method} +ManualWriteFile()
+{static} {method} +Save()
+{method} +ReadButtonDefinitions()
+{method} +CleanUp()
+{method} +SetButtonControls()
+{method} +SetN()
+{method} +PressButton()
+
+}
+
+
+class "VerticalButtonBar" {
+{field} -Ref : U32
+{static} {method} #StartMainGUI()
+{static} {method} #ExecuteAction()
+{static} {method} #RequestDestroy()
+{static} {method} #MainGUI()
+{static} {method} #StopMainGUI()
+{static} {method} #VerticalButtonBar_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #VerticalButtonBar_GetAttributes()
+{static} {method} #VerticalButtonBar_SendAndReceive()
+{static} {method} +VerticalButtonBar_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} #ReadButtonBar()
+{method} #WriteButtonBar()
+{method} +ReadLabels()
+{method} #ReadIAuthorization()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +ExecuteButtonAction()
+{method} +GetFrontPanel()
+{method} +Create()
+{method} +Destroy()
+{method} +GetButtonDefinitionFile()
+{method} +SetButtonDefinitionFile()
+{method} +AuthorizationUpdated()
+
+}
+"TAFBaseGUI" <|-- "VerticalButtonBar"
+"IAuthorizationUpdated" <|.. "VerticalButtonBar"
+"ITAFGUIActions" <|.. "VerticalButtonBar"
+
+
+
+class "Mockup_ConfigurationManager" {
+{field} -Ref : U32
+{method} +GetFrontPanel()
+
+}
+"TAFBaseGUI" <|-- "Mockup_ConfigurationManager"
+"ITAFGUIActions" <|.. "Mockup_ConfigurationManager"
+
+
+
+class "Mockup_QualificationScreen" {
+{field} -Ref : U32
+{method} +GetFrontPanel()
+
+}
+"TAFBaseGUI" <|-- "Mockup_QualificationScreen"
+"ITAFGUIActions" <|.. "Mockup_QualificationScreen"
+
+
+
+class "Mockup_ServiceScreen" {
+{field} -Ref : U32
+{method} +GetFrontPanel()
+
+}
+"TAFBaseGUI" <|-- "Mockup_ServiceScreen"
+"ITAFGUIActions" <|.. "Mockup_ServiceScreen"
+
+
+
+class "Mockup_UserManager" {
+{field} -Ref : U32
+{method} +GetFrontPanel()
+
+}
+"TAFBaseGUI" <|-- "Mockup_UserManager"
+"ITAFGUIActions" <|.. "Mockup_UserManager"
+
+
+
+class "DemoApplication" {
+{field} -Ref : U32
+{static} {method} #DemoApplication_New()
+{static} {method} #DemoApplication_GetAttributes()
+{static} {method} +DemoApplication_Create()
+{method} #Layout()
+{method} #ExecuteMenu()
+{method} #AddTAFMenu()
+{method} #RefreshTafMenu()
+{method} +Create()
+{method} +Destroy()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +AuthorizationUpdated()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+
+}
+"MasterGUI" <|-- "DemoApplication"
+
+
+class "TemplateGUI.lvlib:TemplateGUI" {
+{field} -Ref : U32
+{static} {method} #StartMainGUI()
+{static} {method} #RequestDestroy()
+{static} {method} #MainGUI()
+{static} {method} #StopMainGUI()
+{static} {method} #TemplateGUI_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #TemplateGUI_GetAttributes()
+{static} {method} #TemplateGUI_SendAndReceive()
+{static} {method} -TemplateGUI_MainGUIActive()
+{static} {method} +TemplateGUI_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +ExecuteButtonAction()
+{method} +GetFrontPanel()
+{method} +Create()
+{method} +Destroy()
+{method} +IsGUIRunning()
+
+}
+"TAFBaseGUI" <|-- "TemplateGUI.lvlib:TemplateGUI"
+"ITAFGUIActions" <|.. "TemplateGUI.lvlib:TemplateGUI"
+
+
+
+class "ErrorCreationTAF" {
+{field} -None : Boolean
+{method} #DoCreateError()
+
+}
+"ErrorCreationExecution" <|-- "ErrorCreationTAF"
+
+
+class "BusAuthorizationUpdated" {
+{field} -BusType : LV Class
+{method} +GetExternalInterfaces()
+{method} +AuthorizationUpdated()
+
+}
+"BusBase.lvlib:BusBase" <|-- "BusAuthorizationUpdated"
+"IAuthorizationUpdated" <|.. "BusAuthorizationUpdated"
+
+"BusAuthorizationUpdated" *-- "IAuthorizationUpdated"
+
+
+interface "IInterface" {
+
+}
+
+
+
+@enduml
+....

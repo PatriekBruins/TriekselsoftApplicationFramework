@@ -1,0 +1,136 @@
+= Source code documentation
+Antidoc v2.0.3; 
+:doctype: book
+:toc: left
+:imagesdir: Images
+:sectnums: 
+:toclevels: 2
+:sectanchors: 
+:sectlinks: 
+:chapter-label: Section
+
+include::Includes/000.adoc[leveloffset=+0]
+
+== Libraries
+
+This section describes the libraries contained in the project.
+
+include::Includes/001.adoc[leveloffset=+1]
+
+include::Includes/002.adoc[leveloffset=+1]
+
+include::Includes/003.adoc[leveloffset=+1]
+
+include::Includes/004.adoc[leveloffset=+1]
+
+include::Includes/005.adoc[leveloffset=+1]
+
+include::Includes/006.adoc[leveloffset=+1]
+
+include::Includes/007.adoc[leveloffset=+1]
+
+include::Includes/008.adoc[leveloffset=+1]
+
+include::Includes/009.adoc[leveloffset=+1]
+
+include::Includes/010.adoc[leveloffset=+1]
+
+== Classes
+
+This section describes the classes contained in the project.
+
+include::Includes/011.adoc[leveloffset=+1]
+
+include::Includes/012.adoc[leveloffset=+1]
+
+include::Includes/013.adoc[leveloffset=+1]
+
+include::Includes/014.adoc[leveloffset=+1]
+
+include::Includes/015.adoc[leveloffset=+1]
+
+include::Includes/016.adoc[leveloffset=+1]
+
+include::Includes/017.adoc[leveloffset=+1]
+
+include::Includes/018.adoc[leveloffset=+1]
+
+include::Includes/019.adoc[leveloffset=+1]
+
+include::Includes/020.adoc[leveloffset=+1]
+
+include::Includes/021.adoc[leveloffset=+1]
+
+include::Includes/022.adoc[leveloffset=+1]
+
+include::Includes/023.adoc[leveloffset=+1]
+
+include::Includes/024.adoc[leveloffset=+1]
+
+include::Includes/025.adoc[leveloffset=+1]
+
+include::Includes/026.adoc[leveloffset=+1]
+
+include::Includes/027.adoc[leveloffset=+1]
+
+include::Includes/028.adoc[leveloffset=+1]
+
+include::Includes/029.adoc[leveloffset=+1]
+
+include::Includes/030.adoc[leveloffset=+1]
+
+include::Includes/031.adoc[leveloffset=+1]
+
+include::Includes/032.adoc[leveloffset=+1]
+
+include::Includes/033.adoc[leveloffset=+1]
+
+include::Includes/034.adoc[leveloffset=+1]
+
+include::Includes/035.adoc[leveloffset=+1]
+
+include::Includes/036.adoc[leveloffset=+1]
+
+include::Includes/037.adoc[leveloffset=+1]
+
+include::Includes/038.adoc[leveloffset=+1]
+
+include::Includes/039.adoc[leveloffset=+1]
+
+include::Includes/040.adoc[leveloffset=+1]
+
+include::Includes/041.adoc[leveloffset=+1]
+
+include::Includes/042.adoc[leveloffset=+1]
+
+include::Includes/043.adoc[leveloffset=+1]
+
+include::Includes/044.adoc[leveloffset=+1]
+
+include::Includes/045.adoc[leveloffset=+1]
+
+include::Includes/046.adoc[leveloffset=+1]
+
+include::Includes/047.adoc[leveloffset=+1]
+
+include::Includes/048.adoc[leveloffset=+1]
+
+== Legal Information
+
+=== Document creation
+
+This document has been generated using the following tools.
+
+include::Includes/049.adoc[leveloffset=+2]
+
+include::Includes/050.adoc[leveloffset=+2]
+
+include::Includes/051.adoc[leveloffset=+2]
+
+include::Includes/052.adoc[leveloffset=+2]
+
+=== Product used in the project
+
+Antidoc hasn't been able to detect third party products in the project.
+This is the author's responsibility to list any of the missing product used.
+

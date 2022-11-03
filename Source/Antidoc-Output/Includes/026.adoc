@@ -1,0 +1,361 @@
+== MasterGUI.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.0
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "MasterGUI" {
+{field} -Ref : U32
+{static} {method} #StartMainGUI()
+{static} {method} #DockVI()
+{static} {method} #RequestDestroy()
+{static} {method} #MainGUI()
+{static} {method} #StopMainGUI()
+{static} {method} #MasterGUI_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #MasterGUI_GetAttributes()
+{static} {method} #MasterGUI_SendAndReceive()
+{static} {method} -MasterGUI_MainGUIActive()
+{static} {method} +MasterGUI_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} #SetLayout()
+{method} #RefreshTafMenu()
+{method} #DockMainPanel()
+{method} #DockSubPanel()
+{method} #AddTAFMenu()
+{method} #DockSubPanelFromFrontPanel()
+{method} #PreTAFMenuHook()
+{method} #PostTAFMenuHook()
+{method} #DockStaticSubpanels()
+{method} #ExecuteMenu()
+{method} #ReadMainPanel()
+{method} #WriteMainPanel()
+{method} #ReadWindowsTitle()
+{method} #WriteMenu()
+{method} #ReadMenu()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +ExecuteButtonAction()
+{method} #Layout()
+{method} +Create()
+{method} +Destroy()
+{method} +IsGUIRunning()
+{method} +StartGUI()
+{method} +DockGUI()
+{method} +GetFrontPanel()
+
+}
+"TAFBaseGUI" <|-- "MasterGUI"
+"IAuthorizationUpdated" <|.. "MasterGUI"
+interface "IAuthorizationUpdated" {}
+"IDockGUI" <|.. "MasterGUI"
+interface "IDockGUI" {}
+"ITAFGUIActions" <|.. "MasterGUI"
+interface "ITAFGUIActions" {}
+
+
+
+
+@enduml
+....
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|StartMainGUI
+|image:MasterGUI.lvclass_StartMainGUI.vi.png[MasterGUI.lvclass:StartMainGUI.vi]
+|+++Looks up an existing object matching object name or creates a new object and returns a refnum you can use when calling other class methods.+++
+
++++Objects created with this VI should be destroyed using this class Delete VI.+++
+
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockVI
+|image:MasterGUI.lvclass_DockVI.vi.png[MasterGUI.lvclass:DockVI.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|RequestDestroy
+|image:MasterGUI.lvclass_RequestDestroy.vi.png[MasterGUI.lvclass:RequestDestroy.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetLayout
+|image:MasterGUI.lvclass_SetLayout.vi.png[MasterGUI.lvclass:SetLayout.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|RefreshTafMenu
+|image:MasterGUI.lvclass_RefreshTafMenu.vi.png[MasterGUI.lvclass:RefreshTafMenu.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockMainPanel
+|image:MasterGUI.lvclass_DockMainPanel.vi.png[MasterGUI.lvclass:DockMainPanel.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockSubPanel
+|image:MasterGUI.lvclass_DockSubPanel.vi.png[MasterGUI.lvclass:DockSubPanel.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|AddTAFMenu
+|image:MasterGUI.lvclass_AddTAFMenu.vi.png[MasterGUI.lvclass:AddTAFMenu.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockSubPanelFromFrontPanel
+|image:MasterGUI.lvclass_DockSubPanelFromFrontPanel.vi.png[MasterGUI.lvclass:DockSubPanelFromFrontPanel.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|PreTAFMenuHook
+|image:MasterGUI.lvclass_PreTAFMenuHook.vi.png[MasterGUI.lvclass:PreTAFMenuHook.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|PostTAFMenuHook
+|image:MasterGUI.lvclass_PostTAFMenuHook.vi.png[MasterGUI.lvclass:PostTAFMenuHook.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockStaticSubpanels
+|image:MasterGUI.lvclass_DockStaticSubpanels.vi.png[MasterGUI.lvclass:DockStaticSubpanels.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MainGUI
+|image:MasterGUI.lvclass_MainGUI.vi.png[MasterGUI.lvclass:MainGUI.vi]
+|+++This template is based off of the Queued Message Handler design pattern and the Queued Message Handler project template that ships with LabVIEW.+++
+
++++The main difference is that the queue is private to this module and communication between modules is performed via Broadcast and Request events.+++
+
++++Request events are wrapped in public API methods and are handled in the Event Handling Loop (EHL) of this VI. Any module can register for Broadcast events sent by this module. The EHL generates messages based on user interface actions.+++
+
++++The Message Handling Loop (MHL) processes messages generated by the EHL, or by other messages.  The messages are string values, so new messages can be added easily to the Message Cases case structure in the MHL.  Each message cluster can also provide an optional value for Message Data, which is a variant that can be converted to whatever message-specific data is required.+++
+
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|StopMainGUI
+|image:MasterGUI.lvclass_StopMainGUI.vi.png[MasterGUI.lvclass:StopMainGUI.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|ExecuteMenu
+|image:MasterGUI.lvclass_ExecuteMenu.vi.png[MasterGUI.lvclass:ExecuteMenu.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MasterGUI_New
+|image:MasterGUI.lvclass_MasterGUI_New.vi.png[MasterGUI.lvclass:MasterGUI_New.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|MainGUIRepository
+|image:MasterGUI.lvclass_MainGUIRepository.vi.png[MasterGUI.lvclass:MainGUIRepository.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MasterGUI_GetAttributes
+|image:MasterGUI.lvclass_MasterGUI_GetAttributes.vi.png[MasterGUI.lvclass:MasterGUI_GetAttributes.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MasterGUI_SendAndReceive
+|image:MasterGUI.lvclass_MasterGUI_SendAndReceive.vim.png[MasterGUI.lvclass:MasterGUI_SendAndReceive.vim]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|ReadMainPanel
+|image:MasterGUI.lvclass_ReadMainPanel.vi.png[MasterGUI.lvclass:ReadMainPanel.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteMainPanel
+|image:MasterGUI.lvclass_WriteMainPanel.vi.png[MasterGUI.lvclass:WriteMainPanel.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadWindowsTitle
+|image:MasterGUI.lvclass_ReadWindowsTitle.vi.png[MasterGUI.lvclass:ReadWindowsTitle.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteMenu
+|image:MasterGUI.lvclass_WriteMenu.vi.png[MasterGUI.lvclass:WriteMenu.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadMenu
+|image:MasterGUI.lvclass_ReadMenu.vi.png[MasterGUI.lvclass:ReadMenu.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetPersistentConfiguration
+|image:MasterGUI.lvclass_GetPersistentConfiguration.vi.png[MasterGUI.lvclass:GetPersistentConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetPersistentConfiguration
+|image:MasterGUI.lvclass_SetPersistentConfiguration.vi.png[MasterGUI.lvclass:SetPersistentConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaces
+|image:MasterGUI.lvclass_GetExternalInterfaces.vi.png[MasterGUI.lvclass:GetExternalInterfaces.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterfaces
+|image:MasterGUI.lvclass_SetExternalInterfaces.vi.png[MasterGUI.lvclass:SetExternalInterfaces.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ExecuteButtonAction
+|image:MasterGUI.lvclass_ExecuteButtonAction.vi.png[MasterGUI.lvclass:ExecuteButtonAction.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Layout
+|image:MasterGUI.lvclass_Layout.vi.png[MasterGUI.lvclass:Layout.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MasterGUI_Create
+|image:MasterGUI.lvclass_MasterGUI_Create.vi.png[MasterGUI.lvclass:MasterGUI_Create.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create
+|image:MasterGUI.lvclass_Create.vi.png[MasterGUI.lvclass:Create.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Destroy
+|image:MasterGUI.lvclass_Destroy.vi.png[MasterGUI.lvclass:Destroy.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ControlMainGUIWindow
+|image:MasterGUI.lvclass_ControlMainGUIWindow.vi.png[MasterGUI.lvclass:ControlMainGUIWindow.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|IsGUIRunning
+|image:MasterGUI.lvclass_IsGUIRunning.vi.png[MasterGUI.lvclass:IsGUIRunning.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|StartGUI
+|image:MasterGUI.lvclass_StartGUI.vi.png[MasterGUI.lvclass:StartGUI.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockGUI
+|image:MasterGUI.lvclass_DockGUI.vi.png[MasterGUI.lvclass:DockGUI.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetFrontPanel
+|image:MasterGUI.lvclass_GetFrontPanel.vi.png[MasterGUI.lvclass:GetFrontPanel.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

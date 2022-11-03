@@ -1,0 +1,34 @@
+== TemplateGUI.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Nested libraries
+[cols="<.<1d,<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Type
+
+|<<TemplateGUI.lvclass>>
+|LVClass
+|===
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Test GUI
+|image:TemplateGUI.lvlib_Test_GUI.vi.png[TemplateGUI.lvlib:Test GUI.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

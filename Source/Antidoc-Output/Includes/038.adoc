@@ -1,0 +1,105 @@
+== ButtonCollection.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.3
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "ButtonCollection" {
+{field} -ButtonDefinitions : Array of Cluster
+{field} -Buttons : Cluster
+{field} -Active : Cluster
+{field} -ActiveIndex : I32
+{static} {method} +Load()
+{static} {method} +ManualWriteFile()
+{static} {method} +Save()
+{method} +ReadButtonDefinitions()
+{method} +CleanUp()
+{method} +SetButtonControls()
+{method} +SetN()
+{method} +PressButton()
+
+}
+
+
+
+@enduml
+....
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|ReadButtonDefinitions
+|image:ButtonCollection.lvclass_ReadButtonDefinitions.vi.png[ButtonCollection.lvclass:ReadButtonDefinitions.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Load
+|image:ButtonCollection.lvclass_Load.vi.png[ButtonCollection.lvclass:Load.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|CleanUp
+|image:ButtonCollection.lvclass_CleanUp.vi.png[ButtonCollection.lvclass:CleanUp.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetButtonControls
+|image:ButtonCollection.lvclass_SetButtonControls.vi.png[ButtonCollection.lvclass:SetButtonControls.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetNavigationLevel
+|image:ButtonCollection.lvclass_SetNavigationLevel.vi.png[ButtonCollection.lvclass:SetNavigationLevel.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|PressButton
+|image:ButtonCollection.lvclass_PressButton.vi.png[ButtonCollection.lvclass:PressButton.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ManualWriteFile
+|image:ButtonCollection.lvclass_ManualWriteFile.vi.png[ButtonCollection.lvclass:ManualWriteFile.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Save
+|image:ButtonCollection.lvclass_Save.vi.png[ButtonCollection.lvclass:Save.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

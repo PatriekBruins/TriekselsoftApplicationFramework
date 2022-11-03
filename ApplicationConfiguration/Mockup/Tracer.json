@@ -1,0 +1,9 @@
+﻿// JSONtext Config File
+{
+  "BufferSize":1000,
+  "Startup":{
+    "OpenAtStartUp":true,
+    "OpenMinimized":true
+  },
+  "OpenAtClosure":false
+}

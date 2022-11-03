@@ -1,0 +1,41 @@
+﻿// JSONtext Config File
+{
+  "StaticDocking":[
+    {
+      "ObjectLabel":"ButtonBar",
+      "SubPanelLabel":"ButtonBar"
+    },
+    {
+      "ObjectLabel":"Footer",
+      "SubPanelLabel":"Footer"
+    },
+    {
+      "ObjectLabel":"Header",
+      "SubPanelLabel":"Header"
+    },
+    {
+      "ObjectLabel":"MainFlexPanel",
+      "SubPanelLabel":"MainFlexPanel"
+    }
+  ],
+  "WindowsTitle":"TriekselSoft Demo Application",
+  "MenuEnables":[
+    {
+      "MenuTag":"TAF",
+      "MenuExpression":"LoggedOn=True"
+    },
+    {
+      "MenuTag":"Trace Window",
+      "MenuExpression":"LoggedOn=True"
+    }
+  ],
+  "AdditionalMenuItems":[
+    {
+      "Parent":"",
+      "Items":["File"],
+      "ShortCuts":[]
+    }
+  ],
+  "TraceObjectName":"Tracer",
+  "TextDockSubPanelName":"MainFlexPanel"
+}

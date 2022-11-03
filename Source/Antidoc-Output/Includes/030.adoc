@@ -1,0 +1,216 @@
+== UserManager.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.0
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "UserMananger.lvlib:UserManager" {
+{field} -Ref : U32
+{static} {method} #MainGUI()
+{static} {method} #StartMainGUI()
+{static} {method} #RequestDestroy()
+{static} {method} #StopMainGUI()
+{static} {method} #UserManager_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #UserManager_GetAttributes()
+{static} {method} #UserManager_SendAndReceive()
+{static} {method} -UserManager_MainGUIActive()
+{static} {method} +UserManager_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +ExecuteButtonAction()
+{method} +SetExternalInterfaces()
+{method} +Create()
+{method} +Destroy()
+{method} +IsGUIRunning()
+{method} +GetFrontPanel()
+{method} +SetEvaluations()
+{method} +EvaluateAuthorizationExpression()
+
+}
+"TAFBaseGUI" <|-- "UserMananger.lvlib:UserManager"
+"IAuthorization" <|.. "UserMananger.lvlib:UserManager"
+interface "IAuthorization" {}
+"ITAFGUIActions" <|.. "UserMananger.lvlib:UserManager"
+interface "ITAFGUIActions" {}
+
+
+
+
+@enduml
+....
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|MainGUI
+|image:UserMananger.lvlib_UserManager.lvclass_MainGUI.vi.png[UserMananger.lvlib:UserManager.lvclass:MainGUI.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|StartMainGUI
+|image:UserMananger.lvlib_UserManager.lvclass_StartMainGUI.vi.png[UserMananger.lvlib:UserManager.lvclass:StartMainGUI.vi]
+|+++Looks up an existing object matching object name or creates a new object and returns a refnum you can use when calling other class methods.+++
+
++++Objects created with this VI should be destroyed using this class Delete VI.+++
+
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|RequestDestroy
+|image:UserMananger.lvlib_UserManager.lvclass_RequestDestroy.vi.png[UserMananger.lvlib:UserManager.lvclass:RequestDestroy.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|StopMainGUI
+|image:UserMananger.lvlib_UserManager.lvclass_StopMainGUI.vi.png[UserMananger.lvlib:UserManager.lvclass:StopMainGUI.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|UserManager_New
+|image:UserMananger.lvlib_UserManager.lvclass_UserManager_New.vi.png[UserMananger.lvlib:UserManager.lvclass:UserManager_New.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|MainGUIRepository
+|image:UserMananger.lvlib_UserManager.lvclass_MainGUIRepository.vi.png[UserMananger.lvlib:UserManager.lvclass:MainGUIRepository.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|UserManager_GetAttributes
+|image:UserMananger.lvlib_UserManager.lvclass_UserManager_GetAttributes.vi.png[UserMananger.lvlib:UserManager.lvclass:UserManager_GetAttributes.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|UserManager_SendAndReceive
+|image:UserMananger.lvlib_UserManager.lvclass_UserManager_SendAndReceive.vim.png[UserMananger.lvlib:UserManager.lvclass:UserManager_SendAndReceive.vim]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|GetPersistentConfiguration
+|image:UserMananger.lvlib_UserManager.lvclass_GetPersistentConfiguration.vi.png[UserMananger.lvlib:UserManager.lvclass:GetPersistentConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetPersistentConfiguration
+|image:UserMananger.lvlib_UserManager.lvclass_SetPersistentConfiguration.vi.png[UserMananger.lvlib:UserManager.lvclass:SetPersistentConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaces
+|image:UserMananger.lvlib_UserManager.lvclass_GetExternalInterfaces.vi.png[UserMananger.lvlib:UserManager.lvclass:GetExternalInterfaces.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ExecuteButtonAction
+|image:UserMananger.lvlib_UserManager.lvclass_ExecuteButtonAction.vi.png[UserMananger.lvlib:UserManager.lvclass:ExecuteButtonAction.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterfaces
+|image:UserMananger.lvlib_UserManager.lvclass_SetExternalInterfaces.vi.png[UserMananger.lvlib:UserManager.lvclass:SetExternalInterfaces.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|UserManager_Create
+|image:UserMananger.lvlib_UserManager.lvclass_UserManager_Create.vi.png[UserMananger.lvlib:UserManager.lvclass:UserManager_Create.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create
+|image:UserMananger.lvlib_UserManager.lvclass_Create.vi.png[UserMananger.lvlib:UserManager.lvclass:Create.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Destroy
+|image:UserMananger.lvlib_UserManager.lvclass_Destroy.vi.png[UserMananger.lvlib:UserManager.lvclass:Destroy.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ControlMainGUIWindow
+|image:UserMananger.lvlib_UserManager.lvclass_ControlMainGUIWindow.vi.png[UserMananger.lvlib:UserManager.lvclass:ControlMainGUIWindow.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|IsGUIRunning
+|image:UserMananger.lvlib_UserManager.lvclass_IsGUIRunning.vi.png[UserMananger.lvlib:UserManager.lvclass:IsGUIRunning.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|GetFrontPanel
+|image:UserMananger.lvlib_UserManager.lvclass_GetFrontPanel.vi.png[UserMananger.lvlib:UserManager.lvclass:GetFrontPanel.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetEvaluations
+|image:UserMananger.lvlib_UserManager.lvclass_SetEvaluations.vi.png[UserMananger.lvlib:UserManager.lvclass:SetEvaluations.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|EvaluateAuthorizationExpression
+|image:UserMananger.lvlib_UserManager.lvclass_EvaluateAuthorizationExpression.vi.png[UserMananger.lvlib:UserManager.lvclass:EvaluateAuthorizationExpression.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

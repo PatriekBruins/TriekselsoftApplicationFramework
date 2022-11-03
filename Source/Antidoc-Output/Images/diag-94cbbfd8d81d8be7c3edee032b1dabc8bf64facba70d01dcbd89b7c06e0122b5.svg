@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="186px" preserveAspectRatio="none" style="width:187px;height:186px;background:#FFFFFF;" version="1.1" viewBox="0 0 187 186" width="187px" zoomAndPan="magnify"><defs/><g><!--MD5=[2bb486e18dffc97c24a5fd8d709ce62f]
+class IAuthorizationUpdated--><g id="elem_IAuthorizationUpdated"><rect codeLine="8" fill="#FFFFFF" height="64.7999" id="IAuthorizationUpdated" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:0.5;" width="173" x="7" y="115"/><rect fill="#808080" height="32" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:0.5;" width="173" x="7" y="115"/><rect fill="#808080" height="2.5" style="stroke:#808080;stroke-width:0.5;" width="173" x="7" y="144.5"/><rect codeLine="8" fill="none" height="64.7999" id="IAuthorizationUpdated" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:0.5;" width="173" x="7" y="115"/><ellipse cx="22" cy="131" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M24.6719,134.2969 Q25.2188,134.2969 25.5,134.4844 Q25.7813,134.6563 25.7813,135.1563 Q25.7813,136 24.6719,136 L19.5313,136 Q18.4063,136 18.4063,135.1563 Q18.4063,134.6563 18.6875,134.4844 Q18.9844,134.2969 19.5313,134.2969 L21.25,134.2969 L21.25,127.7813 L19.5313,127.7813 Q18.4063,127.7813 18.4063,126.9375 Q18.4063,126.4531 18.6875,126.2813 Q18.9844,126.0938 19.5313,126.0938 L24.6719,126.0938 Q25.2188,126.0938 25.5,126.2813 Q25.7813,126.4531 25.7813,126.9375 Q25.7813,127.7813 24.6719,127.7813 L22.9531,127.7813 L22.9531,134.2969 L24.6719,134.2969 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="141" x="36" y="136.6">IAuthorizationUpdated</text><line style="stroke:#555555;stroke-width:0.5;" x1="8" x2="179" y1="147" y2="147"/><line style="stroke:#555555;stroke-width:0.5;" x1="8" x2="179" y1="155" y2="155"/><ellipse cx="18" cy="166" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="27" y="172.9999">AuthorizationUpdated()</text></g><!--MD5=[065ef51c0b83ac26c2e8b4ca504d0938]
+class IInterface--><g id="elem_IInterface"><rect codeLine="13" fill="#FFFFFF" height="48" id="IInterface" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:0.5;" width="92" x="47.5" y="7"/><rect fill="#808080" height="32" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:0.5;" width="92" x="47.5" y="7"/><rect fill="#808080" height="2.5" style="stroke:#808080;stroke-width:0.5;" width="92" x="47.5" y="36.5"/><rect codeLine="13" fill="none" height="48" id="IInterface" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:0.5;" width="92" x="47.5" y="7"/><ellipse cx="62.5" cy="23" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M65.1719,26.2969 Q65.7188,26.2969 66,26.4844 Q66.2813,26.6563 66.2813,27.1563 Q66.2813,28 65.1719,28 L60.0313,28 Q58.9063,28 58.9063,27.1563 Q58.9063,26.6563 59.1875,26.4844 Q59.4844,26.2969 60.0313,26.2969 L61.75,26.2969 L61.75,19.7813 L60.0313,19.7813 Q58.9063,19.7813 58.9063,18.9375 Q58.9063,18.4531 59.1875,18.2813 Q59.4844,18.0938 60.0313,18.0938 L65.1719,18.0938 Q65.7188,18.0938 66,18.2813 Q66.2813,18.4531 66.2813,18.9375 Q66.2813,19.7813 65.1719,19.7813 L63.4531,19.7813 L63.4531,26.2969 L65.1719,26.2969 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="60" x="76.5" y="28.6">IInterface</text><line style="stroke:#555555;stroke-width:0.5;" x1="48.5" x2="138.5" y1="39" y2="39"/><line style="stroke:#555555;stroke-width:0.5;" x1="48.5" x2="138.5" y1="47" y2="47"/></g><!--MD5=[d7640b3eda667f43ab7574c4a45c576a]
+reverse link IInterface to IAuthorizationUpdated--><g id="link_IInterface_IAuthorizationUpdated"><path codeLine="12" d="M93.5,75.59 C93.5,88.59 93.5,102.59 93.5,114.69 " fill="none" id="IInterface-backto-IAuthorizationUpdated" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="86.5,75.17,93.5,55.17,100.5,75.17,86.5,75.17" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ffa7657344a195fe983ec4279ab14d7e]
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+interface "IAuthorizationUpdated" {
+{method} +AuthorizationUpdated()
+
+}
+"IInterface" <|.. "IAuthorizationUpdated"
+interface "IInterface" {}
+
+
+
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 10:55:52 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,310 @@
+﻿// JSONtext Config File
+{
+  "Buttons":[
+    {
+      "ThisNavigationName":"root",
+      "ButtonLabel":"btn 1",
+      "Caption":"Log On",
+      "Tooltip":"",
+      "EnabledExpression":"1",
+      "Actions":[
+ //       {
+ //         "ActionType":"Call",
+ //         "TargetObject":"UserManager",
+ //         "Parameter":"LogOn",
+ //         "WaitUntilDone":true
+ //       },
+		{
+          "ActionType":"ShowGUI",
+          "TargetObject":"UserManager",
+          "Parameter":"",
+          "WaitUntilDone":true
+        },
+		{
+          "ActionType":"Call",
+          "TargetObject":"UserManager",
+          "Parameter":"Expression:LoggedOn=True",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"LoggedOn"
+    },
+    {
+      "ThisNavigationName":"root",
+      "ButtonLabel":"btn 12",
+      "Caption":"Exit",
+      "Tooltip":"Stop the application",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"Call",
+          "TargetObject":"MasterGUI",
+          "Parameter":"Exit",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"root"
+    },
+    {
+      "ThisNavigationName":"LoggedOn",
+      "ButtonLabel":"btn 1",
+      "Caption":"Product_Qualification",
+      "Tooltip":"",
+//      "EnabledExpression":"QualificationAllowed=True",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"QualificationScreen",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"Qualification"
+    },
+    {
+      "ThisNavigationName":"LoggedOn",
+      "ButtonLabel":"btn 3",
+      "Caption":"Show_Reports",
+      "Tooltip":"",
+//      "EnabledExpression":"ReportViewingAllowed=True",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"ReportViewer",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"ReportViewing"
+    },
+    {
+      "ThisNavigationName":"ReportViewing",
+      "ButtonLabel":"btn 12",
+      "Caption":"Back",
+      "Tooltip":"",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"MainFlexPanel",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"LoggedOn"
+    },
+    {
+      "ThisNavigationName":"LoggedOn",
+      "ButtonLabel":"btn 5",
+      "Caption":"User_Management",
+      "Tooltip":"",
+//     "EnabledExpression":"UserManagementAllowed=True", 
+      "EnabledExpression":"1",
+	  "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"UserManager",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"UserManagement"
+    },
+    {
+      "ThisNavigationName":"UserManagement",
+      "ButtonLabel":"btn 12",
+      "Caption":"Back",
+      "Tooltip":"",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"MainFlexPanel",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"LoggedOn"
+    },
+    {
+      "ThisNavigationName":"LoggedOn",
+      "ButtonLabel":"btn 6",
+      "Caption":"Configuration_Management",
+      "Tooltip":"",
+//      "EnabledExpression":"ReportViewingAllowed=True",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"ConfigurationManager",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"ConfigurationManagement"
+    },
+    {
+      "ThisNavigationName":"ConfigurationManagement",
+      "ButtonLabel":"btn 12",
+      "Caption":"Back",
+      "Tooltip":"",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"MainFlexPanel",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"LoggedOn"
+    },
+    {
+      "ThisNavigationName":"LoggedOn",
+      "ButtonLabel":"btn 7",
+      "Caption":"Service",
+      "Tooltip":"",
+//      "EnabledExpression":"ServiceAllowed=True",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"ServiceScreen",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"Service"
+	},
+    {
+      "ThisNavigationName":"Service",
+      "ButtonLabel":"btn 12",
+      "Caption":"Back",
+      "Tooltip":"",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"MainFlexPanel",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"LoggedOn"
+    },
+    {
+      "ThisNavigationName":"LoggedOn",
+      "ButtonLabel":"btn 12",
+      "Caption":"Log out",
+      "Tooltip":"",
+      "EnabledExpression":"1",
+      "Actions":[
+		{
+          "ActionType":"Call",
+          "TargetObject":"UserManager",
+          "Parameter":"Expression:LoggedOn=False",
+          "WaitUntilDone":true
+        }
+		],
+      "NextNavigationName":"root"
+    },
+    {
+      "ThisNavigationName":"Qualification",
+      "ButtonLabel":"btn 1",
+      "Caption":"Start_Qualification",
+      "Tooltip":"",
+//      "EnabledExpression":"QualificationStarted=False",
+      "EnabledExpression":"1",
+      "Actions":[
+//        {
+//          "ActionType":"Call",
+//          "TargetObject":"TestExecutor",
+//          "Parameter":"Start",
+//          "WaitUntilDone":true
+//        },
+		{
+          "ActionType":"Call",
+          "TargetObject":"UserManager",
+          "Parameter":"Expression:QualificationStarted=True",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"Qualification"
+    },
+    {
+      "ThisNavigationName":"Qualification",
+      "ButtonLabel":"btn 11",
+      "Caption":"Abort_Qualification",
+      "Tooltip":"",
+      "EnabledExpression":"Expression:QualificationStarted=True",
+      "EnabledExpression":"1",
+      "Actions":[
+//        {
+ //         "ActionType":"Call",
+ //         "TargetObject":"TestExecutor",
+//          "Parameter":"Abort",
+//          "WaitUntilDone":true
+ //       },
+		{
+          "ActionType":"Call",
+          "TargetObject":"UserManager",
+          "Parameter":"Expression:QualificationStarted=False",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"Qualification"
+    },
+    {
+      "ThisNavigationName":"Qualification",
+      "ButtonLabel":"btn 12",
+      "Caption":"Back",
+      "Tooltip":"",
+ //     "EnabledExpression":"QualificationStarted=False",
+     "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"MainFlexPanel",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"LoggedOn"
+    },
+    {
+      "ThisNavigationName":"Service",
+      "ButtonLabel":"btn 1",
+      "Caption":"Camera",
+      "Tooltip":"",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"Cam1",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"Service"
+    },
+    {
+      "ThisNavigationName":"Service",
+      "ButtonLabel":"btn 2",
+      "Caption":"FaceDetect",
+      "Tooltip":"",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"ShowGUI",
+          "TargetObject":"FaceDetect",
+          "Parameter":"MainFlexPanel",
+          "WaitUntilDone":true
+        }
+      ],
+      "NextNavigationName":"Service"
+    }
+   
+  ]
+}

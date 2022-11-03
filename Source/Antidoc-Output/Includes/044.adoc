@@ -1,0 +1,151 @@
+== DemoApplication.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.2
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "DemoApplication" {
+{field} -Ref : U32
+{static} {method} #DemoApplication_New()
+{static} {method} #DemoApplication_GetAttributes()
+{static} {method} +DemoApplication_Create()
+{method} #Layout()
+{method} #ExecuteMenu()
+{method} #AddTAFMenu()
+{method} #RefreshTafMenu()
+{method} +Create()
+{method} +Destroy()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +AuthorizationUpdated()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+
+}
+"MasterGUI" <|-- "DemoApplication"
+
+
+
+@enduml
+....
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Layout
+|image:DemoApplication.lvclass_Layout.vi.png[DemoApplication.lvclass:Layout.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ExecuteMenu
+|image:DemoApplication.lvclass_ExecuteMenu.vi.png[DemoApplication.lvclass:ExecuteMenu.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|AddTAFMenu
+|image:DemoApplication.lvclass_AddTAFMenu.vi.png[DemoApplication.lvclass:AddTAFMenu.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|RefreshTafMenu
+|image:DemoApplication.lvclass_RefreshTafMenu.vi.png[DemoApplication.lvclass:RefreshTafMenu.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DemoApplication_New
+|image:DemoApplication.lvclass_DemoApplication_New.vi.png[DemoApplication.lvclass:DemoApplication_New.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|DemoApplication_GetAttributes
+|image:DemoApplication.lvclass_DemoApplication_GetAttributes.vi.png[DemoApplication.lvclass:DemoApplication_GetAttributes.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DemoApplication_Create
+|image:DemoApplication.lvclass_DemoApplication_Create.vi.png[DemoApplication.lvclass:DemoApplication_Create.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create
+|image:DemoApplication.lvclass_Create.vi.png[DemoApplication.lvclass:Create.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Destroy
+|image:DemoApplication.lvclass_Destroy.vi.png[DemoApplication.lvclass:Destroy.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaces
+|image:DemoApplication.lvclass_GetExternalInterfaces.vi.png[DemoApplication.lvclass:GetExternalInterfaces.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterfaces
+|image:DemoApplication.lvclass_SetExternalInterfaces.vi.png[DemoApplication.lvclass:SetExternalInterfaces.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|AuthorizationUpdated
+|image:DemoApplication.lvclass_AuthorizationUpdated.vi.png[DemoApplication.lvclass:AuthorizationUpdated.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetPersistentConfiguration
+|image:DemoApplication.lvclass_GetPersistentConfiguration.vi.png[DemoApplication.lvclass:GetPersistentConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetPersistentConfiguration
+|image:DemoApplication.lvclass_SetPersistentConfiguration.vi.png[DemoApplication.lvclass:SetPersistentConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

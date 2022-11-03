@@ -1,0 +1,30 @@
+﻿
+{
+  "ObjectData":[	
+	  {
+		"ObjectName":"MasterGUI",
+		"Objects":[
+		  {
+			"Label":"Header",
+			"TargetObjectName":"Header",
+			"ObjectTypeLocation":"Source\\ActiveObjects\\HeaderTriekselSoft\\HeaderTriekselSoft.lvclass"
+		  },
+		  {
+			"Label":"ButtonBar",
+			"TargetObjectName":"ButtonBar",
+			"ObjectTypeLocation":"Source\\ActiveObjects\\VerticalButtonBar\\VerticalButtonBar.lvclass"
+		  },
+		  {
+			"Label":"Footer",
+			"TargetObjectName":"Footer",
+			"ObjectTypeLocation":"Source\\ActiveObjects\\FooterTriekselSoft\\FooterTriekselSoft.lvclass"
+		  },
+		  {
+			"Label":"MainFlexPanel",
+			"TargetObjectName":"MainFlexPanel",
+			"ObjectTypeLocation":"Source\\ActiveObjects\\FlexPanelDefault\\FlexPanelDefault.lvclass"
+		  }
+		]
+	  }
+	   ]
+}

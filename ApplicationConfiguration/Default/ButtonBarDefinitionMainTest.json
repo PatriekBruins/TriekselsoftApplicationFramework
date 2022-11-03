@@ -1,0 +1,77 @@
+// JSONtext Config File
+{
+  "Buttons":[
+    {
+      "ThisNavigationName":"root",
+      "ButtonLabel":"btn 1",
+      "Caption":"Doe iets",
+      "Tooltip":"iets",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"Call",
+          "TargetObject":"ButtonBar",
+          "Parameter":"doe",
+          "WaitUntilDone":true
+        },
+		{
+          "ActionType":"Call",
+          "TargetObject":"ButtonBar",
+          "Parameter":"ButtonStateLabel:OnlyOnce=True",
+          "WaitUntilDone":false
+       }
+      ],
+      "NextNavigationName":"Level 1"
+    },
+    {
+      "ThisNavigationName":"root",
+      "ButtonLabel":"btn 12",
+      "Caption":"Exit",
+      "Tooltip":"Stop the app",
+      "EnabledExpression":"1",
+      "Actions":[
+        {
+          "ActionType":"Call",
+          "TargetObject":"MasterGUI",
+          "Parameter":"Exit",
+          "WaitUntilDone":false
+        }
+      ],
+      "NextNavigationName":"root"
+    },
+		{
+		  "ThisNavigationName":"Level 1",
+		  "ButtonLabel":"btn 2",
+		  "Caption":"tweede",
+		  "Tooltip":"",
+		  "EnabledExpression":"OnlyOnce=True",
+		  "Actions":[],
+		  "NextNavigationName":"Level 2"
+		},
+		{
+		  "ThisNavigationName":"Level 1",
+		  "ButtonLabel":"btn 12",
+		  "Caption":"Back",
+		  "Tooltip":"",
+		  "EnabledExpression":"1",
+		  "Actions":[],
+		  "NextNavigationName":"root"
+		},
+			{
+			  "ThisNavigationName":"Level 2",
+			  "ButtonLabel":"btn 3",
+			  "Caption":"derde",
+			  "Tooltip":"",
+			  "EnabledExpression":"1",
+			  "Actions":[
+			  {
+				  "ActionType":"Call",
+				  "TargetObject":"ButtonBar",
+				  "Parameter":"ButtonStateLabel:OnlyOnce=False",
+				  "WaitUntilDone":false
+			   }
+			   ],
+			  "NextNavigationName":"Level 1"
+			}
+  ]
+}

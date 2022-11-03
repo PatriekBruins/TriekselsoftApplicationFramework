@@ -1,0 +1,56 @@
+@startuml
+
+title User Interface Button Bar Design: **ButtonBarDefinitionMainTest.json**
+
+left to right direction
+rectangle "**root**" as root {
+usecase "**Log On**\n|  Button  |  btn 1  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as rootbtn1
+usecase "**Exit**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |  Stop the application  |" as rootbtn12
+}
+rectangle "**LoggedOn**" as LoggedOn {
+usecase "**Product_Qualification**\n|  Button  |  btn 1  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn1
+usecase "**Show_Reports**\n|  Button  |  btn 3  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn3
+usecase "**User_Management**\n|  Button  |  btn 5  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn5
+usecase "**Configuration_Management**\n|  Button  |  btn 6  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn6
+usecase "**Service**\n|  Button  |  btn 7  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn7
+usecase "**Log out**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn12
+}
+rectangle "**ReportViewing**" as ReportViewing {
+usecase "**Back**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as ReportViewingbtn12
+}
+rectangle "**UserManagement**" as UserManagement {
+usecase "**Back**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as UserManagementbtn12
+}
+rectangle "**ConfigurationManagement**" as ConfigurationManagement {
+usecase "**Back**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as ConfigurationManagementbtn12
+}
+rectangle "**Service**" as Service {
+usecase "**Back**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Servicebtn12
+usecase "**Camera**\n|  Button  |  btn 1  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Servicebtn1
+usecase "**FaceDetect**\n|  Button  |  btn 2  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Servicebtn2
+}
+rectangle "**Qualification**" as Qualification {
+usecase "**Start_Qualification**\n|  Button  |  btn 1  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Qualificationbtn1
+usecase "**Abort_Qualification**\n|  Button  |  btn 11  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Qualificationbtn11
+usecase "**Back**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Qualificationbtn12
+}
+rootbtn1 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  UserManager  |    |\n|  Call  |  TRUE  |  UserManager  |  Expression:LoggedOn=True  |"
+rootbtn12 -right-> rootbtn12 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  Call  |  TRUE  |  MasterGUI  |  Exit  |"
+LoggedOnbtn1 --> Qualification : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  QualificationScreen  |  MainFlexPanel  |"
+LoggedOnbtn3 --> ReportViewing : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  ReportViewer  |  MainFlexPanel  |"
+LoggedOnbtn5 --> UserManagement : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  UserManager  |  MainFlexPanel  |"
+LoggedOnbtn6 --> ConfigurationManagement : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  ConfigurationManager  |  MainFlexPanel  |"
+LoggedOnbtn7 --> Service : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  ServiceScreen  |  MainFlexPanel  |"
+LoggedOnbtn12 --> root : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  Call  |  TRUE  |  UserManager  |  Expression:LoggedOn=False  |"
+ReportViewingbtn12 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  MainFlexPanel  |  MainFlexPanel  |"
+UserManagementbtn12 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  MainFlexPanel  |  MainFlexPanel  |"
+ConfigurationManagementbtn12 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  MainFlexPanel  |  MainFlexPanel  |"
+Servicebtn12 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  MainFlexPanel  |  MainFlexPanel  |"
+Servicebtn1 -right-> Servicebtn1 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  Cam1  |  MainFlexPanel  |"
+Servicebtn2 -right-> Servicebtn2 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  FaceDetect  |  MainFlexPanel  |"
+Qualificationbtn1 -right-> Qualificationbtn1 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  Call  |  TRUE  |  UserManager  |  Expression:QualificationStarted=True  |"
+Qualificationbtn11 -right-> Qualificationbtn11 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  Call  |  TRUE  |  UserManager  |  Expression:QualificationStarted=False  |"
+Qualificationbtn12 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  MainFlexPanel  |  MainFlexPanel  |"
+
+Legend **Legend of available Items**\n<#yellow>|  Buttons  |\n|  Abort_Qualification  |\n|  Back  |\n|  Camera  |\n|  Configuration_Management  |\n|  Exit  |\n|  FaceDetect  |\n|  Log On  |\n|  Log out  |\n|  Product_Qualification  |\n|  Service  |\n|  Show_Reports  |\n|  Start_Qualification  |\n|  User_Management  |\n\n<#yellow>|  Enabled Expression  |\n|  1  |\n\n<#yellow>|  Actions  |\n|  Call  |\n|  ShowGUI  |\n\n<#yellow>|  Objects  |\n|  Cam1  |\n|  ConfigurationManager  |\n|  FaceDetect  |\n|  MainFlexPanel  |\n|  MasterGUI  |\n|  QualificationScreen  |\n|  ReportViewer  |\n|  ServiceScreen  |\n|  UserManager  |\n\n<#yellow>|  Parameter  |\n|    |\n|  Exit  |\n|  Expression:LoggedOn=False  |\n|  Expression:LoggedOn=True  |\n|  Expression:QualificationStarted=False  |\n|  Expression:QualificationStarted=True  |\n|  MainFlexPanel  |\n
+@enduml

@@ -1,0 +1,168 @@
+== IApplicationConfiguration.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.0
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+interface "IApplicationConfiguration" {
+{static} {method} +ApplicationConfigurationName --constant()
+{method} +Create()
+{method} +GetObjectConfiguration()
+{method} +GetObjectConfigurationString()
+{method} +SetObjectConfiguration()
+{method} +SetObjectConfigurationString()
+{method} +GetAllObjectData()
+{method} +GetObjectExternalInterfaces()
+{method} +Open()
+{method} +SetApplicationBasePath()
+{method} +GetConfigurationBasePath()
+{method} +GetExternalInterfaceString()
+{method} +ListConfigurations()
+{method} +GetConfigurationString()
+{method} +SetConfigurationString()
+{method} +GetObjectData()
+
+}
+"IInterface" <|.. "IApplicationConfiguration"
+interface "IInterface" {}
+
+
+
+
+@enduml
+....
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|ApplicationConfigurationName --constant
+|image:IApplicationConfiguration.lvclass_ApplicationConfigurationName___constant.vi.png[IApplicationConfiguration.lvclass:ApplicationConfigurationName --constant.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create
+|image:IApplicationConfiguration.lvclass_Create.vi.png[IApplicationConfiguration.lvclass:Create.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectConfiguration
+|image:IApplicationConfiguration.lvclass_GetObjectConfiguration.vi.png[IApplicationConfiguration.lvclass:GetObjectConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectConfigurationString
+|image:IApplicationConfiguration.lvclass_GetObjectConfigurationString.vi.png[IApplicationConfiguration.lvclass:GetObjectConfigurationString.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetObjectConfiguration
+|image:IApplicationConfiguration.lvclass_SetObjectConfiguration.vi.png[IApplicationConfiguration.lvclass:SetObjectConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetObjectConfigurationString
+|image:IApplicationConfiguration.lvclass_SetObjectConfigurationString.vi.png[IApplicationConfiguration.lvclass:SetObjectConfigurationString.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetAllObjectData
+|image:IApplicationConfiguration.lvclass_GetAllObjectData.vi.png[IApplicationConfiguration.lvclass:GetAllObjectData.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectExternalInterfaces
+|image:IApplicationConfiguration.lvclass_GetObjectExternalInterfaces.vi.png[IApplicationConfiguration.lvclass:GetObjectExternalInterfaces.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Open
+|image:IApplicationConfiguration.lvclass_Open.vi.png[IApplicationConfiguration.lvclass:Open.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetApplicationBasePath
+|image:IApplicationConfiguration.lvclass_SetApplicationBasePath.vi.png[IApplicationConfiguration.lvclass:SetApplicationBasePath.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetConfigurationBasePath
+|image:IApplicationConfiguration.lvclass_GetConfigurationBasePath.vi.png[IApplicationConfiguration.lvclass:GetConfigurationBasePath.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaceString
+|image:IApplicationConfiguration.lvclass_GetExternalInterfaceString.vi.png[IApplicationConfiguration.lvclass:GetExternalInterfaceString.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ListConfigurations
+|image:IApplicationConfiguration.lvclass_ListConfigurations.vi.png[IApplicationConfiguration.lvclass:ListConfigurations.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetConfigurationString
+|image:IApplicationConfiguration.lvclass_GetConfigurationString.vi.png[IApplicationConfiguration.lvclass:GetConfigurationString.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetConfigurationString
+|image:IApplicationConfiguration.lvclass_SetConfigurationString.vi.png[IApplicationConfiguration.lvclass:SetConfigurationString.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectData
+|image:IApplicationConfiguration.lvclass_GetObjectData.vi.png[IApplicationConfiguration.lvclass:GetObjectData.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

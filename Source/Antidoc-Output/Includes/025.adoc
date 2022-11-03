@@ -1,0 +1,270 @@
+== Application.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.0
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "Application" {
+{field} -Ref : U32
+{static} {method} #GetApplicationReference()
+{static} {method} #Application_GetInstance()
+{static} {method} #RouteExternalInterfaces()
+{static} {method} #Application_New()
+{static} {method} #Application_GetAttributes()
+{static} {method} +Application_Init()
+{static} {method} +Application_CleanUp()
+{static} {method} +AddObject()
+{static} {method} +SetInterfaceConfiguration()
+{static} {method} +GetBasePath()
+{static} {method} +ObtainObjectsFromCluster()
+{static} {method} +GetObjectFromMemory()
+{static} {method} +CreateObject()
+{static} {method} +ObtainObject()
+{static} {method} +GetObjectConfiguration()
+{static} {method} +LoadAllPersistentData()
+{static} {method} +GetAllObjectsOfType()
+{static} {method} +GetConfigurationBasePath()
+{static} {method} +GetExistingObject()
+{static} {method} +SetObject()
+{static} {method} +DestroyAll()
+{static} {method} +PreloadObjects2()
+{static} {method} +CreateObjects()
+{static} {method} +SetExternalInterfaces()
+{static} {method} +SetExternalInterface()
+{static} {method} +SaveAllPersistentData()
+{static} {method} +GetClassLocation()
+{method} #Do_SetApplicationConfiguration()
+{method} #Do_GetObjectConfiguration()
+
+}
+
+
+
+@enduml
+....
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Do_SetApplicationConfiguration
+|image:Application.lvclass_Do_SetApplicationConfiguration.vi.png[Application.lvclass:Do_SetApplicationConfiguration.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Do_GetObjectConfiguration
+|image:Application.lvclass_Do_GetObjectConfiguration.vi.png[Application.lvclass:Do_GetObjectConfiguration.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetApplicationReference
+|image:Application.lvclass_GetApplicationReference.vi.png[Application.lvclass:GetApplicationReference.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Application_GetInstance
+|image:Application.lvclass_Application_GetInstance.vi.png[Application.lvclass:Application_GetInstance.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|RouteExternalInterfaces
+|image:Application.lvclass_RouteExternalInterfaces.vi.png[Application.lvclass:RouteExternalInterfaces.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Application_New
+|image:Application.lvclass_Application_New.vi.png[Application.lvclass:Application_New.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Application_GetAttributes
+|image:Application.lvclass_Application_GetAttributes.vi.png[Application.lvclass:Application_GetAttributes.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Application_Init
+|image:Application.lvclass_Application_Init.vi.png[Application.lvclass:Application_Init.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Application_CleanUp
+|image:Application.lvclass_Application_CleanUp.vi.png[Application.lvclass:Application_CleanUp.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|AddObject
+|image:Application.lvclass_AddObject.vi.png[Application.lvclass:AddObject.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetInterfaceConfiguration
+|image:Application.lvclass_SetInterfaceConfiguration.vi.png[Application.lvclass:SetInterfaceConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetBasePath
+|image:Application.lvclass_GetBasePath.vi.png[Application.lvclass:GetBasePath.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ObtainObjectsFromCluster
+|image:Application.lvclass_ObtainObjectsFromCluster.vim.png[Application.lvclass:ObtainObjectsFromCluster.vim]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|GetObjectFromMemory
+|image:Application.lvclass_GetObjectFromMemory.vi.png[Application.lvclass:GetObjectFromMemory.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|CreateObject
+|image:Application.lvclass_CreateObject.vi.png[Application.lvclass:CreateObject.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|ObtainObject
+|image:Application.lvclass_ObtainObject.vi.png[Application.lvclass:ObtainObject.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|GetObjectConfiguration
+|image:Application.lvclass_GetObjectConfiguration.vi.png[Application.lvclass:GetObjectConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|LoadAllPersistentData
+|image:Application.lvclass_LoadAllPersistentData.vi.png[Application.lvclass:LoadAllPersistentData.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetAllObjectsOfType
+|image:Application.lvclass_GetAllObjectsOfType.vim.png[Application.lvclass:GetAllObjectsOfType.vim]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|GetConfigurationBasePath
+|image:Application.lvclass_GetConfigurationBasePath.vi.png[Application.lvclass:GetConfigurationBasePath.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetExistingObject
+|image:Application.lvclass_GetExistingObject.vi.png[Application.lvclass:GetExistingObject.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetObject
+|image:Application.lvclass_SetObject.vi.png[Application.lvclass:SetObject.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|DestroyAll
+|image:Application.lvclass_DestroyAll.vi.png[Application.lvclass:DestroyAll.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|PreloadObjects2
+|image:Application.lvclass_PreloadObjects2.vi.png[Application.lvclass:PreloadObjects2.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|CreateObjects
+|image:Application.lvclass_CreateObjects.vi.png[Application.lvclass:CreateObjects.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterfaces
+|image:Application.lvclass_SetExternalInterfaces.vi.png[Application.lvclass:SetExternalInterfaces.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterface
+|image:Application.lvclass_SetExternalInterface.vi.png[Application.lvclass:SetExternalInterface.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SaveAllPersistentData
+|image:Application.lvclass_SaveAllPersistentData.vi.png[Application.lvclass:SaveAllPersistentData.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetClassLocation
+|image:Application.lvclass_GetClassLocation.vi.png[Application.lvclass:GetClassLocation.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

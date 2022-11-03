@@ -1,0 +1,20 @@
+﻿{
+  "StaticDocking":[
+    {
+      "ObjectLabel":"ButtonBar",
+      "SubPanelLabel":"ButtonBar"
+    },
+    {
+      "ObjectLabel":"Footer",
+      "SubPanelLabel":"Footer"
+    },
+    {
+      "ObjectLabel":"Header",
+      "SubPanelLabel":"Header"
+    },
+    {
+      "ObjectLabel":"MainFlexPanel",
+      "SubPanelLabel":"MainFlexPanel"
+    }
+  ]
+}

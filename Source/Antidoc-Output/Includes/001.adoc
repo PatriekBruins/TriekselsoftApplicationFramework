@@ -1,0 +1,8 @@
+== MasterGUI.lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+This library has no functions set to non private scope.

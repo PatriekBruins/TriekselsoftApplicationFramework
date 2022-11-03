@@ -1,0 +1,31 @@
+@startuml
+
+start
+
+: Gather Requirements;
+
+: Decide main application architecture;
+
+: Create Functional Decomposition;
+
+: Design Screen/Button flow;
+
+: Review Screen/Button flow;
+
+: Design Mockup GUIs;
+
+: Review Mockup GUIs;
+
+: Extend Functional Decomposition;
+
+: Create Application Architecture;
+
+: Define Interfaces;
+
+: Define Classes;
+
+
+
+
+
+@enduml

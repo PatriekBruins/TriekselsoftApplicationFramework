@@ -1,0 +1,7 @@
+﻿// JSONtext Config File
+{
+  "scaleFactor":10,
+  "minNeighbors":10,
+  "Color":255,
+  "Size":{"height":100,"width":100}
+}

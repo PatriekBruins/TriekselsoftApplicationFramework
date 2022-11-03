@@ -1,0 +1,193 @@
+== AppConfigJSON.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.0
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "AppConfigJSON" {
+{field} -Ref : U32
+{static} {method} #AppConfigJSON_New()
+{static} {method} #AppConfigJSON_GetAttributes()
+{static} {method} +AppConfigJSON_Create()
+{method} +Destroy()
+{method} +GetObjectConfiguration()
+{method} +SetObjectConfiguration()
+{method} +Open()
+{method} +Create()
+{method} +GetAllObjectData()
+{method} +GetObjectExternalInterfaces()
+{method} +SetApplicationBasePath()
+{method} +GetConfigurationBasePath()
+{method} +GetObjectConfigurationString()
+{method} +SetObjectConfigurationString()
+{method} +GetExternalInterfaceString()
+{method} +GetConfigurationString()
+{method} +ListConfigurations()
+{method} +SetConfigurationString()
+{method} +GetObjectData()
+
+}
+"IApplicationConfiguration" <|.. "AppConfigJSON"
+interface "IApplicationConfiguration" {}
+
+
+
+
+@enduml
+....
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|AppConfigJSON_New
+|image:AppConfigJSON.lvclass_AppConfigJSON_New.vi.png[AppConfigJSON.lvclass:AppConfigJSON_New.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|AppConfigJSON_GetAttributes
+|image:AppConfigJSON.lvclass_AppConfigJSON_GetAttributes.vi.png[AppConfigJSON.lvclass:AppConfigJSON_GetAttributes.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|AppConfigJSON_Create
+|image:AppConfigJSON.lvclass_AppConfigJSON_Create.vi.png[AppConfigJSON.lvclass:AppConfigJSON_Create.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Destroy
+|image:AppConfigJSON.lvclass_Destroy.vi.png[AppConfigJSON.lvclass:Destroy.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectConfiguration
+|image:AppConfigJSON.lvclass_GetObjectConfiguration.vi.png[AppConfigJSON.lvclass:GetObjectConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetObjectConfiguration
+|image:AppConfigJSON.lvclass_SetObjectConfiguration.vi.png[AppConfigJSON.lvclass:SetObjectConfiguration.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Open
+|image:AppConfigJSON.lvclass_Open.vi.png[AppConfigJSON.lvclass:Open.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create
+|image:AppConfigJSON.lvclass_Create.vi.png[AppConfigJSON.lvclass:Create.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetAllObjectData
+|image:AppConfigJSON.lvclass_GetAllObjectData.vi.png[AppConfigJSON.lvclass:GetAllObjectData.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectExternalInterfaces
+|image:AppConfigJSON.lvclass_GetObjectExternalInterfaces.vi.png[AppConfigJSON.lvclass:GetObjectExternalInterfaces.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetApplicationBasePath
+|image:AppConfigJSON.lvclass_SetApplicationBasePath.vi.png[AppConfigJSON.lvclass:SetApplicationBasePath.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetConfigurationBasePath
+|image:AppConfigJSON.lvclass_GetConfigurationBasePath.vi.png[AppConfigJSON.lvclass:GetConfigurationBasePath.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectConfigurationString
+|image:AppConfigJSON.lvclass_GetObjectConfigurationString.vi.png[AppConfigJSON.lvclass:GetObjectConfigurationString.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetObjectConfigurationString
+|image:AppConfigJSON.lvclass_SetObjectConfigurationString.vi.png[AppConfigJSON.lvclass:SetObjectConfigurationString.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaceString
+|image:AppConfigJSON.lvclass_GetExternalInterfaceString.vi.png[AppConfigJSON.lvclass:GetExternalInterfaceString.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetConfigurationString
+|image:AppConfigJSON.lvclass_GetConfigurationString.vi.png[AppConfigJSON.lvclass:GetConfigurationString.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ListConfigurations
+|image:AppConfigJSON.lvclass_ListConfigurations.vi.png[AppConfigJSON.lvclass:ListConfigurations.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetConfigurationString
+|image:AppConfigJSON.lvclass_SetConfigurationString.vi.png[AppConfigJSON.lvclass:SetConfigurationString.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectData
+|image:AppConfigJSON.lvclass_GetObjectData.vi.png[AppConfigJSON.lvclass:GetObjectData.vi]
+|No description found (add content in vi description)
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
