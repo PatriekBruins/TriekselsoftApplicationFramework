@@ -107,6 +107,15 @@
 				<Item Name="Draw Unflattened Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Unflattened Pixmap.vi"/>
 				<Item Name=".NET Object to Variant.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/dotnet.llb/.NET Object to Variant.vi"/>
 				<Item Name="Picture to Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Picture to Pixmap.vi"/>
+				<Item Name="QuickDrop Plugin Data ver1.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/QuickDropSupport/QuickDrop Plugin Data ver1.ctl"/>
+				<Item Name="QuickDrop Parse Plugin Variant.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/QuickDropSupport/QuickDrop Parse Plugin Variant.vi"/>
+				<Item Name="LVDeltaXY32Cluster.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVDeltaXY32Cluster.ctl"/>
+				<Item Name="TRef TravTarget.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef TravTarget.ctl"/>
+				<Item Name="TRef Traverse.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef Traverse.vi"/>
+				<Item Name="VI Scripting - Traverse.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/traverseref.llb/VI Scripting - Traverse.lvlib"/>
+				<Item Name="VIAnUtil Check Type If ErrClust.vi" Type="VI" URL="/&lt;vilib&gt;/addons/analyzer/_analyzerutils.llb/VIAnUtil Check Type If ErrClust.vi"/>
+				<Item Name="VIAnUtil Clear Specific Error.vi" Type="VI" URL="/&lt;vilib&gt;/addons/analyzer/_analyzerutils.llb/VIAnUtil Clear Specific Error.vi"/>
+				<Item Name="VIAnUtil Has Diagram.vi" Type="VI" URL="/&lt;vilib&gt;/addons/analyzer/_analyzerutils.llb/VIAnUtil Has Diagram.vi"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="MGI RWA Options Cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Options Cluster.ctl"/>
@@ -164,6 +173,52 @@
 			<Item Name="System.Drawing" Type="Document" URL="System.Drawing">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Nattify - Ensure Leftmost BD Object Is Visible.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Ensure Leftmost BD Object Is Visible.vi"/>
+			<Item Name="Nattify - Move All BD Objects.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Move All BD Objects.vi"/>
+			<Item Name="Nattify - Window Margins.ctl" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Window Margins.ctl"/>
+			<Item Name="Nattify - Min Window Dimensions.ctl" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Min Window Dimensions.ctl"/>
+			<Item Name="Nattify - Window Gaps.ctl" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Window Gaps.ctl"/>
+			<Item Name="Nattify - Rectangle Dimensions.ctl" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Rectangle Dimensions.ctl"/>
+			<Item Name="Nattify - Compute Window Bounds.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Compute Window Bounds.vi"/>
+			<Item Name="Nattify - Get Window Margins.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Get Window Margins.vi"/>
+			<Item Name="Nattify - Establish Window Bounds.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Establish Window Bounds.vi"/>
+			<Item Name="Nattify - Resize BD.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Resize BD.vi"/>
+			<Item Name="LV Config Read Numeric (I32).vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Numeric (I32).vi"/>
+			<Item Name="LV Config Read Color.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Color.vi"/>
+			<Item Name="LV Config Read Pathlist.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Pathlist.vi"/>
+			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
+			<Item Name="LV Config Read Boolean.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Boolean.vi"/>
+			<Item Name="LV Config Read.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read.vi"/>
+			<Item Name="Nattify - Window Type.ctl" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Window Type.ctl"/>
+			<Item Name="Nattify - Get Window Gaps.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Get Window Gaps.vi"/>
+			<Item Name="Nattify - Get Min Window Dimensions.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Get Min Window Dimensions.vi"/>
+			<Item Name="Nattify - Get Display Workspace Bounds.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Get Display Workspace Bounds.vi"/>
+			<Item Name="Nattify - Get Window INI tokens.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Get Window INI tokens.vi"/>
+			<Item Name="Nattify - Get BD Canvas Margin.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Get BD Canvas Margin.vi"/>
+			<Item Name="Nattify - Arrange BD.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Arrange BD.vi"/>
+			<Item Name="Patriek - Color Block Diagram.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Patriek - Color Block Diagram.vi"/>
+			<Item Name="Nattify - FP Objects Arrangement Info.ctl" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - FP Objects Arrangement Info.ctl"/>
+			<Item Name="Nattify - Resize FP.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Resize FP.vi"/>
+			<Item Name="Nattify - Arrange Other FP Objects.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Arrange Other FP Objects.vi"/>
+			<Item Name="Nattify - Get FP Controls Max Bottom.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Get FP Controls Max Bottom.vi"/>
+			<Item Name="Nattify - Align 1 Row of FP Controls.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Align 1 Row of FP Controls.vi"/>
+			<Item Name="Nattify - Compute Bound on Grid.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Compute Bound on Grid.vi"/>
+			<Item Name="Nattify - FP Control Info.ctl" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - FP Control Info.ctl"/>
+			<Item Name="Nattify - Get FP Controls Rows.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Get FP Controls Rows.vi"/>
+			<Item Name="Nattify - Arrange FP Controls Rows.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Arrange FP Controls Rows.vi"/>
+			<Item Name="Nattify - Space FP Controls.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Space FP Controls.vi"/>
+			<Item Name="Nattify - Compute Top Row Vertical Delta.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Compute Top Row Vertical Delta.vi"/>
+			<Item Name="Nattify - Arrange FP Controls Columns.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Arrange FP Controls Columns.vi"/>
+			<Item Name="Nattify - Order FP Conn Pane Controls.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Order FP Conn Pane Controls.vi"/>
+			<Item Name="Nattify - Filter FP Conn Pane Controls.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Filter FP Conn Pane Controls.vi"/>
+			<Item Name="Nattify - Arrange FP Controls.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Arrange FP Controls.vi"/>
+			<Item Name="Nattify - Get FP Objects Arrangement Info.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Get FP Objects Arrangement Info.vi"/>
+			<Item Name="Nattify - Arrange FP.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Nattify - Arrange FP.vi"/>
+			<Item Name="Patriek - Align Terminals.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Patriek - Align Terminals.vi"/>
+			<Item Name="Enum Choice Array.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Enum Choice Array.vi"/>
+			<Item Name="Patriek - CamelCaseSplitter.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Patriek - CamelCaseSplitter.vi"/>
+			<Item Name="Patriek - CamelCaseIt.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Patriek - CamelCaseIt.vi"/>
+			<Item Name="Triekselfy.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/Triekselfy.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

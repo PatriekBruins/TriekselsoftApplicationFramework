@@ -215,7 +215,6 @@
       "ButtonLabel":"btn 1",
       "Caption":"Start_Qualification",
       "Tooltip":"",
-//      "EnabledExpression":"QualificationStarted=False",
       "EnabledExpression":"1",
       "Actions":[
 //        {
@@ -239,14 +238,14 @@
       "Caption":"Abort_Qualification",
       "Tooltip":"",
       "EnabledExpression":"Expression:QualificationStarted=True",
-      "EnabledExpression":"1",
+//      "EnabledExpression":"1",
       "Actions":[
-//        {
+        {
  //         "ActionType":"Call",
  //         "TargetObject":"TestExecutor",
 //          "Parameter":"Abort",
 //          "WaitUntilDone":true
- //       },
+        },
 		{
           "ActionType":"Call",
           "TargetObject":"UserManager",

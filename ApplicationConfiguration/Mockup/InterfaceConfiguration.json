@@ -7,35 +7,43 @@
 		"Interfaces":[
 			{
 			"Label":"Authorizer",
-			"ObjectName":"UserManager"
+			"ObjectName":"UserManager",
+			"Type":"IAuthorization.lvclass"
 			},
 			{
 			"Label":"TextViewer",
-			"ObjectName":"TextViewer"
+			"ObjectName":"TextViewer",
+			"Type":"ITAFTextViewer.lvclass"
 			},
 			{
 			"Label":"ApplicationConfiguration",
-			"ObjectName":"ApplicationConfiguration"
+			"ObjectName":"ApplicationConfiguration",
+			"Type":"IApplicationConfiguration.lvclass"
 			},
 			{
 			"Label":"Tracer",
-			"ObjectName":"Tracer"
+			"ObjectName":"Tracer",
+			"Type":"IFrontPanel.lvclass"
 			},
 			{
 			"Label":"Header",
-			"ObjectName":"Header"
+			"ObjectName":"Header",
+			"Type":"IFrontPanel.lvclass"
 			},
 			{
 			"Label":"ButtonBar",
-			"ObjectName":"ButtonBar"
+			"ObjectName":"ButtonBar",
+			"Type":"IFrontPanel.lvclass"
 			},
 			{
 			"Label":"Footer",
-			"ObjectName":"Footer"
+			"ObjectName":"Footer",
+			"Type":"IFrontPanel.lvclass"
 			},
 			{
 			"Label":"MainFlexPanel",
-			"ObjectName":"MainFlexPanel"
+			"ObjectName":"MainFlexPanel",
+			"Type":"IFrontPanel.lvclass"
 			}
 		]
 	}, 	
@@ -44,7 +52,8 @@
 		"ObjectType":"JSONTextViewer.lvclass",
 		"Interfaces":[
 		{	"Label":"ApplicationConfiguration",
-			"ObjectName":"ApplicationConfiguration"
+			"ObjectName":"ApplicationConfiguration",
+			"Type":"IApplicationConfiguration.lvclass"
 		}
 		]
 	}, 
@@ -95,11 +104,13 @@
 		"Interfaces":[
 			{
 			"Label":"IDockGUI",
-			"ObjectName":"MasterGUI"
+			"ObjectName":"MasterGUI",
+			"Type":"IDockGUI.lvclass"
 			},		  
 			{
 			"Label":"Authorizer",
-			"ObjectName":"UserManager"
+			"ObjectName":"UserManager",
+			"Type":"IAuthorization.lvclass"
 			}
 		]
 	},	  
@@ -109,7 +120,8 @@
 		"Interfaces":[
 		  {
 			"Label":"ActivationUpdated",
-			"ObjectName":"ActivationUpdated"
+			"ObjectName":"ActivationUpdated",
+			"Type":"IAuthorizationUpdated.lvclass"
 		  }
 		]
 	},
@@ -119,11 +131,13 @@
 		"Interfaces":[
 			{
 			"Label":"TargetClasses_idx_0",
-			"ObjectName":"ButtonBar"
+			"ObjectName":"ButtonBar",
+			"Type":"IAuthorizationUpdated.lvclass"
 			},
 			{
 			"Label":"TargetClasses_idx_1",
-			"ObjectName":"MasterGUI"
+			"ObjectName":"MasterGUI",
+			"Type":"IAuthorizationUpdated.lvclass"
 			}
 		]
 	},
@@ -138,7 +152,8 @@
 		"Interfaces":[
 			{
 			"Label":"INewOpenCvMat",
-			"ObjectName":"FaceDetect"
+			"ObjectName":"FaceDetect",
+			"Type":"INewOpenCvMat.lvclass"
 			}
 		]
 	}
