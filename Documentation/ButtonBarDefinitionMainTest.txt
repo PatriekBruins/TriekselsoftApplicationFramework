@@ -30,13 +30,13 @@ usecase "**Camera**\n|  Button  |  btn 1  |\n|  Enable If  |  1  |\n|  Tooltip  
 usecase "**FaceDetect**\n|  Button  |  btn 2  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Servicebtn2
 }
 rectangle "**Qualification**" as Qualification {
-usecase "**Start_Qualification**\n|  Button  |  btn 1  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Qualificationbtn1
-usecase "**Abort_Qualification**\n|  Button  |  btn 11  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Qualificationbtn11
+usecase "**Start_Qualification**\n|  Button  |  btn 1  |\n|  Enable If  |  QualificationStarted=False  |\n|  Tooltip  |    |" as Qualificationbtn1
+usecase "**Abort_Qualification**\n|  Button  |  btn 11  |\n|  Enable If  |  QualificationStarted=True  |\n|  Tooltip  |    |" as Qualificationbtn11
 usecase "**Back**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Qualificationbtn12
 }
 rootbtn1 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  UserManager  |    |\n|  Call  |  TRUE  |  UserManager  |  Expression:LoggedOn=True  |"
 rootbtn12 -right-> rootbtn12 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  Call  |  TRUE  |  MasterGUI  |  Exit  |"
-LoggedOnbtn1 --> Qualification : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  QualificationScreen  |  MainFlexPanel  |"
+LoggedOnbtn1 --> Qualification : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  QualificationScreen  |  MainFlexPanel  |\n|  Call  |  TRUE  |  UserManager  |  Expression:QualificationStarted=False  |"
 LoggedOnbtn3 --> ReportViewing : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  ReportViewer  |  MainFlexPanel  |"
 LoggedOnbtn5 --> UserManagement : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  UserManager  |  MainFlexPanel  |"
 LoggedOnbtn6 --> ConfigurationManagement : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  ConfigurationManager  |  MainFlexPanel  |"
@@ -52,5 +52,5 @@ Qualificationbtn1 -right-> Qualificationbtn1 : "<#lightgray>|  ActionType  |  Sy
 Qualificationbtn11 -right-> Qualificationbtn11 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  Call  |  TRUE  |  UserManager  |  Expression:QualificationStarted=False  |"
 Qualificationbtn12 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  MainFlexPanel  |  MainFlexPanel  |"
 
-Legend **Legend of available Items**\n<#yellow>|  Buttons  |\n|  Abort_Qualification  |\n|  Back  |\n|  Camera  |\n|  Configuration_Management  |\n|  Exit  |\n|  FaceDetect  |\n|  Log On  |\n|  Log out  |\n|  Product_Qualification  |\n|  Service  |\n|  Show_Reports  |\n|  Start_Qualification  |\n|  User_Management  |\n\n<#yellow>|  Enabled Expression  |\n|  1  |\n\n<#yellow>|  Actions  |\n|  Call  |\n|  ShowGUI  |\n\n<#yellow>|  Objects  |\n|  Cam1  |\n|  ConfigurationManager  |\n|  FaceDetect  |\n|  MainFlexPanel  |\n|  MasterGUI  |\n|  QualificationScreen  |\n|  ReportViewer  |\n|  ServiceScreen  |\n|  UserManager  |\n\n<#yellow>|  Parameter  |\n|    |\n|  Exit  |\n|  Expression:LoggedOn=False  |\n|  Expression:LoggedOn=True  |\n|  Expression:QualificationStarted=False  |\n|  Expression:QualificationStarted=True  |\n|  MainFlexPanel  |\n
+Legend **Legend of available Items**\n<#yellow>|  Buttons  |\n|  Abort_Qualification  |\n|  Back  |\n|  Camera  |\n|  Configuration_Management  |\n|  Exit  |\n|  FaceDetect  |\n|  Log On  |\n|  Log out  |\n|  Product_Qualification  |\n|  Service  |\n|  Show_Reports  |\n|  Start_Qualification  |\n|  User_Management  |\n\n<#yellow>|  Enabled Expression  |\n|  1  |\n|  QualificationStarted=False  |\n|  QualificationStarted=True  |\n\n<#yellow>|  Actions  |\n|  Call  |\n|  ShowGUI  |\n\n<#yellow>|  Objects  |\n|  Cam1  |\n|  ConfigurationManager  |\n|  FaceDetect  |\n|  MainFlexPanel  |\n|  MasterGUI  |\n|  QualificationScreen  |\n|  ReportViewer  |\n|  ServiceScreen  |\n|  UserManager  |\n\n<#yellow>|  Parameter  |\n|    |\n|  Exit  |\n|  Expression:LoggedOn=False  |\n|  Expression:LoggedOn=True  |\n|  Expression:QualificationStarted=False  |\n|  Expression:QualificationStarted=True  |\n|  MainFlexPanel  |\n
 @enduml
