@@ -58,6 +58,12 @@
           "TargetObject":"QualificationScreen",
           "Parameter":"MainFlexPanel",
           "WaitUntilDone":true
+        },
+		{
+          "ActionType":"Call",
+          "TargetObject":"UserManager",
+          "Parameter":"Expression:QualificationStarted=False",
+          "WaitUntilDone":true
         }
       ],
       "NextNavigationName":"Qualification"
@@ -215,7 +221,7 @@
       "ButtonLabel":"btn 1",
       "Caption":"Start_Qualification",
       "Tooltip":"",
-      "EnabledExpression":"1",
+      "EnabledExpression":"QualificationStarted=False",
       "Actions":[
 //        {
 //          "ActionType":"Call",
@@ -237,15 +243,15 @@
       "ButtonLabel":"btn 11",
       "Caption":"Abort_Qualification",
       "Tooltip":"",
-      "EnabledExpression":"Expression:QualificationStarted=True",
+      "EnabledExpression":"QualificationStarted=True",
 //      "EnabledExpression":"1",
       "Actions":[
-        {
+ //       {
  //         "ActionType":"Call",
  //         "TargetObject":"TestExecutor",
 //          "Parameter":"Abort",
 //          "WaitUntilDone":true
-        },
+ //       },
 		{
           "ActionType":"Call",
           "TargetObject":"UserManager",
