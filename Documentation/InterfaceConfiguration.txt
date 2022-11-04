@@ -4,7 +4,7 @@ class TextViewer << JSONTextViewer.lvclass  >>
 class ApplicationConfiguration << AppConfigJSON.lvclass  >>
 class Tracer << TraceWindow.lvclass  >>
 class Header << HeaderTriekselSoft.lvclass  >>
-class Footer << FooterTriekselSoft.lvclass  >>
+class Footer << YAFFooter.lvclass  >>
 class MainFlexPanel << FlexPanelDefault.lvclass  >>
 class ConfigurationManager << Mockup_ConfigurationManager.lvclass  >>
 class ServiceScreen << Mockup_ServiceScreen.lvclass  >>
@@ -32,6 +32,8 @@ MasterGUI : (IFrontPanel.lvclass) Footer: Footer
 MasterGUI : (IFrontPanel.lvclass) MainFlexPanel: MainFlexPanel
 TextViewer o-- ApplicationConfiguration : IApplicationConfiguration.lvclass
 TextViewer : (IApplicationConfiguration.lvclass) ApplicationConfiguration: ApplicationConfiguration
+Footer o-- Tracer : ITAFFilteredTrace.lvclass
+Footer : (ITAFFilteredTrace.lvclass) TracerSource: Tracer
 ButtonBar o-- MasterGUI : IDockGUI.lvclass
 ButtonBar o-- UserManager : IAuthorization.lvclass
 ButtonBar : (IDockGUI.lvclass) IDockGUI: MasterGUI

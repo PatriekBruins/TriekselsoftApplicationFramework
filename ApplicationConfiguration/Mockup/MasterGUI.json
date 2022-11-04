@@ -18,7 +18,6 @@
       "SubPanelLabel":"MainFlexPanel"
     }
   ],
-  "WindowsTitle":"TriekselSoft Demo Application",
   "MenuEnables":[
     {
       "MenuTag":"TAF",
@@ -37,5 +36,14 @@
     }
   ],
   "TraceObjectName":"Tracer",
-  "TextDockSubPanelName":"MainFlexPanel"
+  "TextDockSubPanelName":"MainFlexPanel",
+  "WindowsProperties":{
+    "WindowsTitle":"TriekselSoft Demo Application",
+    "Centered":true,
+    "Position":{"X":200,"Y":200},
+    "Size":{"X":1024,"Y":768},
+    "Minimizable":true,
+    "State":"Standard",
+    "Resizable":true
+  }
 }

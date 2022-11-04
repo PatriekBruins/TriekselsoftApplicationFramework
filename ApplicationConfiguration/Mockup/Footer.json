@@ -1,0 +1,10 @@
+﻿// JSONtext Config File
+{
+  "Filter":[
+    {
+      "TraceColumn":1,
+      "FilterFunction":"Exact",
+      "SearchText":"Error"
+    }
+  ]
+}

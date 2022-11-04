@@ -74,8 +74,14 @@
 	}, 
 	{
 		"ObjectName":"Footer",
-		"ObjectType":"FooterTriekselSoft.lvclass",
-		"Interfaces":[]
+		"ObjectType":"YAFFooter.lvclass",
+		"Interfaces":[
+		{
+			"Label":"TracerSource",
+			"ObjectName":"Tracer",
+			"Type":"ITAFFilteredTrace.lvclass"
+		}
+		]
 	}, 
 	{
 		"ObjectName":"MainFlexPanel",
