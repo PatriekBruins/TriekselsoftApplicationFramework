@@ -25,16 +25,16 @@
 	<Property Name="NI.LVClass.IsInterface" Type="Bool">true</Property>
 	<Property Name="NI.LVClass.LowestCompatibleVersion" Type="Str">1.0.0.0</Property>
 	<Item Name="Parent Libraries" Type="Parent Libraries">
-		<Item Name="IInterface.lvclass" Type="Parent" URL="../../../../IInterface/IInterface.lvclass"/>
+		<Item Name="IInterface.lvclass" Type="Parent" URL="../../../Interface_TAF_IInterface/IInterface/IInterface.lvclass"/>
 	</Item>
 	<Item Name="GetFrontPanel.vi" Type="VI" URL="../GetFrontPanel.vi">
-		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%\!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AF&amp;=H*P=C"0&gt;81!"!!!!$:!=!!?!!!&lt;'5:S&lt;WZU5'&amp;O:7R$&lt;WZU=G^M,GRW9WRB=X-!%5:S&lt;WZU5'&amp;O:7R$&lt;WZU=G^M!#J!=!!?!!!6%UF'=G^O&gt;&amp;"B&lt;G6M,GRW9WRB=X-!#G^C;G6D&gt;#"P&gt;81!!":!5!!$!!!!!1!##%6S=G^S)%FO!!!I1(!!(A!!&amp;2.*2H*P&lt;H2197ZF&lt;#ZM&gt;G.M98.T!!FP9GJF9X1A;7Y!6!$Q!!Q!!Q!%!!5!"A!%!!1!"!!%!!=!"!!%!!A#!!"Y!!!.#!!!!!!!!!E!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!!!!!!*!!!!!!!1!*!!!!!!</Property>
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%X!!!!#A!-1#%'5X2B&gt;(6T!!!,1!-!"%.P:'5!!""!-0````]'5W^V=G.F!!!71&amp;!!!Q!!!!%!!AB&amp;=H*P=E^V&gt;!!!"!!!!$:!=!!?!!!&lt;'5:S&lt;WZU5'&amp;O:7R$&lt;WZU=G^M,GRW9WRB=X-!%5:S&lt;WZU5'&amp;O:7R$&lt;WZU=G^M!#B!=!!?!!!6%UF'=G^O&gt;&amp;"B&lt;G6M,GRW9WRB=X-!#5^C;G6D&gt;%^V&gt;!!51&amp;!!!Q!!!!%!!A&gt;&amp;=H*P=EFO!#B!=!!?!!!6%UF'=G^O&gt;&amp;"B&lt;G6M,GRW9WRB=X-!#%^C;G6D&gt;%FO!!"5!0!!$!!$!!1!"1!'!!1!"!!%!!1!"Q!%!!1!#!)!!(A!!!U)!!!!!!!!#1!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!E!!!!!!"!!E!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-		<Property Name="NI.ClassItem.Flags" Type="Int">1073741824</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.MustOverride" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1115685376</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1350574592</Property>
 	</Item>
 </LVClass>
