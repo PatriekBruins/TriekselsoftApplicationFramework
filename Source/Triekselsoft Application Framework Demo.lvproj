@@ -29,10 +29,11 @@
 		</Item>
 		<Item Name="DemoApplication.lvclass" Type="LVClass" URL="../DemoApplication/DemoApplication.lvclass"/>
 		<Item Name="_Main.vi" Type="VI" URL="../_Main.vi"/>
-		<Item Name="TemplateGUI.lvlib" Type="Library" URL="../TemplateGUI/TemplateGUI.lvlib"/>
+		<Item Name="TemplateGUIOpenGDSActiveObject.lvlib" Type="Library" URL="../TemplateGUI/TemplateGUIOpenGDSActiveObject.lvlib"/>
 		<Item Name="ErrorCreationTAF.lvclass" Type="LVClass" URL="../ErrorCreationTAF/ErrorCreationTAF.lvclass"/>
 		<Item Name="BusAuthorizationUpdated.lvclass" Type="LVClass" URL="../BusAuthorizationUpdated/BusAuthorizationUpdated.lvclass"/>
 		<Item Name="IInterface.lvclass" Type="LVClass" URL="../IInterface/IInterface.lvclass"/>
+		<Item Name="TemplateGUITAF.lvlib" Type="Library" URL="../TemplateGUIYAF/TemplateGUITAF.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>

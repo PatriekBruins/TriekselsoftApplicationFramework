@@ -5,5 +5,5 @@
     "OpenAtStartUp":true,
     "OpenMinimized":true
   },
-  "OpenAtClosure":true,
+  "OpenAtClosure":false,
 }
