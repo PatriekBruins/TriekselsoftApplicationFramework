@@ -3,5 +3,6 @@
   "scaleFactor":10,
   "minNeighbors":10,
   "Color":255,
-  "Size":{"height":100,"width":100}
+  "Size":{"height":100,"width":100},
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
 }

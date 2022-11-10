@@ -192,4 +192,22 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1350574592</Property>
 	</Item>
+	<Item Name="FileInfo.ctl" Type="VI" URL="../FileInfo.ctl">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!"%!!!!!1!]!0%!!!!!!!!!!C&amp;*18"Q&lt;'FD982J&lt;WZ$&lt;WZG;7&gt;V=G&amp;U;7^O,GRW9WRB=X-*1W^O&gt;(*P&lt;#!R!!A!!!!"!!!!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">5242880</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1074541056</Property>
+	</Item>
+	<Item Name="DefaultDocumentTypes.ctl" Type="VI" URL="../DefaultDocumentTypes.ctl">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!"%!!!!!1!]!0%!!!!!!!!!!C&amp;*18"Q&lt;'FD982J&lt;WZ$&lt;WZG;7&gt;V=G&amp;U;7^O,GRW9WRB=X-*1W^O&gt;(*P&lt;#!S!!A!!!!"!!!!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">5242880</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1074541056</Property>
+	</Item>
 </LVClass>

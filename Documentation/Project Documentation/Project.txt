@@ -1,0 +1,122 @@
+= Triekselsoft Application Framework (TAF)
+
+= Introduction
+
+Welcome to the Triekselsoft application framework
+
+In my search on the internet for an application framework build in LabVIEW, I came across very
+little examples.
+Sure, there are many frameworks like Actor framework, DQMH, etc.
+But a framework to build a fully operational application I found hard to find.
+What I did see was that every company builds it's one and likes to keep that to themselves.
+Can't blame them.
+
+Since I have some experience in developing LabVIEW applications this is my attempt to give
+back to the community a bit of what i've received.
+I found some spare time to fill this gab.
+
+
+I hope this might help you in developing yours, either by re-using some ideas, modules or perhaps
+the complete framework.
+Please feel free to do some, although I'd like to get some feedback :)
+
+= Top level functionalities
+
+* Splash screen startup VI
+* Configurable main panel using Json file
+* Configurable subpanels and layout, either by Json file for the static allocations and via software API
+* Configurable button bar with dynamic button visibility and actions defined by button press. All via Json config file
+* Build-in debug tracing
+* Configurable menu by Json file
+* Build-in menu items for editing json config files
+* Build-in menu items for opening front panel and diagrams of user interface supported objects
+* Source code documentation generation, using Antidoc (wonderfull stuff)
+* Central managed error code database, using sqlite and ExpressVIs
+* Loose coupling between objects by using interfaces
+
+= Architecture
+
+Before getting started with a short explanation on the architecture I should mention that it
+heavily relies on object oriented design using Interfaces. So if you're not into this it might be a little tough, although
+I think it's worth chewing on it.
+
+The starting point is an object.
+
+An object has a number of methods to execute tasks. These methods are captured by the interfaces 
+the object supports. Communication to the object is preferrably never by using direct call to the methods
+but by using the interface of the object.
+
+Okay, so we can talk to the object by using it's supported interfaces. But objects probably want to talk to other objects as well.
+Normally just use composition/aggregation: one object contains the other. Nicely hardcoded and thus tight coupled.
+The TAF framework tries to de-couple these aggregations. How?
+
+By providing these object dependencies upfront, at the start of the application. 
+By using a json configuration file that defines all objects used, and per object provide the composed objects.
+And to make life still a bit more complex, the aggregated object doesn't use the dependent object itself.
+It defines just the interface to the object. So in the end the aggregated object consists of one or more interfaces.
+These must be filled by actual instances of objects that support these interfaces in order for the aggregated class to perform its purpose.
+Let's take an example:
+
+image:CarExample.png[CarExample.png] 
+
+So we have a car. This can be turned on and off by using the ICarControl interface.
+
+And the car needs to control the breaks, controlling the speed and the steering by using interfaces. 
+
+* for the break we can use a couple feed or the wheelbreak
+* for the speed we can use again a couple of feed or the engine
+* for the steering we can use a joystick or a steering wheel
+
+So what does a particular car instance actually use? Say we want a car that just uses feed and a joystick then
+we configure in our TAF framework json file that the attributes Break and Gas both contain the UsingFeed class, therfore
+using the feed that supports both the interfaces. And for the attribute Steering we provide the Joystick object which supports the ISteeringSystem interface.
+
+Then we have created a car but the car itself isn't aware of the actual instance of the objects that is uses. It's only aware of the interfaces it needs.
+
+The TAF InterfaceConfiguration json file would look like this:
+
+....
+{
+	"Objects":[	
+	{
+		"ObjectName":"ImaginaryCar",
+		"ObjectType":"Car.lvclass"
+		"Interfaces":[
+			{
+			"Label":"Break",
+			"ObjectName":"MyFeed",
+			"Type":"IBreakSystem.lvclass"
+			},
+			{
+			"Label":"Gas",
+			"ObjectName":"MyFeed",
+			"Type":"ISpeedSystem.lvclass"
+			},
+			{
+			"Label":"Steering",
+			"ObjectName":"Joystick",
+			"Type":"ISteeringSystem.lvclass"
+			}
+		]
+	},	
+	{
+		"ObjectName":"MyFeed",
+		"ObjectType":"UsingFeed.lvclass",
+		"Interfaces":[]
+	}, 
+	{
+		"ObjectName":"ThatJoystick",
+		"ObjectType":"joystick.lvclass",
+		"Interfaces":[]
+	}
+]
+}
+....
+
+Resulting in the actual used UML Diagram at runtime.
+
+image:InterfaceConfiguration.png[InterfaceConfiguration.png] 
+
+Or in LabVIEW for the Car class attributes
+
+image:CarInLabVIEW.png[CarInLabVIEW.png] 

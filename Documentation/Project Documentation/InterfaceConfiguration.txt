@@ -1,0 +1,11 @@
+@startuml
+class ImaginaryCar << Car.lvclass  >>
+class MyFeed << UsingFeed.lvclass  >>
+class ThatJoystick << joystick.lvclass  >>
+ImaginaryCar o-- MyFeed : IBreakSystem.lvclass
+ImaginaryCar o-- MyFeed : ISpeedSystem.lvclass
+ImaginaryCar o-- ThatJoystick : ISteeringSystem.lvclass
+ImaginaryCar : (IBreakSystem.lvclass) Break: MyFeed
+ImaginaryCar : (ISpeedSystem.lvclass) Gas: MyFeed
+ImaginaryCar : (ISteeringSystem.lvclass) Steering: ThatJoystick
+@enduml

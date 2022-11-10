@@ -1,3 +1,4 @@
 ﻿{
-  "ButtonDefinitionFile":"ButtonBarDefinitionMainTest.json"
+  "ButtonDefinitionFile":"ButtonBarDefinitionMainTest.json",
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
 }

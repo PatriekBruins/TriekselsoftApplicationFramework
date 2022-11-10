@@ -1,0 +1,48 @@
+@startuml
+
+class Car
+Car : IBreakSystem Break
+Car : ISpeedSystem Gas
+Car : ISteeringSystem Steering
+
+Car : On()
+Car : Off()
+
+interface IBreakSystem
+interface ISpeedSystem
+interface ISteeringSystem
+interface ICarControl
+
+ICarControl : On()
+ICarControl : Off()
+ICarControl <|.. Car
+
+ISpeedSystem : Speed()
+IBreakSystem : BreakPercentage()
+ISteeringSystem : SteeringAngle()
+
+class UsingFeed
+UsingFeed : Speed()
+UsingFeed : BreakPercentage()
+
+ISpeedSystem <|.. UsingFeed
+IBreakSystem <|.. UsingFeed
+
+class UsingEngine
+UsingEngine : Speed()
+ISpeedSystem <|.. UsingEngine
+
+class UsingWheelBreak
+UsingWheelBreak : BreakPercentage()
+IBreakSystem <|.. UsingWheelBreak
+
+class SteeringWheel
+SteeringWheel : SteeringAngle()
+ISteeringSystem <|.. SteeringWheel
+
+class Joystick
+Joystick : SteeringAngle()
+ISteeringSystem <|.. Joystick
+
+
+@enduml

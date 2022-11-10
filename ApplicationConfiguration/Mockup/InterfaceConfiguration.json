@@ -1,6 +1,10 @@
 ﻿// JSONtext Config File
 {
-  "Objects":[	
+	"TAFFileInfo":
+	{
+		"Type":"InterfaceConfiguration"
+	},
+	"Objects":[	
 	{
 		"ObjectName":"MasterGUI",
 		"ObjectType":"DemoApplication.lvclass"

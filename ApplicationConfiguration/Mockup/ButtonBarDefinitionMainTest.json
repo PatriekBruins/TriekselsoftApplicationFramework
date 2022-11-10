@@ -1,6 +1,10 @@
 ﻿// JSONtext Config File
 {
-  "Buttons":[
+	"TAFFileInfo":
+	{
+		"Type":"ButtonDefinition"
+	},
+	"Buttons":[
     {
       "ThisNavigationName":"root",
       "ButtonLabel":"btn 1",

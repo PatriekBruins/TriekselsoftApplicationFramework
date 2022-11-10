@@ -45,5 +45,6 @@
     "Minimizable":true,
     "State":"Standard",
     "Resizable":true
-  }
+  },
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
 }

@@ -18,8 +18,43 @@
 		<Item Name="ApplicationConfiguration" Type="Folder" URL="../../ApplicationConfiguration">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="ActiveObjects" Type="Folder" URL="../ActiveObjects">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="ActiveObjects" Type="Folder">
+			<Item Name="BusAuthorizationUpdated" Type="Folder">
+				<Item Name="BusAuthorizationUpdated.lvclass" Type="LVClass" URL="../ActiveObjects/BusAuthorizationUpdated/BusAuthorizationUpdated.lvclass"/>
+			</Item>
+			<Item Name="FlexPanelDefault" Type="Folder">
+				<Item Name="FlexPanelDefault.lvclass" Type="LVClass" URL="../ActiveObjects/FlexPanelDefault/FlexPanelDefault.lvclass"/>
+			</Item>
+			<Item Name="Footer" Type="Folder">
+				<Item Name="Footer.lvclass" Type="LVClass" URL="../ActiveObjects/Footer/Footer.lvclass"/>
+			</Item>
+			<Item Name="FooterTriekselSoft" Type="Folder">
+				<Item Name="FooterTriekselSoft.lvclass" Type="LVClass" URL="../ActiveObjects/FooterTriekselSoft/FooterTriekselSoft.lvclass"/>
+			</Item>
+			<Item Name="HeaderTriekselSoft" Type="Folder">
+				<Item Name="HeaderTriekselSoft.lvclass" Type="LVClass" URL="../ActiveObjects/HeaderTriekselSoft/HeaderTriekselSoft.lvclass"/>
+			</Item>
+			<Item Name="JSONTextViewer" Type="Folder">
+				<Item Name="JSONTextViewer" Type="Folder">
+					<Item Name="properties" Type="Folder"/>
+					<Item Name="protected" Type="Folder"/>
+					<Item Name="utils" Type="Folder"/>
+				</Item>
+				<Item Name="JSONTextViewer.lvlib" Type="Library" URL="../ActiveObjects/JSONTextViewer/JSONTextViewer.lvlib"/>
+			</Item>
+			<Item Name="UserManager" Type="Folder">
+				<Item Name="UserManager" Type="Folder">
+					<Item Name="protected" Type="Folder"/>
+					<Item Name="SetLabel.vi" Type="VI" URL="../ActiveObjects/UserManager/UserManager/SetLabel.vi"/>
+				</Item>
+			</Item>
+			<Item Name="VerticalButtonBar" Type="Folder">
+				<Item Name="ButtonCollection" Type="Folder">
+					<Item Name="ButtonCollection.lvclass" Type="LVClass" URL="../ActiveObjects/VerticalButtonBar/ButtonCollection/ButtonCollection.lvclass"/>
+				</Item>
+				<Item Name="properties" Type="Folder"/>
+				<Item Name="VerticalButtonBar.lvclass" Type="LVClass" URL="../ActiveObjects/VerticalButtonBar/VerticalButtonBar.lvclass"/>
+			</Item>
 		</Item>
 		<Item Name="Mockups" Type="Folder" URL="../Mockups">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -123,6 +158,19 @@
 				<Item Name="Check Color Table Size.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check Color Table Size.vi"/>
 				<Item Name="Check Data Size.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check Data Size.vi"/>
 				<Item Name="Write PNG File.vi" Type="VI" URL="/&lt;vilib&gt;/picture/png.llb/Write PNG File.vi"/>
+				<Item Name="Remove Duplicates From 1D Array.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Remove Duplicates From 1D Array.vim"/>
+				<Item Name="Wovalab_lib_AsciiDoctor.lvlib" Type="Library" URL="/&lt;vilib&gt;/Wovalab/AsciiDoc for LabVIEW/Wovalab_lib_AsciiDoctor.lvlib"/>
+				<Item Name="System Directory Type.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/System Directory Type.ctl"/>
+				<Item Name="Get System Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/Get System Directory.vi"/>
+				<Item Name="Escape String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/Escape String.vi"/>
+				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
+				<Item Name="Open URL in Default Browser.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser.vi"/>
+				<Item Name="Open URL in Default Browser (string).vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser (string).vi"/>
+				<Item Name="Open URL in Default Browser core.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser core.vi"/>
+				<Item Name="Open URL in Default Browser (path).vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser (path).vi"/>
+				<Item Name="Path to URL.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL.vi"/>
+				<Item Name="Path to URL inner.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL inner.vi"/>
+				<Item Name="Escape Characters for HTTP.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Escape Characters for HTTP.vi"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="MGI RWA Options Cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Options Cluster.ctl"/>
@@ -226,6 +274,9 @@
 			<Item Name="Patriek - CamelCaseSplitter.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Patriek - CamelCaseSplitter.vi"/>
 			<Item Name="Patriek - CamelCaseIt.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/_Nattify Support.llb/Patriek - CamelCaseIt.vi"/>
 			<Item Name="Triekselfy.vi" Type="VI" URL="/&lt;resource&gt;/dialog/QuickDrop/plugins/Triekselfy.vi"/>
+			<Item Name="System.Windows.Forms" Type="Document" URL="System.Windows.Forms">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

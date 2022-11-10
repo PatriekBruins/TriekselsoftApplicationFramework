@@ -1,2 +1,5 @@
 ﻿// JSONtext Config File
-{"Dummy":false}
+{
+  "Dummy":false,
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
+}

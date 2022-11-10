@@ -6,5 +6,6 @@
       "FilterFunction":"Exact",
       "SearchText":"Error"
     }
-  ]
+  ],
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
 }

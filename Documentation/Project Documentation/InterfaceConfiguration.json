@@ -1,0 +1,37 @@
+﻿// JSONtext Config File
+{
+
+	"Objects":[	
+	{
+		"ObjectName":"ImaginaryCar",
+		"ObjectType":"Car.lvclass"
+		"Interfaces":[
+			{
+			"Label":"Break",
+			"ObjectName":"MyFeed",
+			"Type":"IBreakSystem.lvclass"
+			},
+			{
+			"Label":"Gas",
+			"ObjectName":"MyFeed",
+			"Type":"ISpeedSystem.lvclass"
+			},
+			{
+			"Label":"Steering",
+			"ObjectName":"ThatJoystick",
+			"Type":"ISteeringSystem.lvclass"
+			}
+		]
+	},	
+	{
+		"ObjectName":"MyFeed",
+		"ObjectType":"UsingFeed.lvclass",
+		"Interfaces":[]
+	}, 
+	{
+		"ObjectName":"ThatJoystick",
+		"ObjectType":"joystick.lvclass",
+		"Interfaces":[]
+	}
+]
+}
