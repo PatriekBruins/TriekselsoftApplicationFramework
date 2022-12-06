@@ -67,3 +67,9 @@
 [submodule "Source/.Externals/Interface_ImageAcquisition"]
 	path = Source/.Externals/Interface_ImageAcquisition
 	url = https://github.com/PatriekBruins/Interface_ImageAcquisition.git
+[submodule "Source/.Externals/Library_EmguCV"]
+	path = Source/.Externals/Library_EmguCV
+	url = https://github.com/PatriekBruins/Library_EmguCV.git
+[submodule "Source/.Externals/Interface_TAF_IAuthorization"]
+	path = Source/.Externals/Interface_TAF_IAuthorization
+	url = https://github.com/PatriekBruins/Interface_TAF_IAuthorization.git
