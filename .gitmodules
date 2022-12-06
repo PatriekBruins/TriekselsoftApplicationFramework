@@ -1,0 +1,69 @@
+[submodule "Source/.Externals/Tools_Triekselsoft"]
+	path = Source/.Externals/Tools_Triekselsoft
+	url = https://github.com/PatriekBruins/Tools_Triekselsoft.git
+[submodule "Source/.Externals/Tools_TAF_PlantUML"]
+	path = Source/.Externals/Tools_TAF_PlantUML
+	url = https://github.com/PatriekBruins/Tools_TAF_PlantUML.git
+[submodule "Source/.Externals/Tool_Project_DescriptionEditor"]
+	path = Source/.Externals/Tool_Project_DescriptionEditor
+	url = https://github.com/PatriekBruins/Tool_Project_DescriptionEditor.git
+[submodule "Source/.Externals/Library_YAF"]
+	path = Source/.Externals/Library_YAF
+	url = https://github.com/PatriekBruins/Library_YAF.git
+[submodule "Source/.Externals/Library_TAF_UserManager"]
+	path = Source/.Externals/Library_TAF_UserManager
+	url = https://github.com/PatriekBruins/Library_TAF_UserManager.git
+[submodule "Source/.Externals/Library_TAF_TraceWindow"]
+	path = Source/.Externals/Library_TAF_TraceWindow
+	url = https://github.com/PatriekBruins/Library_TAF_TraceWindow.git
+[submodule "Source/.Externals/Library_TAF_Support"]
+	path = Source/.Externals/Library_TAF_Support
+	url = https://github.com/PatriekBruins/Library_TAF_Support.git
+[submodule "Source/.Externals/Library_TAF_ErrorCreation"]
+	path = Source/.Externals/Library_TAF_ErrorCreation
+	url = https://github.com/PatriekBruins/Library_TAF_ErrorCreation.git
+[submodule "Source/.Externals/Library_TAF_BusBase"]
+	path = Source/.Externals/Library_TAF_BusBase
+	url = https://github.com/PatriekBruins/Library_TAF_BusBase.git
+[submodule "Source/.Externals/Library_TAF_ApplicationFramework"]
+	path = Source/.Externals/Library_TAF_ApplicationFramework
+	url = https://github.com/PatriekBruins/Library_TAF_ApplicationFramework.git
+[submodule "Source/.Externals/Interface_UserInterface_IFrontPanel"]
+	path = Source/.Externals/Interface_UserInterface_IFrontPanel
+	url = https://github.com/PatriekBruins/Interface_UserInterface_IFrontPanel.git
+[submodule "Source/.Externals/Interface_UserInterface_IDockGUI"]
+	path = Source/.Externals/Interface_UserInterface_IDockGUI
+	url = https://github.com/PatriekBruins/Interface_UserInterface_IDockGUI.git
+[submodule "Source/.Externals/Interface_TAF_TraceSubscriptor"]
+	path = Source/.Externals/Interface_TAF_TraceSubscriptor
+	url = https://github.com/PatriekBruins/Interface_TAF_TraceSubscriptor.git
+[submodule "Source/.Externals/Interface_TAF_ITextViewer"]
+	path = Source/.Externals/Interface_TAF_ITextViewer
+	url = https://github.com/PatriekBruins/Interface_TAF_ITextViewer.git
+[submodule "Source/.Externals/Interface_TAF_ITAFObject"]
+	path = Source/.Externals/Interface_TAF_ITAFObject
+	url = https://github.com/PatriekBruins/Interface_TAF_ITAFObject.git
+[submodule "Source/.Externals/Interface_TAF_ITAFGUIActions"]
+	path = Source/.Externals/Interface_TAF_ITAFGUIActions
+	url = https://github.com/PatriekBruins/Interface_TAF_ITAFGUIActions.git
+[submodule "Source/.Externals/Interface_TAF_IInterface"]
+	path = Source/.Externals/Interface_TAF_IInterface
+	url = https://github.com/PatriekBruins/Interface_TAF_IInterface.git
+[submodule "Source/.Externals/Interface_TAF_IApplicationConfiguration"]
+	path = Source/.Externals/Interface_TAF_IApplicationConfiguration
+	url = https://github.com/PatriekBruins/Interface_TAF_IApplicationConfiguration.git
+[submodule "Source/.Externals/Interface_TAF_AutorizationUpdated"]
+	path = Source/.Externals/Interface_TAF_AutorizationUpdated
+	url = https://github.com/PatriekBruins/Interface_TAF_AutorizationUpdated.git
+[submodule "Source/.Externals/Interface_OpenCV_INewOpenCVMat"]
+	path = Source/.Externals/Interface_OpenCV_INewOpenCVMat
+	url = https://github.com/PatriekBruins/Interface_OpenCV_INewOpenCVMat.git
+[submodule "Source/.Externals/Interface_Object_IPersistentData"]
+	path = Source/.Externals/Interface_Object_IPersistentData
+	url = https://github.com/PatriekBruins/Interface_Object_IPersistentData.git
+[submodule "Source/.Externals/Interface_Object_ICreateDestroy"]
+	path = Source/.Externals/Interface_Object_ICreateDestroy
+	url = https://github.com/PatriekBruins/Interface_Object_ICreateDestroy.git
+[submodule "Source/.Externals/Interface_ImageAcquisition"]
+	path = Source/.Externals/Interface_ImageAcquisition
+	url = https://github.com/PatriekBruins/Interface_ImageAcquisition.git
