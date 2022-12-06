@@ -73,3 +73,9 @@
 [submodule "Source/.Externals/Interface_TAF_IAuthorization"]
 	path = Source/.Externals/Interface_TAF_IAuthorization
 	url = https://github.com/PatriekBruins/Interface_TAF_IAuthorization.git
+[submodule "Source/.Externals/Library_UserInterface_FrontPanelControl"]
+	path = Source/.Externals/Library_UserInterface_FrontPanelControl
+	url = https://github.com/PatriekBruins/Library_UserInterface_FrontPanelControl.git
+[submodule "Source/.Externals/Driver_Windows_WebCam"]
+	path = Source/.Externals/Driver_Windows_WebCam
+	url = https://github.com/PatriekBruins/Driver_Windows_WebCam.git
