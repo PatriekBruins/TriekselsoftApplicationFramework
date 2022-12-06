@@ -1,0 +1,56 @@
+== Classes overview
+
+This project contains 1 classe and 0 interface.
+
+.Classes list
+[cols="<.<1d,<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Classes |Interfaces
+
+|<<Application.lvclass>>
+|
+|===
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "Application" {
+{field} -Ref : U32
+{static} {method} #GetApplicationReference()
+{static} {method} #Application_GetInstance()
+{static} {method} #RouteExternalInterfaces()
+{static} {method} #Application_New()
+{static} {method} #Application_GetAttributes()
+{static} {method} +Application_Init()
+{static} {method} +Application_CleanUp()
+{static} {method} +AddObject()
+{static} {method} +SetInterfaceConfiguration()
+{static} {method} +GetBasePath()
+{static} {method} +GetObjectFromMemory()
+{static} {method} +CreateObject()
+{static} {method} +LoadAllPersistentData()
+{static} {method} +GetAllObjectsOfType()
+{static} {method} +GetConfigurationBasePath()
+{static} {method} +GetExistingObject()
+{static} {method} +DestroyAll()
+{static} {method} +PreloadObjects()
+{static} {method} +CreateObjects()
+{static} {method} +SetExternalInterfaces()
+{static} {method} +SaveAllPersistentData()
+{static} {method} +GetClassLocation()
+{method} #Do_SetApplicationConfiguration()
+{method} #Do_GetObjectConfiguration()
+
+}
+
+
+
+@enduml
+....

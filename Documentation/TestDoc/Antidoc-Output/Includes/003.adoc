@@ -1,0 +1,276 @@
+== Application.lvclass
+
+*Responsibility:*
+This is a singleton class that manages at high level the application. 
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+start
+
+: **Start Main VI**;
+: **Detect all lvclasses in memory and the project folder recursively**
+----
+This ensures that we don't need any class path anymore. All are solved because they are pre-identified.;
+: **Read the Json InterfaceConfiguration file**
+----
+This file defines all classes needed by the application by name and type;
+: **Load all classes from the InterfaceConfiguration into memory**;
+: **Create the classes that adhere to the ICreateDestroy interface**
+----
+The ICreateDestroy class defines two method: Create and Destroy.
+Adhering to this interface enforces that the by reference classes are created
+at startup of the application.
+This is only necessary for objects where dependency inversion is needed.
+You can still use hard linked objects inside other objects.
+Then you don't have to inherit from the ICreateDestroy interface;
+: **Set the class names as defined by the InterfaceConfiguration file**
+----
+Each object shall be uniquely named. This name is used in the InterfaceConfiguration file
+to reference to the unique instance. The ITAFObject has a SetName member;
+: **Set the External Interfaces of each of the classes as defined by the InterfaceConfiguration file**
+----
+Each of the inverted dendency owned has to be set at forhand. These are defined in thee
+InterfaceConfiguration file per object.;
+: **Set the object's persistent data.
+----
+Each TAF objects contains in it's attributes a set of persistent data.
+This data is retained between different runs of the application.
+At this phase the persistent data is put in the object;
+: **Start the main application class**
+----
+When all is defined the application can start executing it's normal behaviour;
+: **Wait until application is exited**;
+end
+
+@enduml
+....
+
+
+
+
+*Version:* 1.0.0.0
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "Application" {
+{field} -Ref : U32
+{static} {method} #GetApplicationReference()
+{static} {method} #Application_GetInstance()
+{static} {method} #RouteExternalInterfaces()
+{static} {method} #Application_New()
+{static} {method} #Application_GetAttributes()
+{static} {method} +Application_Init()
+{static} {method} +Application_CleanUp()
+{static} {method} +AddObject()
+{static} {method} +SetInterfaceConfiguration()
+{static} {method} +GetBasePath()
+{static} {method} +GetObjectFromMemory()
+{static} {method} +CreateObject()
+{static} {method} +LoadAllPersistentData()
+{static} {method} +GetAllObjectsOfType()
+{static} {method} +GetConfigurationBasePath()
+{static} {method} +GetExistingObject()
+{static} {method} +DestroyAll()
+{static} {method} +PreloadObjects()
+{static} {method} +CreateObjects()
+{static} {method} +SetExternalInterfaces()
+{static} {method} +SaveAllPersistentData()
+{static} {method} +GetClassLocation()
+{method} #Do_SetApplicationConfiguration()
+{method} #Do_GetObjectConfiguration()
+
+}
+
+
+
+@enduml
+....
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Do_SetApplicationConfiguration
+|image:Application.lvclass_Do_SetApplicationConfiguration.vi.png[Application.lvclass:Do_SetApplicationConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Do_GetObjectConfiguration
+|image:Application.lvclass_Do_GetObjectConfiguration.vi.png[Application.lvclass:Do_GetObjectConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetApplicationReference
+|image:Application.lvclass_GetApplicationReference.vi.png[Application.lvclass:GetApplicationReference.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Application_GetInstance
+|image:Application.lvclass_Application_GetInstance.vi.png[Application.lvclass:Application_GetInstance.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|RouteExternalInterfaces
+|image:Application.lvclass_RouteExternalInterfaces.vi.png[Application.lvclass:RouteExternalInterfaces.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Application_New
+|image:Application.lvclass_Application_New.vi.png[Application.lvclass:Application_New.vi]
+|GOOP4 Attribute container.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Application_GetAttributes
+|image:Application.lvclass_Application_GetAttributes.vi.png[Application.lvclass:Application_GetAttributes.vi]
+|Retrieves the object attributes of the by reference class.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Application_Init
+|image:Application.lvclass_Application_Init.vi.png[Application.lvclass:Application_Init.vi]
+|Initializes the application. Sets the base path for the application
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Application_CleanUp
+|image:Application.lvclass_Application_CleanUp.vi.png[Application.lvclass:Application_CleanUp.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|AddObject
+|image:Application.lvclass_AddObject.vi.png[Application.lvclass:AddObject.vi]
+|Add the object provide linked to the provided name to the object pool
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetInterfaceConfiguration
+|image:Application.lvclass_SetInterfaceConfiguration.vi.png[Application.lvclass:SetInterfaceConfiguration.vi]
+|Sets the configuration to be used by the application. This is typically set at the start of the application
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetBasePath
+|image:Application.lvclass_GetBasePath.vi.png[Application.lvclass:GetBasePath.vi]
+|Returns the base path of the project or application
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectFromMemory
+|image:Application.lvclass_GetObjectFromMemory.vi.png[Application.lvclass:GetObjectFromMemory.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|CreateObject
+|image:Application.lvclass_CreateObject.vi.png[Application.lvclass:CreateObject.vi]
+|Creates the ITAFObject provided as input and put it to the object pool
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|LoadAllPersistentData
+|image:Application.lvclass_LoadAllPersistentData.vi.png[Application.lvclass:LoadAllPersistentData.vi]
+|Loads the persistend data of each IPersistendData supported interface objects from disk and puts in the object.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetAllObjectsOfType
+|image:Application.lvclass_GetAllObjectsOfType.vim.png[Application.lvclass:GetAllObjectsOfType.vim]
+|Returns from the pool all objects that inherit from the applied class or interface.
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|GetConfigurationBasePath
+|image:Application.lvclass_GetConfigurationBasePath.vi.png[Application.lvclass:GetConfigurationBasePath.vi]
+|Returns the root folder of the currently active configuration.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetExistingObject
+|image:Application.lvclass_GetExistingObject.vi.png[Application.lvclass:GetExistingObject.vi]
+|Returns the object from the pool with the specified type and label. If you provide an interface the interface implemenation is returned.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|DestroyAll
+|image:Application.lvclass_DestroyAll.vi.png[Application.lvclass:DestroyAll.vi]
+|Calls the Destroy method of eacht of the objects in the pool if these objects support the ICreateDestroy interface.
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|PreloadObjects
+|image:Application.lvclass_PreloadObjects.vi.png[Application.lvclass:PreloadObjects.vi]
+|Load all objects from the InterfaceConfiguration file into memory
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|CreateObjects
+|image:Application.lvclass_CreateObjects.vi.png[Application.lvclass:CreateObjects.vi]
+|Calls the Create method from each of the objects in the pool if these objects supports the ICreateDestroy interface. If they don't support it the object is skipped
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterfaces
+|image:Application.lvclass_SetExternalInterfaces.vi.png[Application.lvclass:SetExternalInterfaces.vi]
+|Sets the external interfaces of all ITAFObjects supported objects. This allows the object to communicate with the objects depends on
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SaveAllPersistentData
+|image:Application.lvclass_SaveAllPersistentData.vi.png[Application.lvclass:SaveAllPersistentData.vi]
+|Retrieves from the objects that support the IPersistendData interface the persistend data and stores that to disk. Each objects gets it's own file.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetClassLocation
+|image:Application.lvclass_GetClassLocation.vi.png[Application.lvclass:GetClassLocation.vi]
+|Returns the file location of the classname
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
