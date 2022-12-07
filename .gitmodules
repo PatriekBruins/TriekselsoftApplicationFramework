@@ -73,6 +73,6 @@
 [submodule "Source/.Externals/Library_YAF"]
 	path = Source/.Externals/Library_YAF
 	url = https://github.com/PatriekBruins/Library_YAF.git
-[submodule "Source/.External/Library_UserInterface_FrontPanelControl"]
-	path = Source/.External/Library_UserInterface_FrontPanelControl
+[submodule "Source/.Externals/Library_UserInterface_FrontPanelControl"]
+	path = Source/.Externals/Library_UserInterface_FrontPanelControl
 	url = https://github.com/PatriekBruins/Library_UserInterface_FrontPanelControl.git
