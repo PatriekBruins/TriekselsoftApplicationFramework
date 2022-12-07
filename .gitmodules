@@ -7,9 +7,6 @@
 [submodule "Source/.Externals/Tool_Project_DescriptionEditor"]
 	path = Source/.Externals/Tool_Project_DescriptionEditor
 	url = https://github.com/PatriekBruins/Tool_Project_DescriptionEditor.git
-[submodule "Source/.Externals/Library_YAF"]
-	path = Source/.Externals/Library_YAF
-	url = https://github.com/PatriekBruins/Library_YAF.git
 [submodule "Source/.Externals/Library_TAF_UserManager"]
 	path = Source/.Externals/Library_TAF_UserManager
 	url = https://github.com/PatriekBruins/Library_TAF_UserManager.git
@@ -73,9 +70,3 @@
 [submodule "Source/.Externals/Interface_TAF_IAuthorization"]
 	path = Source/.Externals/Interface_TAF_IAuthorization
 	url = https://github.com/PatriekBruins/Interface_TAF_IAuthorization.git
-[submodule "Source/.Externals/Library_UserInterface_FrontPanelControl"]
-	path = Source/.Externals/Library_UserInterface_FrontPanelControl
-	url = https://github.com/PatriekBruins/Library_UserInterface_FrontPanelControl.git
-[submodule "Source/.Externals/Driver_Windows_WebCam"]
-	path = Source/.Externals/Driver_Windows_WebCam
-	url = https://github.com/PatriekBruins/Driver_Windows_WebCam.git
