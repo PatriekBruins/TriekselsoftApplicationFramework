@@ -79,3 +79,21 @@
 [submodule "Source/.Externals/Driver_Windows_WebCam"]
 	path = Source/.Externals/Driver_Windows_WebCam
 	url = https://github.com/PatriekBruins/Driver_Windows_WebCam.git
+[submodule "Source/.Externals/TAFAOModule_GUI_VerticalButtonBar"]
+	path = Source/.Externals/TAFAOModule_GUI_VerticalButtonBar
+	url = https://github.com/PatriekBruins/TAFAOModule_GUI_VerticalButtonBar.git
+[submodule "Source/.Externals/TAFAOModule_Template"]
+	path = Source/.Externals/TAFAOModule_Template
+	url = https://github.com/PatriekBruins/TAFAOModule_Template.git
+[submodule "Source/.Externals/YAFTAFModule_GUI_Footer"]
+	path = Source/.Externals/YAFTAFModule_GUI_Footer
+	url = https://github.com/PatriekBruins/YAFTAFModule_GUI_Footer.git
+[submodule "Source/.Externals/YAFTAFModule_OpenCV_Camera"]
+	path = Source/.Externals/YAFTAFModule_OpenCV_Camera
+	url = https://github.com/PatriekBruins/YAFTAFModule_OpenCV_Camera.git
+[submodule "Source/.Externals/YAFTAFModule_OpenCV_FaceDetection"]
+	path = Source/.Externals/YAFTAFModule_OpenCV_FaceDetection
+	url = https://github.com/PatriekBruins/YAFTAFModule_OpenCV_FaceDetection.git
+[submodule "Source/.Externals/YAFTAFModule_Template"]
+	path = Source/.Externals/YAFTAFModule_Template
+	url = https://github.com/PatriekBruins/YAFTAFModule_Template.git

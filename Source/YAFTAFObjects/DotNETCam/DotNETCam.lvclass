@@ -36,7 +36,7 @@
 	<Property Name="NI.LVClass.LowestCompatibleVersion" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Parent Libraries" Type="Parent Libraries">
-		<Item Name="YAFTAF.lvclass" Type="Parent" URL="../../../.Externals/Library_TAF/YAFTAF/YAFTAF.lvclass"/>
+		<Item Name="YAFTAF.lvclass" Type="Parent" URL="../../../.Externals/Library_YAF/YAFTAF/YAFTAF.lvclass"/>
 	</Item>
 	<Item Name="DotNETCam.ctl" Type="Class Private Data" URL="DotNETCam.ctl">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>

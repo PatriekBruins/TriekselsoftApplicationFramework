@@ -12,8 +12,279 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name=".Externals" Type="Folder" URL="../.Externals">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name=".Externals" Type="Folder">
+			<Item Name="Driver_Windows_WebCam" Type="Folder">
+				<Item Name="Snpshot_Example.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/Snpshot_Example.vi"/>
+				<Item Name="User32.DestroyWindow.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/User32.DestroyWindow.vi"/>
+				<Item Name="User32.FindWindowA.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/User32.FindWindowA.vi"/>
+				<Item Name="User32.GetDesktopWindow.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/User32.GetDesktopWindow.vi"/>
+				<Item Name="User32.SendMessageA.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/User32.SendMessageA.vi"/>
+				<Item Name="User32.SendMessageA_num.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/User32.SendMessageA_num.vi"/>
+				<Item Name="User32.SendMessageA_str.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/User32.SendMessageA_str.vi"/>
+				<Item Name="User32.WebCam_WM_Events.ctl" Type="VI" URL="../.Externals/Driver_Windows_WebCam/User32.WebCam_WM_Events.ctl"/>
+				<Item Name="WebCam.Connect.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/WebCam.Connect.vi"/>
+				<Item Name="WebCam.CreateCaptureWindowA.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/WebCam.CreateCaptureWindowA.vi"/>
+				<Item Name="WebCam.Disconnect.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/WebCam.Disconnect.vi"/>
+				<Item Name="WebCam.DLGVideoSource.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/WebCam.DLGVideoSource.vi"/>
+				<Item Name="WebCam.Example03.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/WebCam.Example03.vi"/>
+				<Item Name="WebCam.InitPreview.vi" Type="VI" URL="../.Externals/Driver_Windows_WebCam/WebCam.InitPreview.vi"/>
+			</Item>
+			<Item Name="Interface_ImageAcquisition" Type="Folder">
+				<Item Name="INewImage" Type="Folder">
+					<Item Name="INewImage.lvclass" Type="LVClass" URL="../.Externals/Interface_ImageAcquisition/INewImage/INewImage.lvclass"/>
+				</Item>
+				<Item Name="Source" Type="Folder">
+					<Item Name=".Externals" Type="Folder"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_ImageAcquisition/LICENSE"/>
+			</Item>
+			<Item Name="Interface_Object_ICreateDestroy" Type="Folder">
+				<Item Name="ICreateDestroy" Type="Folder">
+					<Item Name="ICreateDestroy.lvclass" Type="LVClass" URL="../.Externals/Interface_Object_ICreateDestroy/ICreateDestroy/ICreateDestroy.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_Object_ICreateDestroy/LICENSE"/>
+			</Item>
+			<Item Name="Interface_Object_IPersistentData" Type="Folder">
+				<Item Name="IPersistentData" Type="Folder">
+					<Item Name="IPersistentData.lvclass" Type="LVClass" URL="../.Externals/Interface_Object_IPersistentData/IPersistentData/IPersistentData.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_Object_IPersistentData/LICENSE"/>
+			</Item>
+			<Item Name="Interface_OpenCV_INewOpenCVMat" Type="Folder">
+				<Item Name="INewOpenCVMat" Type="Folder">
+					<Item Name="INewOpenCVMat.lvclass" Type="LVClass" URL="../.Externals/Interface_OpenCV_INewOpenCVMat/INewOpenCVMat/INewOpenCVMat.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_OpenCV_INewOpenCVMat/LICENSE"/>
+			</Item>
+			<Item Name="Interface_TAF_AutorizationUpdated" Type="Folder">
+				<Item Name="IAuthorizationUpdated" Type="Folder">
+					<Item Name="IAuthorizationUpdated.lvclass" Type="LVClass" URL="../.Externals/Interface_TAF_AutorizationUpdated/IAuthorizationUpdated/IAuthorizationUpdated.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_TAF_AutorizationUpdated/LICENSE"/>
+			</Item>
+			<Item Name="Interface_TAF_IApplicationConfiguration" Type="Folder">
+				<Item Name="IApplicationConfiguration" Type="Folder">
+					<Item Name="IApplicationConfiguration.lvclass" Type="LVClass" URL="../.Externals/Interface_TAF_IApplicationConfiguration/IApplicationConfiguration/IApplicationConfiguration.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_TAF_IApplicationConfiguration/LICENSE"/>
+			</Item>
+			<Item Name="Interface_TAF_IAuthorization" Type="Folder">
+				<Item Name="IAuthorization" Type="Folder">
+					<Item Name="IAuthorization.lvclass" Type="LVClass" URL="../.Externals/Interface_TAF_IAuthorization/IAuthorization/IAuthorization.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_TAF_IAuthorization/LICENSE"/>
+			</Item>
+			<Item Name="Interface_TAF_IInterface" Type="Folder">
+				<Item Name="IInterface" Type="Folder">
+					<Item Name="IInterface.lvclass" Type="LVClass" URL="../.Externals/Interface_TAF_IInterface/IInterface/IInterface.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_TAF_IInterface/LICENSE"/>
+			</Item>
+			<Item Name="Interface_TAF_ITAFGUIActions" Type="Folder">
+				<Item Name="ITAFGUIActions" Type="Folder">
+					<Item Name="ITAFGUIActions.lvclass" Type="LVClass" URL="../.Externals/Interface_TAF_ITAFGUIActions/ITAFGUIActions/ITAFGUIActions.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_TAF_ITAFGUIActions/LICENSE"/>
+			</Item>
+			<Item Name="Interface_TAF_ITAFObject" Type="Folder">
+				<Item Name="ITAFObject" Type="Folder">
+					<Item Name="ITAFObject.lvclass" Type="LVClass" URL="../.Externals/Interface_TAF_ITAFObject/ITAFObject/ITAFObject.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_TAF_ITAFObject/LICENSE"/>
+			</Item>
+			<Item Name="Interface_TAF_ITextViewer" Type="Folder">
+				<Item Name="ITAFTextViewer.lvclass" Type="LVClass" URL="../.Externals/Interface_TAF_ITextViewer/ITAFTextViewer.lvclass"/>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_TAF_ITextViewer/LICENSE"/>
+			</Item>
+			<Item Name="Interface_TAF_TraceSubscriptor" Type="Folder">
+				<Item Name="ITAFFilteredTrace" Type="Folder">
+					<Item Name="ITAFFilteredTrace.lvclass" Type="LVClass" URL="../.Externals/Interface_TAF_TraceSubscriptor/ITAFFilteredTrace/ITAFFilteredTrace.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_TAF_TraceSubscriptor/LICENSE"/>
+			</Item>
+			<Item Name="Interface_UserInterface_IDockGUI" Type="Folder">
+				<Item Name="IDockGUI" Type="Folder">
+					<Item Name="IDockGUI.lvclass" Type="LVClass" URL="../.Externals/Interface_UserInterface_IDockGUI/IDockGUI/IDockGUI.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_UserInterface_IDockGUI/LICENSE"/>
+			</Item>
+			<Item Name="Interface_UserInterface_IFrontPanel" Type="Folder">
+				<Item Name="IFrontPanel" Type="Folder">
+					<Item Name="IFrontPanel.lvclass" Type="LVClass" URL="../.Externals/Interface_UserInterface_IFrontPanel/IFrontPanel/IFrontPanel.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Interface_UserInterface_IFrontPanel/LICENSE"/>
+			</Item>
+			<Item Name="Library_EmguCV" Type="Folder">
+				<Item Name="concrt140.dll" Type="Document" URL="../.Externals/Library_EmguCV/concrt140.dll"/>
+				<Item Name="ConvertMatBrgToPicture.vi" Type="VI" URL="../.Externals/Library_EmguCV/ConvertMatBrgToPicture.vi"/>
+				<Item Name="cvextern.dll" Type="Document" URL="../.Externals/Library_EmguCV/cvextern.dll"/>
+				<Item Name="Emgu.CV.Bitmap.dll" Type="Document" URL="../.Externals/Library_EmguCV/Emgu.CV.Bitmap.dll"/>
+				<Item Name="Emgu.CV.Bitmap.xml" Type="Document" URL="../.Externals/Library_EmguCV/Emgu.CV.Bitmap.xml"/>
+				<Item Name="Emgu.CV.DebuggerVisualizers.dll" Type="Document" URL="../.Externals/Library_EmguCV/Emgu.CV.DebuggerVisualizers.dll"/>
+				<Item Name="Emgu.CV.Models.dll" Type="Document" URL="../.Externals/Library_EmguCV/Emgu.CV.Models.dll"/>
+				<Item Name="Emgu.CV.Models.xml" Type="Document" URL="../.Externals/Library_EmguCV/Emgu.CV.Models.xml"/>
+				<Item Name="Emgu.CV.Platform.NetCore.dll" Type="Document" URL="../.Externals/Library_EmguCV/Emgu.CV.Platform.NetCore.dll"/>
+				<Item Name="Emgu.CV.Platform.NetCore.xml" Type="Document" URL="../.Externals/Library_EmguCV/Emgu.CV.Platform.NetCore.xml"/>
+				<Item Name="Emgu.CV.Platform.NetFramework.dll" Type="Document" URL="../.Externals/Library_EmguCV/Emgu.CV.Platform.NetFramework.dll"/>
+				<Item Name="Emgu.CV.Platform.NetFramework.xml" Type="Document" URL="../.Externals/Library_EmguCV/Emgu.CV.Platform.NetFramework.xml"/>
+				<Item Name="Emgu.CV.Platform.NetStandard.dll" Type="Document" URL="../.Externals/Library_EmguCV/Emgu.CV.Platform.NetStandard.dll"/>
+				<Item Name="Emgu.CV.Platform.NetStandard.xml" Type="Document" URL="../.Externals/Library_EmguCV/Emgu.CV.Platform.NetStandard.xml"/>
+				<Item Name="haarcascade_frontalface_default.xml" Type="Document" URL="../.Externals/Library_EmguCV/haarcascade_frontalface_default.xml"/>
+				<Item Name="msvcp140.dll" Type="Document" URL="../.Externals/Library_EmguCV/msvcp140.dll"/>
+				<Item Name="msvcp140_1.dll" Type="Document" URL="../.Externals/Library_EmguCV/msvcp140_1.dll"/>
+				<Item Name="msvcp140_2.dll" Type="Document" URL="../.Externals/Library_EmguCV/msvcp140_2.dll"/>
+				<Item Name="msvcp140_atomic_wait.dll" Type="Document" URL="../.Externals/Library_EmguCV/msvcp140_atomic_wait.dll"/>
+				<Item Name="msvcp140_codecvt_ids.dll" Type="Document" URL="../.Externals/Library_EmguCV/msvcp140_codecvt_ids.dll"/>
+				<Item Name="opencv_videoio_ffmpeg455.dll" Type="Document" URL="../.Externals/Library_EmguCV/opencv_videoio_ffmpeg455.dll"/>
+				<Item Name="System.Runtime.InteropServices.RuntimeInformation.dll" Type="Document" URL="../.Externals/Library_EmguCV/System.Runtime.InteropServices.RuntimeInformation.dll"/>
+				<Item Name="tst.vi" Type="VI" URL="../.Externals/Library_EmguCV/tst.vi"/>
+				<Item Name="vcruntime140.dll" Type="Document" URL="../.Externals/Library_EmguCV/vcruntime140.dll"/>
+			</Item>
+			<Item Name="Library_TAF_ApplicationFramework" Type="Folder">
+				<Item Name="AppConfigJSON" Type="Folder">
+					<Item Name="AppConfigJSON.lvclass" Type="LVClass" URL="../.Externals/Library_TAF_ApplicationFramework/AppConfigJSON/AppConfigJSON.lvclass"/>
+				</Item>
+				<Item Name="Application" Type="Folder">
+					<Item Name="Application.lvclass" Type="LVClass" URL="../.Externals/Library_TAF_ApplicationFramework/Application/Application.lvclass"/>
+					<Item Name="GetObjectConfiguration.vi" Type="VI" URL="../.Externals/Library_TAF_ApplicationFramework/Application/GetObjectConfiguration.vi"/>
+					<Item Name="ObtainObject.vi" Type="VI" URL="../.Externals/Library_TAF_ApplicationFramework/Application/ObtainObject.vi"/>
+					<Item Name="ObtainObjectsFromCluster.vim" Type="VI" URL="../.Externals/Library_TAF_ApplicationFramework/Application/ObtainObjectsFromCluster.vim"/>
+					<Item Name="SetExternalInterface.vi" Type="VI" URL="../.Externals/Library_TAF_ApplicationFramework/Application/SetExternalInterface.vi"/>
+					<Item Name="SetObject.vi" Type="VI" URL="../.Externals/Library_TAF_ApplicationFramework/Application/SetObject.vi"/>
+				</Item>
+				<Item Name="MasterGUI" Type="Folder">
+					<Item Name="properties" Type="Folder"/>
+					<Item Name="MasterGUI.lvclass" Type="LVClass" URL="../.Externals/Library_TAF_ApplicationFramework/MasterGUI/MasterGUI.lvclass"/>
+					<Item Name="MasterGUI.lvlib" Type="Library" URL="../.Externals/Library_TAF_ApplicationFramework/MasterGUI/MasterGUI.lvlib"/>
+				</Item>
+				<Item Name="TAFBaseGUI" Type="Folder">
+					<Item Name="properties" Type="Folder"/>
+					<Item Name="protected" Type="Folder"/>
+					<Item Name="utils" Type="Folder"/>
+					<Item Name="TAFBaseGUI.lvclass" Type="LVClass" URL="../.Externals/Library_TAF_ApplicationFramework/TAFBaseGUI/TAFBaseGUI.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Library_TAF_ApplicationFramework/LICENSE"/>
+			</Item>
+			<Item Name="Library_TAF_BusBase" Type="Folder">
+				<Item Name="BusBase" Type="Folder">
+					<Item Name="BusBase" Type="Folder">
+						<Item Name="properties" Type="Folder"/>
+						<Item Name="protected" Type="Folder"/>
+						<Item Name="utils" Type="Folder"/>
+					</Item>
+					<Item Name="BusBase.lvlib" Type="Library" URL="../.Externals/Library_TAF_BusBase/BusBase/BusBase.lvlib"/>
+					<Item Name="Test GUI.vi" Type="VI" URL="../.Externals/Library_TAF_BusBase/BusBase/Test GUI.vi"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Library_TAF_BusBase/LICENSE"/>
+			</Item>
+			<Item Name="Library_TAF_ErrorCreation" Type="Folder">
+				<Item Name="ErrorCreationTAF" Type="Folder">
+					<Item Name="ErrorCreationTAF.lvclass" Type="LVClass" URL="../.Externals/Library_TAF_ErrorCreation/ErrorCreationTAF/ErrorCreationTAF.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Library_TAF_ErrorCreation/LICENSE"/>
+			</Item>
+			<Item Name="Library_TAF_Support" Type="Folder">
+				<Item Name="ClusterArrayConversion" Type="Folder">
+					<Item Name="ClusterArrayConversion.lvlib" Type="Library" URL="../.Externals/Library_TAF_Support/ClusterArrayConversion/ClusterArrayConversion.lvlib"/>
+				</Item>
+				<Item Name="Expressions" Type="Folder">
+					<Item Name="Expressions.lvlib" Type="Library" URL="../.Externals/Library_TAF_Support/Expressions/Expressions.lvlib"/>
+				</Item>
+				<Item Name="StringHandling" Type="Folder">
+					<Item Name="FilterUniqueItems.vim" Type="VI" URL="../.Externals/Library_TAF_Support/StringHandling/FilterUniqueItems.vim"/>
+					<Item Name="SearchAndReplaceCharacters.vi" Type="VI" URL="../.Externals/Library_TAF_Support/StringHandling/SearchAndReplaceCharacters.vi"/>
+				</Item>
+				<Item Name="TAFSpecific" Type="Folder">
+					<Item Name="TAFSpecific.lvlib" Type="Library" URL="../.Externals/Library_TAF_Support/TAFSpecific/TAFSpecific.lvlib"/>
+				</Item>
+				<Item Name="VariantHandling" Type="Folder">
+					<Item Name="AddToVariantAttributes.vi" Type="VI" URL="../.Externals/Library_TAF_Support/VariantHandling/AddToVariantAttributes.vi"/>
+					<Item Name="GetFromVariantAttributes.vim" Type="VI" URL="../.Externals/Library_TAF_Support/VariantHandling/GetFromVariantAttributes.vim"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Library_TAF_Support/LICENSE"/>
+			</Item>
+			<Item Name="Library_TAF_TraceWindow" Type="Folder">
+				<Item Name="TAFTraceWindow" Type="Folder">
+					<Item Name="TAFTraceWindow.lvclass" Type="LVClass" URL="../.Externals/Library_TAF_TraceWindow/TAFTraceWindow/TAFTraceWindow.lvclass"/>
+				</Item>
+				<Item Name="TraceWindow" Type="Folder">
+					<Item Name="properties" Type="Folder"/>
+					<Item Name="protected" Type="Folder"/>
+					<Item Name="utils" Type="Folder"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Library_TAF_TraceWindow/LICENSE"/>
+				<Item Name="TraceWindow.lvlib" Type="Library" URL="../.Externals/Library_TAF_TraceWindow/TraceWindow.lvlib"/>
+			</Item>
+			<Item Name="Library_TAF_UserManager" Type="Folder">
+				<Item Name="UserManager" Type="Folder">
+					<Item Name="UserManager" Type="Folder">
+						<Item Name="protected" Type="Folder"/>
+						<Item Name="utils" Type="Folder"/>
+					</Item>
+					<Item Name="UserMananger.lvlib" Type="Library" URL="../.Externals/Library_TAF_UserManager/UserManager/UserMananger.lvlib"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Library_TAF_UserManager/LICENSE"/>
+			</Item>
+			<Item Name="Library_UserInterface_FrontPanelControl" Type="Folder">
+				<Item Name="FrontPanelControl" Type="Folder">
+					<Item Name="FrontPanelControl.lvclass" Type="LVClass" URL="../.Externals/Library_UserInterface_FrontPanelControl/FrontPanelControl/FrontPanelControl.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Library_UserInterface_FrontPanelControl/LICENSE"/>
+			</Item>
+			<Item Name="Library_YAF" Type="Folder">
+				<Item Name="YActor" Type="Folder">
+					<Item Name="private" Type="Folder"/>
+					<Item Name="properties" Type="Folder"/>
+					<Item Name="protected" Type="Folder"/>
+					<Item Name="tracing" Type="Folder"/>
+					<Item Name="YActor.lvclass" Type="LVClass" URL="../.Externals/Library_YAF/YActor/YActor.lvclass"/>
+				</Item>
+				<Item Name="YAFTAF" Type="Folder">
+					<Item Name="YAFTAF.lvclass" Type="LVClass" URL="../.Externals/Library_YAF/YAFTAF/YAFTAF.lvclass"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Library_YAF/LICENSE"/>
+			</Item>
+			<Item Name="Tool_Project_DescriptionEditor" Type="Folder">
+				<Item Name="ClassAndMethodVIDescriptionEditor.vi" Type="VI" URL="../.Externals/Tool_Project_DescriptionEditor/ClassAndMethodVIDescriptionEditor.vi"/>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Tool_Project_DescriptionEditor/LICENSE"/>
+				<Item Name="VIDescriptionEditor.vi" Type="VI" URL="../.Externals/Tool_Project_DescriptionEditor/VIDescriptionEditor.vi"/>
+			</Item>
+			<Item Name="Tools_TAF_PlantUML" Type="Folder">
+				<Item Name="ButtonBarFlow" Type="Folder">
+					<Item Name="ButtonBarFlow" Type="Folder">
+						<Item Name="ButtonBarFlow.lvlib" Type="Library" URL="../.Externals/Tools_TAF_PlantUML/ButtonBarFlow/ButtonBarFlow/ButtonBarFlow.lvlib"/>
+					</Item>
+					<Item Name="ButtonBarFlow.aliases" Type="Document" URL="../.Externals/Tools_TAF_PlantUML/ButtonBarFlow/ButtonBarFlow.aliases"/>
+					<Item Name="ButtonBarFlow.lvlps" Type="Document" URL="../.Externals/Tools_TAF_PlantUML/ButtonBarFlow/ButtonBarFlow.lvlps"/>
+					<Item Name="ButtonBarFlow.lvproj" Type="Document" URL="../.Externals/Tools_TAF_PlantUML/ButtonBarFlow/ButtonBarFlow.lvproj"/>
+				</Item>
+				<Item Name="ExternalInterfaceConvert" Type="Folder">
+					<Item Name="ExternalInterfaceConfigurationToPlantUML.vi" Type="VI" URL="../.Externals/Tools_TAF_PlantUML/ExternalInterfaceConvert/ExternalInterfaceConfigurationToPlantUML.vi"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Tools_TAF_PlantUML/LICENSE"/>
+			</Item>
+			<Item Name="Tools_Triekselsoft" Type="Folder">
+				<Item Name="Antidoc Editor" Type="Folder">
+					<Item Name="Create Antidoc HTML.vi" Type="VI" URL="../.Externals/Tools_Triekselsoft/Antidoc Editor/Create Antidoc HTML.vi"/>
+				</Item>
+				<Item Name="Make Screenshots" Type="Folder">
+					<Item Name="Make Screenshots.vi" Type="VI" URL="../.Externals/Tools_Triekselsoft/Make Screenshots/Make Screenshots.vi"/>
+				</Item>
+				<Item Name="Remove Doc" Type="Folder">
+					<Item Name="Removedoc.vi" Type="VI" URL="../.Externals/Tools_Triekselsoft/Remove Doc/Removedoc.vi"/>
+					<Item Name="Removefrombd.vi" Type="VI" URL="../.Externals/Tools_Triekselsoft/Remove Doc/Removefrombd.vi"/>
+				</Item>
+				<Item Name="Triekselfy" Type="Folder">
+					<Item Name="Triekselfy Project.vi" Type="VI" URL="../.Externals/Tools_Triekselsoft/Triekselfy/Triekselfy Project.vi"/>
+				</Item>
+				<Item Name="LICENSE" Type="Document" URL="../.Externals/Tools_Triekselsoft/LICENSE"/>
+			</Item>
+			<Item Name="YAFTAFModule_OpenCV_Camera" Type="Folder">
+				<Item Name="OpenCVCam" Type="Folder">
+					<Item Name="OpenCVCam.lvclass" Type="LVClass" URL="../.Externals/YAFTAFModule_OpenCV_Camera/OpenCVCam/OpenCVCam.lvclass"/>
+					<Item Name="Test OpenCVCam.vi" Type="VI" URL="../.Externals/YAFTAFModule_OpenCV_Camera/OpenCVCam/Test OpenCVCam.vi"/>
+				</Item>
+			</Item>
 		</Item>
 		<Item Name="ApplicationConfiguration" Type="Folder" URL="../../ApplicationConfiguration">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -50,21 +321,34 @@
 			</Item>
 			<Item Name="VerticalButtonBar" Type="Folder">
 				<Item Name="ButtonCollection" Type="Folder">
-					<Item Name="ButtonCollection.lvclass" Type="LVClass" URL="../ActiveObjects/VerticalButtonBar/ButtonCollection/ButtonCollection.lvclass"/>
+					<Item Name="ButtonCollection.lvclass" Type="LVClass" URL="../.Externals/TAFAOModule_GUI_VerticalButtonBar/VerticalButtonBar/ButtonCollection/ButtonCollection.lvclass"/>
 				</Item>
 				<Item Name="properties" Type="Folder"/>
-				<Item Name="VerticalButtonBar.lvclass" Type="LVClass" URL="../ActiveObjects/VerticalButtonBar/VerticalButtonBar.lvclass"/>
+				<Item Name="VerticalButtonBar.lvclass" Type="LVClass" URL="../.Externals/TAFAOModule_GUI_VerticalButtonBar/VerticalButtonBar/VerticalButtonBar.lvclass"/>
 			</Item>
 		</Item>
 		<Item Name="Mockups" Type="Folder" URL="../Mockups">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="YAFTAFObjects" Type="Folder" URL="../YAFTAFObjects">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="YAFTAFObjects" Type="Folder">
+			<Item Name="DotNETCam" Type="Folder">
+				<Item Name="DotNETCam.lvclass" Type="LVClass" URL="../YAFTAFObjects/DotNETCam/DotNETCam.lvclass"/>
+			</Item>
+			<Item Name="OpenCVFaceDetection" Type="Folder">
+				<Item Name="OpenCVFaceDetection.lvclass" Type="LVClass" URL="../.Externals/YAFTAFModule_OpenCV_FaceDetection/OpenCVFaceDetection/OpenCVFaceDetection.lvclass"/>
+				<Item Name="Test OpenCVFaceDetect.vi" Type="VI" URL="../.Externals/YAFTAFModule_OpenCV_FaceDetection/OpenCVFaceDetection/Test OpenCVFaceDetect.vi"/>
+			</Item>
+			<Item Name="VerticalButtonBarNXGStyle" Type="Folder">
+				<Item Name="VerticalButtonBarNXGStyle.zip" Type="Document" URL="../YAFTAFObjects/VerticalButtonBarNXGStyle/VerticalButtonBarNXGStyle.zip"/>
+			</Item>
+			<Item Name="YAFFooter" Type="Folder">
+				<Item Name="YAFFooter" Type="Folder"/>
+				<Item Name="YAFFooter.lvlib" Type="Library" URL="../.Externals/YAFTAFModule_GUI_Footer/YAFFooter/YAFFooter.lvlib"/>
+			</Item>
 		</Item>
 		<Item Name="Templates" Type="Folder">
-			<Item Name="TemplateGUITAF.lvlib" Type="Library" URL="../TemplateGUIYAF/TemplateGUITAF.lvlib"/>
-			<Item Name="TemplateGUIOpenGDSActiveObject.lvlib" Type="Library" URL="../TemplateGUI/TemplateGUIOpenGDSActiveObject.lvlib"/>
+			<Item Name="TemplateGUITAF.lvlib" Type="Library" URL="../.Externals/YAFTAFModule_Template/TemplateGUITAF.lvlib"/>
+			<Item Name="TemplateGUIOpenGDSActiveObject.lvlib" Type="Library" URL="../.Externals/TAFAOModule_Template/TemplateGUIOpenGDSActiveObject.lvlib"/>
 		</Item>
 		<Item Name="DemoApplication.lvclass" Type="LVClass" URL="../DemoApplication/DemoApplication.lvclass"/>
 		<Item Name="_Main.vi" Type="VI" URL="../_Main.vi"/>
