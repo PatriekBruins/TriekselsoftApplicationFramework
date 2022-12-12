@@ -40,6 +40,7 @@ Before getting started with a short explanation on the architecture I should men
 heavily relies on object oriented design using Interfaces. So if you're not into this it might be a little tough, although
 I think it's worth chewing on it.
 
+==== Basic Concept: The Interface
 The starting point is an object.
 
 An object has a number of methods to execute tasks. These methods are captured by the interfaces 
@@ -57,7 +58,55 @@ It defines just the interface to the object. So in the end the aggregated object
 These must be filled by actual instances of objects that support these interfaces in order for the aggregated class to perform its purpose.
 Let's take an example:
 
-image:CarExample.png[CarExample.png] 
+[plantuml, format="svg", align="center"]
+....
+@startuml
+
+class Car
+Car : IBreakSystem Break
+Car : ISpeedSystem Gas
+Car : ISteeringSystem Steering
+
+Car : On()
+Car : Off()
+
+interface IBreakSystem
+interface ISpeedSystem
+interface ISteeringSystem
+interface ICarControl
+
+ICarControl : On()
+ICarControl : Off()
+ICarControl <|.. Car
+
+ISpeedSystem : Speed()
+IBreakSystem : BreakPercentage()
+ISteeringSystem : SteeringAngle()
+
+class UsingFeed
+UsingFeed : Speed()
+UsingFeed : BreakPercentage()
+
+ISpeedSystem <|.. UsingFeed
+IBreakSystem <|.. UsingFeed
+
+class UsingEngine
+UsingEngine : Speed()
+ISpeedSystem <|.. UsingEngine
+
+class UsingWheelBreak
+UsingWheelBreak : BreakPercentage()
+IBreakSystem <|.. UsingWheelBreak
+
+class SteeringWheel
+SteeringWheel : SteeringAngle()
+ISteeringSystem <|.. SteeringWheel
+
+class Joystick
+Joystick : SteeringAngle()
+ISteeringSystem <|.. Joystick
+@enduml 
+....
 
 So we have a car. This can be turned on and off by using the ICarControl interface.
 
@@ -73,6 +122,7 @@ using the feed that supports both the interfaces. And for the attribute Steering
 
 Then we have created a car but the car itself isn't aware of the actual instance of the objects that is uses. It's only aware of the interfaces it needs.
 
+==== Basic Concept: Interface Description 
 The TAF InterfaceConfiguration json file would look like this:
 
 ....
@@ -115,8 +165,60 @@ The TAF InterfaceConfiguration json file would look like this:
 
 Resulting in the actual used UML Diagram at runtime.
 
-image:InterfaceConfiguration.png[InterfaceConfiguration.png] 
+[plantuml, format="svg", align="center"]
+....
+@startuml
+class ImaginaryCar << Car.lvclass  >>
+class MyFeed << UsingFeed.lvclass  >>
+class ThatJoystick << joystick.lvclass  >>
+ImaginaryCar o-- MyFeed : IBreakSystem.lvclass
+ImaginaryCar o-- MyFeed : ISpeedSystem.lvclass
+ImaginaryCar o-- ThatJoystick : ISteeringSystem.lvclass
+ImaginaryCar : (IBreakSystem.lvclass) Break: MyFeed
+ImaginaryCar : (ISpeedSystem.lvclass) Gas: MyFeed
+ImaginaryCar : (ISteeringSystem.lvclass) Steering: ThatJoystick
+@enduml 
+....
 
-Or in LabVIEW for the Car class attributes
 
-image:CarInLabVIEW.png[CarInLabVIEW.png] 
+==== Basic Concept: Object Container
+One of the other concepts is the object container. This is a singleton object that contains all the objects
+described above by name. Using this concept makes it easier to implement dependency inversion.
+[plantuml, format="svg", align="center"]
+....
+@startuml
+object "Object Container" as OCon
+OCon : Contains the objects by name
+class1 <<type z>>
+class2 <<type z>>
+class3 <<type y>>
+class4 <<type x>>
+class1 .down.>  OCon : name 'a'
+class2 .down.>  OCon : name 'b'
+class3 .down.> OCon : name 'c'
+class4 .down.> OCon : name 'd'
+@enduml
+....
+Previously stored objects can be retrieved from the container either by name or by type.
+[plantuml, format="svg", align="center"]
+....
+@startuml
+participant caller as app
+collections "Object Container" as OCon
+
+app --> OCon : GetExistingObject.vi ( string: 'a', objectype: 'z' )
+app <-- OCon : 'z: class1'
+
+app --> OCon : GetAllObjectsOfType.vim ( objectype: z )
+app <-- OCon : ['z: class1', 'z: class2']
+
+@enduml
+....
+
+It is also possible to retrieve the objects by applying the parent class or interface. That makes it possible to 
+get from the Object Container all classes that adhere to a specific interface.
+
+==== Basic Concept: Persistend Data
+An TAF supported object contains persistend data that can be retreived and set by interface methods. 
+
+==== Basic Concept: Tracing

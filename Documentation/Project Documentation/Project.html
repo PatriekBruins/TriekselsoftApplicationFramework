@@ -507,6 +507,8 @@ Please feel free to do some, although I&#8217;d like to get some feedback :)</p>
 heavily relies on object oriented design using Interfaces. So if you&#8217;re not into this it might be a little tough, although
 I think it&#8217;s worth chewing on it.</p>
 </div>
+<div class="sect3">
+<h4 id="_basic_concept_the_interface">Basic Concept: The Interface</h4>
 <div class="paragraph">
 <p>The starting point is an object.</p>
 </div>
@@ -528,8 +530,10 @@ It defines just the interface to the object. So in the end the aggregated object
 These must be filled by actual instances of objects that support these interfaces in order for the aggregated class to perform its purpose.
 Let&#8217;s take an example:</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="CarExample.png" alt="CarExample.png"></span></p>
+<div class="imageblock text-center kroki">
+<div class="content">
+<img src="diag-e671a0febc4deb50ba35f3ed7f4d7e65c83a523098e550656e881c2a37447009.svg" alt="Diagram">
+</div>
 </div>
 <div class="paragraph">
 <p>So we have a car. This can be turned on and off by using the ICarControl interface.</p>
@@ -558,6 +562,9 @@ using the feed that supports both the interfaces. And for the attribute Steering
 <div class="paragraph">
 <p>Then we have created a car but the car itself isn&#8217;t aware of the actual instance of the objects that is uses. It&#8217;s only aware of the interfaces it needs.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_basic_concept_interface_description">Basic Concept: Interface Description</h4>
 <div class="paragraph">
 <p>The TAF InterfaceConfiguration json file would look like this:</p>
 </div>
@@ -603,19 +610,50 @@ using the feed that supports both the interfaces. And for the attribute Steering
 <div class="paragraph">
 <p>Resulting in the actual used UML Diagram at runtime.</p>
 </div>
+<div class="imageblock text-center kroki">
+<div class="content">
+<img src="diag-bb775c69e6fc61e2ec54acb5f6476750f47f23089893f311537f2d53b78ebe07.svg" alt="Diagram">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_basic_concept_object_container">Basic Concept: Object Container</h4>
 <div class="paragraph">
-<p><span class="image"><img src="InterfaceConfiguration.png" alt="InterfaceConfiguration.png"></span></p>
+<p>One of the other concepts is the object container. This is a singleton object that contains all the objects
+described above by name. Using this concept makes it easier to implement dependency inversion.</p>
+</div>
+<div class="imageblock text-center kroki">
+<div class="content">
+<img src="diag-c3da7e277d70cf9119d4927d2a1001c75324528acb0a008a06912194672f10f0.svg" alt="Diagram">
+</div>
 </div>
 <div class="paragraph">
-<p>Or in LabVIEW for the Car class attributes</p>
+<p>Previously stored objects can be retrieved from the container either by name or by type.</p>
+</div>
+<div class="imageblock text-center kroki">
+<div class="content">
+<img src="diag-c161691d7108eeca3c21616915e315c41087cb56b310a573bdd21bff0c90c55d.svg" alt="Diagram">
+</div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="CarInLabVIEW.png" alt="CarInLabVIEW.png"></span></p>
+<p>It is also possible to retrieve the objects by applying the parent class or interface. That makes it possible to
+get from the Object Container all classes that adhere to a specific interface.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_basic_concept_persistend_data">Basic Concept: Persistend Data</h4>
+<div class="paragraph">
+<p>An TAF supported object contains persistend data that can be retreived and set by interface methods.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_basic_concept_tracing">Basic Concept: Tracing</h4>
+
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-11-09 22:47:40 +0100
+Last updated 2022-12-12 21:18:52 +0100
 </div>
 </div>
 </body>
