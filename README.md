@@ -9,3 +9,7 @@ VI Packages:
  # Antidoc plugin for generating customized documentation
  
  https://github.com/PatriekBruins/TriekselSoft_Antidoc_Plugin
+
+# Project documentation
+  * https://github.com/PatriekBruins/TriekselsoftApplicationFramework/blob/main/Documentation/Project%20Documentation/Project.html
+  * 
