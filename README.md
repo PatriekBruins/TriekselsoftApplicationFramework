@@ -1,5 +1,14 @@
 # TriekselsoftApplicationFramework
 
+Hi,
+
+This is an example of the usage of the Triekselsoft Application Framework using OpenCV for grabbing images.
+It is very much a work in progress version and is published for early acces only.
+Have fun looking around and playing with it.
+
+GBU,
+Patriek
+
 # Dependencies
 
 This example project runs on LabVIEW 2021 32bit only for now. 
