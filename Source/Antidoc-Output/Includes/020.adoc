@@ -1,4 +1,4 @@
-== ITAFTextViewer.lvclass
+== IAuthorizationUpdated.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
@@ -15,12 +15,12 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-interface "ITAFTextViewer" {
-{method} +UpdateText()
+interface "IAuthorizationUpdated" {
+{method} +AuthorizationUpdated()
 
 }
-"IFrontPanel" <|.. "ITAFTextViewer"
-interface "IFrontPanel" {}
+"IInterface" <|.. "IAuthorizationUpdated"
+interface "IInterface" {}
 
 
 
@@ -33,9 +33,9 @@ interface "IFrontPanel" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|UpdateText
-|image:ITAFTextViewer.lvclass_UpdateText.vi.png[ITAFTextViewer.lvclass:UpdateText.vi]
-|No description found (add content in vi description)
+|AuthorizationUpdated
+|image:IAuthorizationUpdated.lvclass_AuthorizationUpdated.vi.png[IAuthorizationUpdated.lvclass:AuthorizationUpdated.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

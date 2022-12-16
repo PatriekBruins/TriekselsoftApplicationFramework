@@ -1,4 +1,4 @@
-== IAuthorization.lvclass
+== ICreateDestroy.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
@@ -15,13 +15,12 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-interface "IAuthorization" {
-{method} +EvaluateAuthorizationExpression()
-{method} +SetCondition()
-{method} +SetEvaluations()
+interface "ICreateDestroy" {
+{method} +Create()
+{method} +Destroy()
 
 }
-"IInterface" <|.. "IAuthorization"
+"IInterface" <|.. "ICreateDestroy"
 interface "IInterface" {}
 
 
@@ -35,25 +34,18 @@ interface "IInterface" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|EvaluateAuthorizationExpression
-|image:IAuthorization.lvclass_EvaluateAuthorizationExpression.vi.png[IAuthorization.lvclass:EvaluateAuthorizationExpression.vi]
-|No description found (add content in vi description)
+|Create
+|image:ICreateDestroy.lvclass_Create.vi.png[ICreateDestroy.lvclass:Create.vi]
+|Create the object instance
 |image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|SetCondition
-|image:IAuthorization.lvclass_SetCondition.vi.png[IAuthorization.lvclass:SetCondition.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 
-|SetEvaluations
-|image:IAuthorization.lvclass_SetEvaluations.vi.png[IAuthorization.lvclass:SetEvaluations.vi]
-|No description found (add content in vi description)
+|Destroy
+|image:ICreateDestroy.lvclass_Destroy.vi.png[ICreateDestroy.lvclass:Destroy.vi]
+|Destroy the object instance
 |image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 |===
 

@@ -1,9 +1,9 @@
-== Mockup_QualificationScreen.lvclass
+== YAFTAF.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.0
+*Version:* 1.0.0.3
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,14 +15,42 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "Mockup_QualificationScreen" {
-{field} -Ref : U32
+class "YAFTAF" {
+{field} -None : Boolean
+{static} {method} -YAFTAF_ClassCast()
+{static} {method} +YAFTAF_Constructor()
+{static} {method} +YAFTAF_Destructor()
+{static} {method} +YAFTAF_UserInterface()
+{static} {method} +YAFTAF_SetPersistentConfiguration()
+{static} {method} +CastVariantData()
+{static} {method} +YAFTAF_GetPersistentConfiguration()
+{static} {method} +YAFTAF_GetExternalInterfaces()
+{static} {method} +YAFTAF_SetExternalInterfaces()
+{method} #Constructor()
+{method} #Destructor()
+{method} #MainGUI()
+{method} #WritePersistentConfiguration()
+{method} #ReadPersistentConfiguration()
+{method} #ReadExternalInterfaces()
+{method} #WriteExternalInterfaces()
+{method} +GetName()
+{method} +SetName()
+{method} +Create()
 {method} +GetFrontPanel()
+{method} +DoCreate()
+{method} +Destroy()
+{method} +YAFTAF_Create()
+{method} +SetPersistentConfiguration()
+{method} +GetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
 
 }
-"TAFBaseGUI" <|-- "Mockup_QualificationScreen"
-"ITAFGUIActions" <|.. "Mockup_QualificationScreen"
-interface "ITAFGUIActions" {}
+"YActor" <|-- "YAFTAF"
+"IFrontPanel" <|.. "YAFTAF"
+interface "IFrontPanel" {}
+"ITAFObject" <|.. "YAFTAF"
+interface "ITAFObject" {}
 
 
 
@@ -35,11 +63,200 @@ interface "ITAFGUIActions" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
+|Constructor
+|image:YAFTAF.lvclass_Constructor.vi.png[YAFTAF.lvclass:Constructor.vi]
+|Used to initialize the attributes of the object. This is called at the creation of the object. This VI can be overridden by the child classes to initialize their attributesa
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Destructor
+|image:YAFTAF.lvclass_Destructor.vi.png[YAFTAF.lvclass:Destructor.vi]
+|Called at the destruction of the object. Use this to clear references or perform action to tidy up the object.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MainGUI
+|image:YAFTAF.lvclass_MainGUI.vi.png[YAFTAF.lvclass:MainGUI.vi]
+|This is the user interface of the object. It will handle the events to update the GUI.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|WritePersistentConfiguration
+|image:YAFTAF.lvclass_WritePersistentConfiguration.vi.png[YAFTAF.lvclass:WritePersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadPersistentConfiguration
+|image:YAFTAF.lvclass_ReadPersistentConfiguration.vi.png[YAFTAF.lvclass:ReadPersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadExternalInterfaces
+|image:YAFTAF.lvclass_ReadExternalInterfaces.vi.png[YAFTAF.lvclass:ReadExternalInterfaces.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteExternalInterfaces
+|image:YAFTAF.lvclass_WriteExternalInterfaces.vi.png[YAFTAF.lvclass:WriteExternalInterfaces.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetName
+|image:YAFTAF.lvclass_GetName.vi.png[YAFTAF.lvclass:GetName.vi]
+|Retrieves the name of the instance of the object
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetName
+|image:YAFTAF.lvclass_SetName.vi.png[YAFTAF.lvclass:SetName.vi]
+|Sets the unique name of this instance of the object
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create
+|image:YAFTAF.lvclass_Create.vi.png[YAFTAF.lvclass:Create.vi]
+|Create the object instance
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
 |GetFrontPanel
-|image:Mockup_QualificationScreen.lvclass_GetFrontPanel.vi.png[Mockup_QualificationScreen.lvclass:GetFrontPanel.vi]
-|No description found (add content in vi description)
+|image:YAFTAF.lvclass_GetFrontPanel.vi.png[YAFTAF.lvclass:GetFrontPanel.vi]
+|Retrieve the FrontPanelControl for controlling the state of the user interface front panel
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|YAFTAF_Constructor
+|image:YAFTAF.lvclass_YAFTAF_Constructor.vi.png[YAFTAF.lvclass:YAFTAF_Constructor.vi]
+|Used to initialize the attributes of the object. This is called at the creation of the object. This VI can be overridden by the child classes to initialize their attributesa
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|YAFTAF_Destructor
+|image:YAFTAF.lvclass_YAFTAF_Destructor.vi.png[YAFTAF.lvclass:YAFTAF_Destructor.vi]
+|Called at the destruction of the object. Use this to clear references or perform action to tidy up the object.
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DoCreate
+|image:YAFTAF.lvclass_DoCreate.vi.png[YAFTAF.lvclass:DoCreate.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|YAFTAF_UserInterface
+|image:YAFTAF.lvclass_YAFTAF_UserInterface.vi.png[YAFTAF.lvclass:YAFTAF_UserInterface.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Destroy
+|image:YAFTAF.lvclass_Destroy.vi.png[YAFTAF.lvclass:Destroy.vi]
+|Destroy the object instance
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|YAFTAF_Create
+|image:YAFTAF.lvclass_YAFTAF_Create.vi.png[YAFTAF.lvclass:YAFTAF_Create.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|YAFTAF_SetPersistentConfiguration
+|image:YAFTAF.lvclass_YAFTAF_SetPersistentConfiguration.vi.png[YAFTAF.lvclass:YAFTAF_SetPersistentConfiguration.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|CastVariantData
+|image:YAFTAF.lvclass_CastVariantData.vim.png[YAFTAF.lvclass:CastVariantData.vim]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|SetPersistentConfiguration
+|image:YAFTAF.lvclass_SetPersistentConfiguration.vi.png[YAFTAF.lvclass:SetPersistentConfiguration.vi]
+|Sets the persistent data in the object
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|YAFTAF_GetPersistentConfiguration
+|image:YAFTAF.lvclass_YAFTAF_GetPersistentConfiguration.vi.png[YAFTAF.lvclass:YAFTAF_GetPersistentConfiguration.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetPersistentConfiguration
+|image:YAFTAF.lvclass_GetPersistentConfiguration.vi.png[YAFTAF.lvclass:GetPersistentConfiguration.vi]
+|Retrieve the persistent data of the object. For TAF these are stored in the attributes of the variant
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|YAFTAF_GetExternalInterfaces
+|image:YAFTAF.lvclass_YAFTAF_GetExternalInterfaces.vi.png[YAFTAF.lvclass:YAFTAF_GetExternalInterfaces.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaces
+|image:YAFTAF.lvclass_GetExternalInterfaces.vi.png[YAFTAF.lvclass:GetExternalInterfaces.vi]
+|Gets the external interface objects that are used by the object. Each interface is defined by:
+
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|YAFTAF_SetExternalInterfaces
+|image:YAFTAF.lvclass_YAFTAF_SetExternalInterfaces.vi.png[YAFTAF.lvclass:YAFTAF_SetExternalInterfaces.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterfaces
+|image:YAFTAF.lvclass_SetExternalInterfaces.vi.png[YAFTAF.lvclass:SetExternalInterfaces.vi]
+|Sets the external interface objects that are used by the object. Each interface is defined by:
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 |===
 

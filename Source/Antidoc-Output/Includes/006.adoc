@@ -1,27 +1,18 @@
-== TraceWindow.lvlib
+== Expressions.lvlib
 
 *Responsibility:*
 No description found (add content in lvlib description)
 
 *Version:* 1.0.0.0
 
-.Nested libraries
-[cols="<.<1d,<.<1d", %autowidth, frame=all, grid=all, stripes=none]
-|===
-|Name |Type
-
-|<<TraceWindow.lvclass>>
-|LVClass
-|===
-
 .Functions (non private scope only)
 [cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|Test GUI
-|image:TraceWindow.lvlib_Test_GUI.vi.png[TraceWindow.lvlib:Test GUI.vi]
-|No description found (add content in vi description)
+|EvaluateLabeledExpression
+|image:Expressions.lvlib_EvaluateLabeledExpression.vi.png[Expressions.lvlib:EvaluateLabeledExpression.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

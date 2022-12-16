@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="101px" preserveAspectRatio="none" style="width:177px;height:101px;background:#FFFFFF;" version="1.1" viewBox="0 0 177 101" width="177px" zoomAndPan="magnify"><defs/><g><!--MD5=[131dfa876bc571c892ddb67ee9c95570]
+class ITAFFilteredTrace--><g id="elem_ITAFFilteredTrace"><rect codeLine="8" fill="#FFFFFF" height="80.5938" id="ITAFFilteredTrace" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:0.5;" width="156" x="7" y="7"/><rect fill="#808080" height="32" rx="2.5" ry="2.5" style="stroke:#808080;stroke-width:0.5;" width="156" x="7" y="7"/><rect fill="#808080" height="2.5" style="stroke:#808080;stroke-width:0.5;" width="156" x="7" y="36.5"/><rect codeLine="8" fill="none" height="80.5938" id="ITAFFilteredTrace" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:0.5;" width="156" x="7" y="7"/><ellipse cx="23.35" cy="23" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M19.2719,18.7656 L19.2719,16.6094 L26.6625,16.6094 L26.6625,18.7656 L24.1938,18.7656 L24.1938,26.8438 L26.6625,26.8438 L26.6625,29 L19.2719,29 L19.2719,26.8438 L21.7406,26.8438 L21.7406,18.7656 L19.2719,18.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="121" x="37.65" y="27.8467">ITAFFilteredTrace</text><line style="stroke:#555555;stroke-width:0.5;" x1="8" x2="162" y1="39" y2="39"/><line style="stroke:#555555;stroke-width:0.5;" x1="8" x2="162" y1="47" y2="47"/><ellipse cx="18" cy="60.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="27" y="63.9951">AddSubscriber()</text><ellipse cx="18" cy="76.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130" x="27" y="80.292">DeleteSubscriber()</text></g><!--MD5=[81dbef906b632658619a346d9ecbc996]
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+interface "ITAFFilteredTrace" {
+{method} +AddSubscriber()
+{method} +DeleteSubscriber()
+
+}
+
+
+
+@enduml
+
+PlantUML version 1.2022.12(Sun Oct 23 18:12:26 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

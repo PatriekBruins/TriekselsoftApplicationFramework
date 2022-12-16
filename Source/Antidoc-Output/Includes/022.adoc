@@ -1,4 +1,4 @@
-== IFrontPanel.lvclass
+== IAuthorization.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
@@ -15,11 +15,13 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-interface "IFrontPanel" {
-{method} +GetFrontPanel()
+interface "IAuthorization" {
+{method} +EvaluateAuthorizationExpression()
+{method} +SetCondition()
+{method} +SetEvaluations()
 
 }
-"IInterface" <|.. "IFrontPanel"
+"IInterface" <|.. "IAuthorization"
 interface "IInterface" {}
 
 
@@ -33,9 +35,23 @@ interface "IInterface" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|GetFrontPanel
-|image:IFrontPanel.lvclass_GetFrontPanel.vi.png[IFrontPanel.lvclass:GetFrontPanel.vi]
-|No description found (add content in vi description)
+|EvaluateAuthorizationExpression
+|image:IAuthorization.lvclass_EvaluateAuthorizationExpression.vi.png[IAuthorization.lvclass:EvaluateAuthorizationExpression.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetCondition
+|image:IAuthorization.lvclass_SetCondition.vi.png[IAuthorization.lvclass:SetCondition.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetEvaluations
+|image:IAuthorization.lvclass_SetEvaluations.vi.png[IAuthorization.lvclass:SetEvaluations.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

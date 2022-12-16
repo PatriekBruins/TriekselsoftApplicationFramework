@@ -1,49 +1,27 @@
-== IPersistentData.lvclass
+== JSONTextViewer.lvlib
 
 *Responsibility:*
-No description found (add content in lvclass description)
+No description found (add content in lvlib description)
 
 *Version:* 1.0.0.0
 
-[plantuml, format="svg", align="center"]
-....
-@startuml
-set namespaceSeparator :
-skinparam ClassBackgroundColor #FFFFFF
-skinparam ClassBorderColor #555555
-skinparam ClassFontColor #000000
-skinparam ClassHeaderBackgroundColor #808080
+.Nested libraries
+[cols="<.<1d,<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Type
 
-skinparam top to bottom direction
-interface "IPersistentData" {
-{method} +GetPersistentConfiguration()
-{method} +SetPersistentConfiguration()
-
-}
-"IInterface" <|.. "IPersistentData"
-interface "IInterface" {}
-
-
-
-
-@enduml
-....
+|<<JSONTextViewer.lvclass>>
+|LVClass
+|===
 
 .Functions (non private scope only)
 [cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|GetPersistentConfiguration
-|image:IPersistentData.lvclass_GetPersistentConfiguration.vi.png[IPersistentData.lvclass:GetPersistentConfiguration.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|SetPersistentConfiguration
-|image:IPersistentData.lvclass_SetPersistentConfiguration.vi.png[IPersistentData.lvclass:SetPersistentConfiguration.vi]
-|No description found (add content in vi description)
+|Test GUI
+|image:JSONTextViewer.lvlib_Test_GUI.vi.png[JSONTextViewer.lvlib:Test GUI.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

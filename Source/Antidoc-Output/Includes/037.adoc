@@ -1,4 +1,4 @@
-== UsedInTestClass.lvclass
+== TraceWindow.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
@@ -15,34 +15,36 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "UsedInTestClass" {
+class "TraceWindow.lvlib:TraceWindow" {
 {field} -Ref : U32
-{static} {method} #Process()
-{static} {method} #StartProcess()
-{static} {method} #StopProcess()
-{static} {method} #ProcessRepository()
-{static} {method} #UsedInTestClass_New()
-{static} {method} #UsedInTestClass_GetAttributes()
-{static} {method} +UsedInTestClass_Create()
-{static} {method} +ControlProcessWindow()
-{method} +Create()
-{method} +Destroy()
+{static} {method} #StartMainGUI()
+{static} {method} #RequestDestroy()
+{static} {method} #MainGUI()
+{static} {method} #StopMainGUI()
+{static} {method} #TraceWindow_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #TraceWindow_GetAttributes()
+{static} {method} #TraceWindow_SendAndReceive()
+{static} {method} -TraceWindow_MainGUIActive()
+{static} {method} +TraceWindow_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} #ReadTraceQueue()
+{method} +WriteTraceQueue()
+{method} #ReadOpenAtClosure()
 {method} +GetPersistentConfiguration()
 {method} +SetPersistentConfiguration()
-{method} +SetImage()
-{method} +RequestImage()
-{method} +GetName()
 {method} +GetExternalInterfaces()
 {method} +SetExternalInterfaces()
 {method} +ExecuteButtonAction()
+{method} +GetFrontPanel()
+{method} +Create()
+{method} +Destroy()
+{method} +IsGUIRunning()
 
 }
-"INewImage" <|.. "UsedInTestClass"
-interface "INewImage" {}
-"ITAFGUIActions" <|.. "UsedInTestClass"
+"TAFBaseGUI" <|-- "TraceWindow.lvlib:TraceWindow"
+"ITAFGUIActions" <|.. "TraceWindow.lvlib:TraceWindow"
 interface "ITAFGUIActions" {}
-"ITAFObject" <|.. "UsedInTestClass"
-interface "ITAFObject" {}
 
 
 
@@ -55,133 +57,174 @@ interface "ITAFObject" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|Process
-|image:UsedInTestClass.lvclass_Process.vi.png[UsedInTestClass.lvclass:Process.vi]
-|No description found (add content in vi description)
+|StartMainGUI
+|image:TraceWindow.lvlib_TraceWindow.lvclass_StartMainGUI.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:StartMainGUI.vi]
+|Looks up an existing object matching object name or creates a new object and returns a refnum you can use when calling other class methods.
+
+Objects created with this VI should be destroyed using this class Delete VI.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|RequestDestroy
+|image:TraceWindow.lvlib_TraceWindow.lvclass_RequestDestroy.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:RequestDestroy.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MainGUI
+|image:TraceWindow.lvlib_TraceWindow.lvclass_MainGUI.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:MainGUI.vi]
+|This is the user interface of the object. It will handle the events to update the GUI.
 |image:scope-protected.png[scope-protected.png]
 |image:reentrancy-preallocated.png[reentrancy-preallocated.png]
 |image:empty.png[empty.png]
 
-|StartProcess
-|image:UsedInTestClass.lvclass_StartProcess.vi.png[UsedInTestClass.lvclass:StartProcess.vi]
-|+++Looks up an existing object matching object name or creates a new object and returns a refnum you can use when calling other class methods.+++
-
-+++Objects created with this VI should be destroyed using this class Delete VI.+++
-
-|image:scope-protected.png[scope-protected.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|StopProcess
-|image:UsedInTestClass.lvclass_StopProcess.vi.png[UsedInTestClass.lvclass:StopProcess.vi]
-|No description found (add content in vi description)
+|StopMainGUI
+|image:TraceWindow.lvlib_TraceWindow.lvclass_StopMainGUI.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:StopMainGUI.vi]
+|-tbd-
 |image:scope-protected.png[scope-protected.png]
 |image:reentrancy-preallocated.png[reentrancy-preallocated.png]
 |image:empty.png[empty.png]
 
-|ProcessRepository
-|image:UsedInTestClass.lvclass_ProcessRepository.vi.png[UsedInTestClass.lvclass:ProcessRepository.vi]
-|No description found (add content in vi description)
-|image:scope-protected.png[scope-protected.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|UsedInTestClass_New
-|image:UsedInTestClass.lvclass_UsedInTestClass_New.vi.png[UsedInTestClass.lvclass:UsedInTestClass_New.vi]
-|No description found (add content in vi description)
+|TraceWindow_New
+|image:TraceWindow.lvlib_TraceWindow.lvclass_TraceWindow_New.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:TraceWindow_New.vi]
+|GOOP4 Attribute container.
 |image:scope-protected.png[scope-protected.png]
 |image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 
-|UsedInTestClass_GetAttributes
-|image:UsedInTestClass.lvclass_UsedInTestClass_GetAttributes.vi.png[UsedInTestClass.lvclass:UsedInTestClass_GetAttributes.vi]
-|No description found (add content in vi description)
+|MainGUIRepository
+|image:TraceWindow.lvlib_TraceWindow.lvclass_MainGUIRepository.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:MainGUIRepository.vi]
+|-tbd-
 |image:scope-protected.png[scope-protected.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|UsedInTestClass_Create
-|image:UsedInTestClass.lvclass_UsedInTestClass_Create.vi.png[UsedInTestClass.lvclass:UsedInTestClass_Create.vi]
-|No description found (add content in vi description)
+|TraceWindow_GetAttributes
+|image:TraceWindow.lvlib_TraceWindow.lvclass_TraceWindow_GetAttributes.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:TraceWindow_GetAttributes.vi]
+|Retrieves the object attributes of the by reference class.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|TraceWindow_SendAndReceive
+|image:TraceWindow.lvlib_TraceWindow.lvclass_TraceWindow_SendAndReceive.vim.png[TraceWindow.lvlib:TraceWindow.lvclass:TraceWindow_SendAndReceive.vim]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|ReadTraceQueue
+|image:TraceWindow.lvlib_TraceWindow.lvclass_ReadTraceQueue.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:ReadTraceQueue.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteTraceQueue
+|image:TraceWindow.lvlib_TraceWindow.lvclass_WriteTraceQueue.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:WriteTraceQueue.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadOpenAtClosure
+|image:TraceWindow.lvlib_TraceWindow.lvclass_ReadOpenAtClosure.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:ReadOpenAtClosure.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetPersistentConfiguration
+|image:TraceWindow.lvlib_TraceWindow.lvclass_GetPersistentConfiguration.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:GetPersistentConfiguration.vi]
+|Retrieve the persistent data of the object. For TAF these are stored in the attributes of the variant
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetPersistentConfiguration
+|image:TraceWindow.lvlib_TraceWindow.lvclass_SetPersistentConfiguration.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:SetPersistentConfiguration.vi]
+|Sets the persistent data in the object
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaces
+|image:TraceWindow.lvlib_TraceWindow.lvclass_GetExternalInterfaces.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:GetExternalInterfaces.vi]
+|Gets the external interface objects that are used by the object. Each interface is defined by:
+
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterfaces
+|image:TraceWindow.lvlib_TraceWindow.lvclass_SetExternalInterfaces.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:SetExternalInterfaces.vi]
+|Sets the external interface objects that are used by the object. Each interface is defined by:
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|ExecuteButtonAction
+|image:TraceWindow.lvlib_TraceWindow.lvclass_ExecuteButtonAction.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:ExecuteButtonAction.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetFrontPanel
+|image:TraceWindow.lvlib_TraceWindow.lvclass_GetFrontPanel.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:GetFrontPanel.vi]
+|Retrieve the FrontPanelControl for controlling the state of the user interface front panel
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|TraceWindow_Create
+|image:TraceWindow.lvlib_TraceWindow.lvclass_TraceWindow_Create.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:TraceWindow_Create.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
 |Create
-|image:UsedInTestClass.lvclass_Create.vi.png[UsedInTestClass.lvclass:Create.vi]
-|No description found (add content in vi description)
+|image:TraceWindow.lvlib_TraceWindow.lvclass_Create.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:Create.vi]
+|Create the object instance
 |image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 
 |Destroy
-|image:UsedInTestClass.lvclass_Destroy.vi.png[UsedInTestClass.lvclass:Destroy.vi]
-|No description found (add content in vi description)
+|image:TraceWindow.lvlib_TraceWindow.lvclass_Destroy.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:Destroy.vi]
+|Destroy the object instance
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|ControlMainGUIWindow
+|image:TraceWindow.lvlib_TraceWindow.lvclass_ControlMainGUIWindow.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:ControlMainGUIWindow.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|GetPersistentConfiguration
-|image:UsedInTestClass.lvclass_GetPersistentConfiguration.vi.png[UsedInTestClass.lvclass:GetPersistentConfiguration.vi]
-|No description found (add content in vi description)
+|IsGUIRunning
+|image:TraceWindow.lvlib_TraceWindow.lvclass_IsGUIRunning.vi.png[TraceWindow.lvlib:TraceWindow.lvclass:IsGUIRunning.vi]
+|-tbd-
 |image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|SetPersistentConfiguration
-|image:UsedInTestClass.lvclass_SetPersistentConfiguration.vi.png[UsedInTestClass.lvclass:SetPersistentConfiguration.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|ControlProcessWindow
-|image:UsedInTestClass.lvclass_ControlProcessWindow.vi.png[UsedInTestClass.lvclass:ControlProcessWindow.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|SetImage
-|image:UsedInTestClass.lvclass_SetImage.vi.png[UsedInTestClass.lvclass:SetImage.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|RequestImage
-|image:UsedInTestClass.lvclass_RequestImage.vi.png[UsedInTestClass.lvclass:RequestImage.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|GetName
-|image:UsedInTestClass.lvclass_GetName.vi.png[UsedInTestClass.lvclass:GetName.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|GetExternalInterfaces
-|image:UsedInTestClass.lvclass_GetExternalInterfaces.vi.png[UsedInTestClass.lvclass:GetExternalInterfaces.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|SetExternalInterfaces
-|image:UsedInTestClass.lvclass_SetExternalInterfaces.vi.png[UsedInTestClass.lvclass:SetExternalInterfaces.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|ExecuteButtonAction
-|image:UsedInTestClass.lvclass_ExecuteButtonAction.vi.png[UsedInTestClass.lvclass:ExecuteButtonAction.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 |===
 

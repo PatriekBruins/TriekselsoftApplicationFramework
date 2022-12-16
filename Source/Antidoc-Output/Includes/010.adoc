@@ -1,4 +1,4 @@
-== TemplateGUI.lvlib
+== TemplateGUIOpenGDSActiveObject.lvlib
 
 *Responsibility:*
 No description found (add content in lvlib description)
@@ -20,8 +20,8 @@ No description found (add content in lvlib description)
 |Name |Connector pane |Description |S. |R. |I.
 
 |Test GUI
-|image:TemplateGUI.lvlib_Test_GUI.vi.png[TemplateGUI.lvlib:Test GUI.vi]
-|No description found (add content in vi description)
+|image:TemplateGUIOpenGDSActiveObject.lvlib_Test_GUI.vi.png[TemplateGUIOpenGDSActiveObject.lvlib:Test GUI.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

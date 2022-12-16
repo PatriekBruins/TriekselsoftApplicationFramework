@@ -1,9 +1,9 @@
-== IInterface.lvclass
+== TemplateGUITAF.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.0
+*Version:* 1.0.0.1
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,13 +15,110 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-interface "IInterface" {
+class "TemplateGUITAF.lvlib:TemplateGUITAF" {
+{field} -ExternalInterfaces : Cluster
+{field} -Local : Cluster
+{field} -Persistent : Cluster
+{static} {method} -TemplateGUITAF_CastUIEvent()
+{static} {method} -TemplateGUITAF_ClassCast()
+{static} {method} #TemplateGUITAF_SendUiEvent()
+{static} {method} +TemplateGUITAF_TemplateMethod()
+{method} #Constructor()
+{method} #Destructor()
+{method} #WritePersistentConfiguration()
+{method} #ReadPersistentConfiguration()
+{method} #ReadExternalInterfaces()
+{method} #WriteExternalInterfaces()
+{method} +TemplateMethod()
+{method} #MainGUI()
 
 }
+"YAFTAF" <|-- "TemplateGUITAF.lvlib:TemplateGUITAF"
+"TemplateGUITAF.lvlib:TemplateGUITAF" *-- "ITAFObject"
 
 
 
 @enduml
 ....
 
-This library has no functions set to non private scope.
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|TemplateGUITAF_SendUiEvent
+|image:TemplateGUITAF.lvlib_TemplateGUITAF.lvclass_TemplateGUITAF_SendUiEvent.vi.png[TemplateGUITAF.lvlib:TemplateGUITAF.lvclass:TemplateGUITAF_SendUiEvent.vi]
+|Sends the selected event to the registered event handler loops in the user interface VI.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Constructor
+|image:TemplateGUITAF.lvlib_TemplateGUITAF.lvclass_Constructor.vi.png[TemplateGUITAF.lvlib:TemplateGUITAF.lvclass:Constructor.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Destructor
+|image:TemplateGUITAF.lvlib_TemplateGUITAF.lvclass_Destructor.vi.png[TemplateGUITAF.lvlib:TemplateGUITAF.lvclass:Destructor.vi]
+|Called at the destruction of the object. Use this to clear references or perform action to tidy up the object.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WritePersistentConfiguration
+|image:TemplateGUITAF.lvlib_TemplateGUITAF.lvclass_WritePersistentConfiguration.vi.png[TemplateGUITAF.lvlib:TemplateGUITAF.lvclass:WritePersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadPersistentConfiguration
+|image:TemplateGUITAF.lvlib_TemplateGUITAF.lvclass_ReadPersistentConfiguration.vi.png[TemplateGUITAF.lvlib:TemplateGUITAF.lvclass:ReadPersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadExternalInterfaces
+|image:TemplateGUITAF.lvlib_TemplateGUITAF.lvclass_ReadExternalInterfaces.vi.png[TemplateGUITAF.lvlib:TemplateGUITAF.lvclass:ReadExternalInterfaces.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteExternalInterfaces
+|image:TemplateGUITAF.lvlib_TemplateGUITAF.lvclass_WriteExternalInterfaces.vi.png[TemplateGUITAF.lvlib:TemplateGUITAF.lvclass:WriteExternalInterfaces.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|TemplateGUITAF_TemplateMethod
+|image:TemplateGUITAF.lvlib_TemplateGUITAF.lvclass_TemplateGUITAF_TemplateMethod.vi.png[TemplateGUITAF.lvlib:TemplateGUITAF.lvclass:TemplateGUITAF_TemplateMethod.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|TemplateMethod
+|image:TemplateGUITAF.lvlib_TemplateGUITAF.lvclass_TemplateMethod.vi.png[TemplateGUITAF.lvlib:TemplateGUITAF.lvclass:TemplateMethod.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|MainGUI
+|image:TemplateGUITAF.lvlib_TemplateGUITAF.lvclass_MainGUI.vi.png[TemplateGUITAF.lvlib:TemplateGUITAF.lvclass:MainGUI.vi]
+|This is the user interface of the object. It will handle the events to update the GUI.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

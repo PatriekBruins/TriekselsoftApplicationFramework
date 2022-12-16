@@ -1,4 +1,4 @@
-== IDockGUI.lvclass
+== IApplicationConfiguration.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
@@ -15,11 +15,26 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-interface "IDockGUI" {
-{method} +DockGUI()
+interface "IApplicationConfiguration" {
+{static} {method} +ApplicationConfigurationName --constant()
+{method} +Create()
+{method} +GetObjectConfiguration()
+{method} +GetObjectConfigurationString()
+{method} +SetObjectConfiguration()
+{method} +SetObjectConfigurationString()
+{method} +GetAllObjectData()
+{method} +GetObjectExternalInterfaces()
+{method} +Open()
+{method} +SetApplicationBasePath()
+{method} +GetConfigurationBasePath()
+{method} +GetExternalInterfaceString()
+{method} +ListConfigurations()
+{method} +GetConfigurationString()
+{method} +SetConfigurationString()
+{method} +GetObjectData()
 
 }
-"IInterface" <|.. "IDockGUI"
+"IInterface" <|.. "IApplicationConfiguration"
 interface "IInterface" {}
 
 
@@ -33,9 +48,114 @@ interface "IInterface" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|DockGUI
-|image:IDockGUI.lvclass_DockGUI.vi.png[IDockGUI.lvclass:DockGUI.vi]
-|No description found (add content in vi description)
+|ApplicationConfigurationName --constant
+|image:IApplicationConfiguration.lvclass_ApplicationConfigurationName___constant.vi.png[IApplicationConfiguration.lvclass:ApplicationConfigurationName --constant.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create
+|image:IApplicationConfiguration.lvclass_Create.vi.png[IApplicationConfiguration.lvclass:Create.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectConfiguration
+|image:IApplicationConfiguration.lvclass_GetObjectConfiguration.vi.png[IApplicationConfiguration.lvclass:GetObjectConfiguration.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectConfigurationString
+|image:IApplicationConfiguration.lvclass_GetObjectConfigurationString.vi.png[IApplicationConfiguration.lvclass:GetObjectConfigurationString.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetObjectConfiguration
+|image:IApplicationConfiguration.lvclass_SetObjectConfiguration.vi.png[IApplicationConfiguration.lvclass:SetObjectConfiguration.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetObjectConfigurationString
+|image:IApplicationConfiguration.lvclass_SetObjectConfigurationString.vi.png[IApplicationConfiguration.lvclass:SetObjectConfigurationString.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetAllObjectData
+|image:IApplicationConfiguration.lvclass_GetAllObjectData.vi.png[IApplicationConfiguration.lvclass:GetAllObjectData.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectExternalInterfaces
+|image:IApplicationConfiguration.lvclass_GetObjectExternalInterfaces.vi.png[IApplicationConfiguration.lvclass:GetObjectExternalInterfaces.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Open
+|image:IApplicationConfiguration.lvclass_Open.vi.png[IApplicationConfiguration.lvclass:Open.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetApplicationBasePath
+|image:IApplicationConfiguration.lvclass_SetApplicationBasePath.vi.png[IApplicationConfiguration.lvclass:SetApplicationBasePath.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetConfigurationBasePath
+|image:IApplicationConfiguration.lvclass_GetConfigurationBasePath.vi.png[IApplicationConfiguration.lvclass:GetConfigurationBasePath.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaceString
+|image:IApplicationConfiguration.lvclass_GetExternalInterfaceString.vi.png[IApplicationConfiguration.lvclass:GetExternalInterfaceString.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ListConfigurations
+|image:IApplicationConfiguration.lvclass_ListConfigurations.vi.png[IApplicationConfiguration.lvclass:ListConfigurations.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetConfigurationString
+|image:IApplicationConfiguration.lvclass_GetConfigurationString.vi.png[IApplicationConfiguration.lvclass:GetConfigurationString.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetConfigurationString
+|image:IApplicationConfiguration.lvclass_SetConfigurationString.vi.png[IApplicationConfiguration.lvclass:SetConfigurationString.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetObjectData
+|image:IApplicationConfiguration.lvclass_GetObjectData.vi.png[IApplicationConfiguration.lvclass:GetObjectData.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

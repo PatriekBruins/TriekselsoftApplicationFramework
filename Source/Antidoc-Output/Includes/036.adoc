@@ -1,9 +1,9 @@
-== JSONTextViewer.lvclass
+== TAFTraceWindow.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.0
+*Version:* 1.0.0.4
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,40 +15,32 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "JSONTextViewer.lvlib:JSONTextViewer" {
-{field} -Ref : U32
-{static} {method} #StartMainGUI()
-{static} {method} #RequestDestroy()
-{static} {method} #MainGUI()
-{static} {method} #StopMainGUI()
-{static} {method} #JSONTextViewer_New()
-{static} {method} #MainGUIRepository()
-{static} {method} #JSONTextViewer_GetAttributes()
-{static} {method} #JSONTextViewer_SendAndReceive()
-{static} {method} -JSONTextViewer_MainGUIActive()
-{static} {method} +JSONTextViewer_Create()
-{static} {method} +ControlMainGUIWindow()
-{method} #ReadJSONText()
-{method} #ReadID()
-{method} +GetPersistentConfiguration()
-{method} +SetPersistentConfiguration()
-{method} +GetExternalInterfaces()
-{method} +SetExternalInterfaces()
-{method} +ExecuteButtonAction()
-{method} +GetFrontPanel()
-{method} +Create()
-{method} +Destroy()
-{method} +IsGUIRunning()
-{method} +UpdateText()
-{method} #Save()
+class "TAFTraceWindow" {
+{field} -ExternalInterfaces : Cluster
+{field} -Local : Cluster
+{field} -Persistent : Cluster
+{static} {method} -TAFTraceWindow_CastUIEvent()
+{static} {method} -TAFTraceWindow_ClassCast()
+{static} {method} -FiterCheckSend()
+{static} {method} #TAFTraceWindow_SendUiEvent()
+{static} {method} +TAFTraceWindow_AddSubscriber()
+{static} {method} +TAFTraceWindow_DeleteSubscriber()
+{static} {method} +TAFTraceWindow_TemplateMethod()
+{method} #Destructor()
+{method} #WritePersistentConfiguration()
+{method} #ReadPersistentConfiguration()
+{method} +AddSubscriber()
+{method} +DeleteSubscriber()
+{method} +TemplateMethod()
+{method} +SetDirectTrace()
+{method} #MainGUI()
 
 }
-"TAFBaseGUI" <|-- "JSONTextViewer.lvlib:JSONTextViewer"
-"ITAFGUIActions" <|.. "JSONTextViewer.lvlib:JSONTextViewer"
-interface "ITAFGUIActions" {}
-"ITAFTextViewer" <|.. "JSONTextViewer.lvlib:JSONTextViewer"
-interface "ITAFTextViewer" {}
+"YAFTAF" <|-- "TAFTraceWindow"
+"ITAFFilteredTrace" <|.. "TAFTraceWindow"
+interface "ITAFFilteredTrace" {}
 
+"TAFTraceWindow" *-- "ITAFObject"
 
 
 
@@ -60,175 +52,88 @@ interface "ITAFTextViewer" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|StartMainGUI
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_StartMainGUI.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:StartMainGUI.vi]
-|+++Looks up an existing object matching object name or creates a new object and returns a refnum you can use when calling other class methods.+++
-
-+++Objects created with this VI should be destroyed using this class Delete VI.+++
-
+|TAFTraceWindow_SendUiEvent
+|image:TAFTraceWindow.lvclass_TAFTraceWindow_SendUiEvent.vi.png[TAFTraceWindow.lvclass:TAFTraceWindow_SendUiEvent.vi]
+|-tbd-
 |image:scope-protected.png[scope-protected.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|RequestDestroy
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_RequestDestroy.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:RequestDestroy.vi]
-|No description found (add content in vi description)
+|Destructor
+|image:TAFTraceWindow.lvclass_Destructor.vi.png[TAFTraceWindow.lvclass:Destructor.vi]
+|Called at the destruction of the object. Use this to clear references or perform action to tidy up the object.
 |image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WritePersistentConfiguration
+|image:TAFTraceWindow.lvclass_WritePersistentConfiguration.vi.png[TAFTraceWindow.lvclass:WritePersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadPersistentConfiguration
+|image:TAFTraceWindow.lvclass_ReadPersistentConfiguration.vi.png[TAFTraceWindow.lvclass:ReadPersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|TAFTraceWindow_AddSubscriber
+|image:TAFTraceWindow.lvclass_TAFTraceWindow_AddSubscriber.vi.png[TAFTraceWindow.lvclass:TAFTraceWindow_AddSubscriber.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|TAFTraceWindow_DeleteSubscriber
+|image:TAFTraceWindow.lvclass_TAFTraceWindow_DeleteSubscriber.vi.png[TAFTraceWindow.lvclass:TAFTraceWindow_DeleteSubscriber.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|TAFTraceWindow_TemplateMethod
+|image:TAFTraceWindow.lvclass_TAFTraceWindow_TemplateMethod.vi.png[TAFTraceWindow.lvclass:TAFTraceWindow_TemplateMethod.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|AddSubscriber
+|image:TAFTraceWindow.lvclass_AddSubscriber.vi.png[TAFTraceWindow.lvclass:AddSubscriber.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|DeleteSubscriber
+|image:TAFTraceWindow.lvclass_DeleteSubscriber.vi.png[TAFTraceWindow.lvclass:DeleteSubscriber.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|TemplateMethod
+|image:TAFTraceWindow.lvclass_TemplateMethod.vi.png[TAFTraceWindow.lvclass:TemplateMethod.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetDirectTrace
+|image:TAFTraceWindow.lvclass_SetDirectTrace.vi.png[TAFTraceWindow.lvclass:SetDirectTrace.vi]
+|-tbd-
+|image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
 |MainGUI
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_MainGUI.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:MainGUI.vi]
-|+++This template is based off of the Queued Message Handler design pattern and the Queued Message Handler project template that ships with LabVIEW.+++
-
-+++The main difference is that the queue is private to this module and communication between modules is performed via Broadcast and Request events.+++
-
-+++Request events are wrapped in public API methods and are handled in the Event Handling Loop (EHL) of this VI. Any module can register for Broadcast events sent by this module. The EHL generates messages based on user interface actions.+++
-
-+++The Message Handling Loop (MHL) processes messages generated by the EHL, or by other messages.  The messages are string values, so new messages can be added easily to the Message Cases case structure in the MHL.  Each message cluster can also provide an optional value for Message Data, which is a variant that can be converted to whatever message-specific data is required.+++
-
-|image:scope-protected.png[scope-protected.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:empty.png[empty.png]
-
-|StopMainGUI
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_StopMainGUI.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:StopMainGUI.vi]
-|No description found (add content in vi description)
-|image:scope-protected.png[scope-protected.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:empty.png[empty.png]
-
-|JSONTextViewer_New
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_JSONTextViewer_New.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:JSONTextViewer_New.vi]
-|No description found (add content in vi description)
+|image:TAFTraceWindow.lvclass_MainGUI.vi.png[TAFTraceWindow.lvclass:MainGUI.vi]
+|This is the user interface of the object. It will handle the events to update the GUI.
 |image:scope-protected.png[scope-protected.png]
 |image:reentrancy-shared.png[reentrancy-shared.png]
-|image:empty.png[empty.png]
-
-|MainGUIRepository
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_MainGUIRepository.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:MainGUIRepository.vi]
-|No description found (add content in vi description)
-|image:scope-protected.png[scope-protected.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|JSONTextViewer_GetAttributes
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_JSONTextViewer_GetAttributes.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:JSONTextViewer_GetAttributes.vi]
-|No description found (add content in vi description)
-|image:scope-protected.png[scope-protected.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|JSONTextViewer_SendAndReceive
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_JSONTextViewer_SendAndReceive.vim.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:JSONTextViewer_SendAndReceive.vim]
-|No description found (add content in vi description)
-|image:scope-protected.png[scope-protected.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:inlined.png[inlined.png]
-
-|ReadJSONText
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_ReadJSONText.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:ReadJSONText.vi]
-|No description found (add content in vi description)
-|image:scope-protected.png[scope-protected.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|ReadID
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_ReadID.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:ReadID.vi]
-|No description found (add content in vi description)
-|image:scope-protected.png[scope-protected.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|GetPersistentConfiguration
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_GetPersistentConfiguration.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:GetPersistentConfiguration.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|SetPersistentConfiguration
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_SetPersistentConfiguration.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:SetPersistentConfiguration.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|GetExternalInterfaces
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_GetExternalInterfaces.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:GetExternalInterfaces.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|SetExternalInterfaces
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_SetExternalInterfaces.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:SetExternalInterfaces.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|ExecuteButtonAction
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_ExecuteButtonAction.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:ExecuteButtonAction.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|GetFrontPanel
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_GetFrontPanel.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:GetFrontPanel.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|JSONTextViewer_Create
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_JSONTextViewer_Create.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:JSONTextViewer_Create.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Create
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_Create.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:Create.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Destroy
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_Destroy.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:Destroy.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|ControlMainGUIWindow
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_ControlMainGUIWindow.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:ControlMainGUIWindow.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|IsGUIRunning
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_IsGUIRunning.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:IsGUIRunning.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:reentrancy-shared.png[reentrancy-shared.png]
-|image:empty.png[empty.png]
-
-|UpdateText
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_UpdateText.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:UpdateText.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Save
-|image:JSONTextViewer.lvlib_JSONTextViewer.lvclass_Save.vi.png[JSONTextViewer.lvlib:JSONTextViewer.lvclass:Save.vi]
-|No description found (add content in vi description)
-|image:scope-protected.png[scope-protected.png]
-|image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |===
 

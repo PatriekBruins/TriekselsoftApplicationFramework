@@ -1,9 +1,9 @@
-== Mockup_ServiceScreen.lvclass
+== ButtonCollection.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.0
+*Version:* 1.0.0.3
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,15 +15,21 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "Mockup_ServiceScreen" {
-{field} -Ref : U32
-{method} +GetFrontPanel()
+class "ButtonCollection" {
+{field} -ButtonDefinitions : Array of Cluster
+{field} -Buttons : Cluster
+{field} -Active : Cluster
+{field} -ActiveIndex : I32
+{static} {method} +Load()
+{static} {method} +ManualWriteFile()
+{static} {method} +Save()
+{method} +ReadButtonDefinitions()
+{method} +CleanUp()
+{method} +SetButtonControls()
+{method} +SetN()
+{method} +PressButton()
 
 }
-"TAFBaseGUI" <|-- "Mockup_ServiceScreen"
-"ITAFGUIActions" <|.. "Mockup_ServiceScreen"
-interface "ITAFGUIActions" {}
-
 
 
 
@@ -35,9 +41,58 @@ interface "ITAFGUIActions" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|GetFrontPanel
-|image:Mockup_ServiceScreen.lvclass_GetFrontPanel.vi.png[Mockup_ServiceScreen.lvclass:GetFrontPanel.vi]
-|No description found (add content in vi description)
+|ReadButtonDefinitions
+|image:ButtonCollection.lvclass_ReadButtonDefinitions.vi.png[ButtonCollection.lvclass:ReadButtonDefinitions.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Load
+|image:ButtonCollection.lvclass_Load.vi.png[ButtonCollection.lvclass:Load.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|CleanUp
+|image:ButtonCollection.lvclass_CleanUp.vi.png[ButtonCollection.lvclass:CleanUp.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetButtonControls
+|image:ButtonCollection.lvclass_SetButtonControls.vi.png[ButtonCollection.lvclass:SetButtonControls.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetNavigationLevel
+|image:ButtonCollection.lvclass_SetNavigationLevel.vi.png[ButtonCollection.lvclass:SetNavigationLevel.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|PressButton
+|image:ButtonCollection.lvclass_PressButton.vi.png[ButtonCollection.lvclass:PressButton.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ManualWriteFile
+|image:ButtonCollection.lvclass_ManualWriteFile.vi.png[ButtonCollection.lvclass:ManualWriteFile.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Save
+|image:ButtonCollection.lvclass_Save.vi.png[ButtonCollection.lvclass:Save.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

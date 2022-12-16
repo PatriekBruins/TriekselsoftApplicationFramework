@@ -1,8 +1,457 @@
-== MasterGUI.lvlib
+== User Interfaces
 
-*Responsibility:*
-No description found (add content in lvlib description)
+.User Interface Elements of VI MasterGUI.lvclass:MainGUI.vi in library or class <<MasterGUI.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
 
-*Version:* 1.0.0.0
+|image:MasterGUI.lvclass_MainGUI_MainPanel.png[MasterGUI.lvclass MainGUI MainPanel]
+|MainPanel
+|
+|===
 
-This library has no functions set to non private scope.
+.User Interface Elements of VI MasterGUI.lvclass:Layout.vi in library or class <<MasterGUI.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:MasterGUI.lvclass_Layout_Header.png[MasterGUI.lvclass Layout Header]
+|Header
+|
+
+|image:MasterGUI.lvclass_Layout_ButtonBar.png[MasterGUI.lvclass Layout ButtonBar]
+|ButtonBar
+|
+
+|image:MasterGUI.lvclass_Layout_MainFlexPanel.png[MasterGUI.lvclass Layout MainFlexPanel]
+|MainFlexPanel
+|
+
+|image:MasterGUI.lvclass_Layout_Footer.png[MasterGUI.lvclass Layout Footer]
+|Footer
+|
+|===
+
+.User Interface Elements of VI BusBase.lvlib:BusBase.lvclass:MainGUI.vi in library or class <<BusBase.lvclass>>
+[cols="", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|
+
+|===
+
+.User Interface Elements of VI TAFTraceWindow.lvclass:MainGUI.vi in library or class <<TAFTraceWindow.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:TAFTraceWindow.lvclass_MainGUI_Size.png[TAFTraceWindow.lvclass MainGUI Size]
+|Size
+|
+
+|image:TAFTraceWindow.lvclass_MainGUI_Trace.png[TAFTraceWindow.lvclass MainGUI Trace]
+|Trace
+|
+|===
+
+.User Interface Elements of VI TraceWindow.lvlib:TraceWindow.lvclass:MainGUI.vi in library or class <<TraceWindow.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:TraceWindow.lvclass_MainGUI_Trace.png[TraceWindow.lvclass MainGUI Trace]
+|Trace
+|
+
+|image:TraceWindow.lvclass_MainGUI_Size.png[TraceWindow.lvclass MainGUI Size]
+|Size
+|
+|===
+
+.User Interface Elements of VI UserMananger.lvlib:UserManager.lvclass:MainGUI.vi in library or class <<UserManager.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:UserManager.lvclass_MainGUI_Items.png[UserManager.lvclass MainGUI Items]
+|Items
+|
+
+|image:UserManager.lvclass_MainGUI_AuthorizationLevels.png[UserManager.lvclass MainGUI AuthorizationLevels]
+|AuthorizationLevels
+|
+
+|image:UserManager.lvclass_MainGUI_Save_4.png[UserManager.lvclass MainGUI Save 4]
+|Save 4
+|
+
+|image:UserManager.lvclass_MainGUI_Save_3.png[UserManager.lvclass MainGUI Save 3]
+|Save 3
+|
+
+|image:UserManager.lvclass_MainGUI_Save_2.png[UserManager.lvclass MainGUI Save 2]
+|Save 2
+|
+
+|image:UserManager.lvclass_MainGUI_Functions.png[UserManager.lvclass MainGUI Functions]
+|Functions
+|
+
+|image:UserManager.lvclass_MainGUI_Save_7.png[UserManager.lvclass MainGUI Save 7]
+|Save 7
+|
+
+|image:UserManager.lvclass_MainGUI_Save_6.png[UserManager.lvclass MainGUI Save 6]
+|Save 6
+|
+
+|image:UserManager.lvclass_MainGUI_Save_5.png[UserManager.lvclass MainGUI Save 5]
+|Save 5
+|
+
+|image:UserManager.lvclass_MainGUI_Users.png[UserManager.lvclass MainGUI Users]
+|Users
+|
+
+|image:UserManager.lvclass_MainGUI_Save_10.png[UserManager.lvclass MainGUI Save 10]
+|Save 10
+|
+
+|image:UserManager.lvclass_MainGUI_Save_9.png[UserManager.lvclass MainGUI Save 9]
+|Save 9
+|
+
+|image:UserManager.lvclass_MainGUI_Save_8.png[UserManager.lvclass MainGUI Save 8]
+|Save 8
+|
+
+|image:UserManager.lvclass_MainGUI_Save.png[UserManager.lvclass MainGUI Save]
+|Save
+|
+
+|image:UserManager.lvclass_MainGUI_Cancel.png[UserManager.lvclass MainGUI Cancel]
+|Cancel
+|
+|===
+
+.User Interface Elements of VI VerticalButtonBar.lvclass:MainGUI.vi in library or class <<VerticalButtonBar.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_1.png[VerticalButtonBar.lvclass MainGUI btn 1]
+|btn 1
+|
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_2.png[VerticalButtonBar.lvclass MainGUI btn 2]
+|btn 2
+|
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_3.png[VerticalButtonBar.lvclass MainGUI btn 3]
+|btn 3
+|
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_4.png[VerticalButtonBar.lvclass MainGUI btn 4]
+|btn 4
+|
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_5.png[VerticalButtonBar.lvclass MainGUI btn 5]
+|btn 5
+|
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_6.png[VerticalButtonBar.lvclass MainGUI btn 6]
+|btn 6
+|
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_7.png[VerticalButtonBar.lvclass MainGUI btn 7]
+|btn 7
+|
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_8.png[VerticalButtonBar.lvclass MainGUI btn 8]
+|btn 8
+|
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_9.png[VerticalButtonBar.lvclass MainGUI btn 9]
+|btn 9
+|
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_10.png[VerticalButtonBar.lvclass MainGUI btn 10]
+|btn 10
+|
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_11.png[VerticalButtonBar.lvclass MainGUI btn 11]
+|btn 11
+|
+
+|image:VerticalButtonBar.lvclass_MainGUI_btn_12.png[VerticalButtonBar.lvclass MainGUI btn 12]
+|btn 12
+|
+|===
+
+.User Interface Elements of VI TemplateGUIOpenGDSActiveObject.lvlib:TemplateGUI.lvclass:MainGUI.vi in library or class <<TemplateGUI.lvclass>>
+[cols="", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|
+
+|===
+
+.User Interface Elements of VI YAFFooter.lvlib:YAFFooter.lvclass:MainGUI.vi in library or class <<YAFFooter.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:YAFFooter.lvclass_MainGUI_Error.png[YAFFooter.lvclass MainGUI Error]
+|Error
+|
+
+|image:YAFFooter.lvclass_MainGUI_String.png[YAFFooter.lvclass MainGUI String]
+|String
+|
+|===
+
+.User Interface Elements of VI OpenCVCam.lvclass:MainGUI.vi in library or class <<OpenCVCam.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:OpenCVCam.lvclass_MainGUI_Framerate.png[OpenCVCam.lvclass MainGUI Framerate]
+|Framerate
+|<B>median</B> is the calculated median value of the set of input data specified by <B>sample length</B>.
+
+|image:OpenCVCam.lvclass_MainGUI_State.png[OpenCVCam.lvclass MainGUI State]
+|State
+|
+
+|image:OpenCVCam.lvclass_MainGUI_Start.png[OpenCVCam.lvclass MainGUI Start]
+|Start
+|
+
+|image:OpenCVCam.lvclass_MainGUI_Image.png[OpenCVCam.lvclass MainGUI Image]
+|Image
+|
+|===
+
+.User Interface Elements of VI OpenCVFaceDetection.lvclass:MainGUI.vi in library or class <<OpenCVFaceDetection.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:OpenCVFaceDetection.lvclass_MainGUI_Image.png[OpenCVFaceDetection.lvclass MainGUI Image]
+|Image
+|
+|===
+
+.User Interface Elements of VI TemplateGUITAF.lvlib:TemplateGUITAF.lvclass:MainGUI.vi in library or class <<TemplateGUITAF.lvclass>>
+[cols="", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|
+
+|===
+
+.User Interface Elements of VI JSONTextViewer.lvlib:JSONTextViewer.lvclass:MainGUI.vi in library or class <<JSONTextViewer.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:JSONTextViewer.lvclass_MainGUI_ID.png[JSONTextViewer.lvclass MainGUI ID]
+|ID
+|
+
+|image:JSONTextViewer.lvclass_MainGUI_Save.png[JSONTextViewer.lvclass MainGUI Save]
+|Save
+|
+
+|image:JSONTextViewer.lvclass_MainGUI_JSON.png[JSONTextViewer.lvclass MainGUI JSON]
+|JSON
+|
+|===
+
+.User Interface Elements of VI MainGUI.vi in library or class <<>>
+[cols="", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|
+
+|===
+
+.User Interface Elements of VI Mockup_ConfigurationManager.lvclass:GetFrontPanel.vi in library or class <<Mockup_ConfigurationManager.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:Mockup_ConfigurationManager.lvclass_GetFrontPanel_Items.png[Mockup_ConfigurationManager.lvclass GetFrontPanel Items]
+|Items
+|
+
+|image:Mockup_ConfigurationManager.lvclass_GetFrontPanel_Tree.png[Mockup_ConfigurationManager.lvclass GetFrontPanel Tree]
+|Tree
+|
+
+|image:Mockup_ConfigurationManager.lvclass_GetFrontPanel_Save.png[Mockup_ConfigurationManager.lvclass GetFrontPanel Save]
+|Save
+|
+
+|image:Mockup_ConfigurationManager.lvclass_GetFrontPanel_Cancel.png[Mockup_ConfigurationManager.lvclass GetFrontPanel Cancel]
+|Cancel
+|
+|===
+
+.User Interface Elements of VI Mockup_QualificationScreen.lvclass:GetFrontPanel.vi in library or class <<Mockup_QualificationScreen.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:Mockup_QualificationScreen.lvclass_GetFrontPanel_Histogram_Graph.png[Mockup_QualificationScreen.lvclass GetFrontPanel Histogram Graph]
+|Histogram Graph
+|<B>Histogram Graph</B> displays the bar graph of the histogram of the input sequence <B>X</B>. The y-axis is the histogram count, and the x-axis is the histogram center values of the intervals (bins) of the histogram.
+
+|image:Mockup_QualificationScreen.lvclass_GetFrontPanel_Image.png[Mockup_QualificationScreen.lvclass GetFrontPanel Image]
+|Image
+|
+|===
+
+.User Interface Elements of VI Mockup_ServiceScreen.lvclass:GetFrontPanel.vi in library or class <<Mockup_ServiceScreen.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:Mockup_ServiceScreen.lvclass_GetFrontPanel_Sub_Panel.png[Mockup_ServiceScreen.lvclass GetFrontPanel Sub Panel]
+|Sub Panel
+|
+
+|image:Mockup_ServiceScreen.lvclass_GetFrontPanel_Device_Interfaces.png[Mockup_ServiceScreen.lvclass GetFrontPanel Device Interfaces]
+|Device Interfaces
+|
+|===
+
+.User Interface Elements of VI Mockup_UserManager.lvclass:GetFrontPanel.vi in library or class <<Mockup_UserManager.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Items.png[Mockup_UserManager.lvclass GetFrontPanel Items]
+|Items
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_AuthorizationLevels.png[Mockup_UserManager.lvclass GetFrontPanel AuthorizationLevels]
+|AuthorizationLevels
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Save_4.png[Mockup_UserManager.lvclass GetFrontPanel Save 4]
+|Save 4
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Save_3.png[Mockup_UserManager.lvclass GetFrontPanel Save 3]
+|Save 3
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Save_2.png[Mockup_UserManager.lvclass GetFrontPanel Save 2]
+|Save 2
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Functions.png[Mockup_UserManager.lvclass GetFrontPanel Functions]
+|Functions
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Save_7.png[Mockup_UserManager.lvclass GetFrontPanel Save 7]
+|Save 7
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Save_6.png[Mockup_UserManager.lvclass GetFrontPanel Save 6]
+|Save 6
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Save_5.png[Mockup_UserManager.lvclass GetFrontPanel Save 5]
+|Save 5
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Users.png[Mockup_UserManager.lvclass GetFrontPanel Users]
+|Users
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Save_10.png[Mockup_UserManager.lvclass GetFrontPanel Save 10]
+|Save 10
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Save_9.png[Mockup_UserManager.lvclass GetFrontPanel Save 9]
+|Save 9
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Save_8.png[Mockup_UserManager.lvclass GetFrontPanel Save 8]
+|Save 8
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Save.png[Mockup_UserManager.lvclass GetFrontPanel Save]
+|Save
+|
+
+|image:Mockup_UserManager.lvclass_GetFrontPanel_Cancel.png[Mockup_UserManager.lvclass GetFrontPanel Cancel]
+|Cancel
+|
+|===
+
+.User Interface Elements of VI DotNETCam.lvclass:MainGUI.vi in library or class <<DotNETCam.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:DotNETCam.lvclass_MainGUI_Boolean.png[DotNETCam.lvclass MainGUI Boolean]
+|Boolean
+|
+
+|image:DotNETCam.lvclass_MainGUI_ErrorIn.png[DotNETCam.lvclass MainGUI ErrorIn]
+|ErrorIn
+|The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed. 
+
+|image:DotNETCam.lvclass_MainGUI_Exit.png[DotNETCam.lvclass MainGUI Exit]
+|Exit
+|
+
+|image:DotNETCam.lvclass_MainGUI_DotNETCamIn.png[DotNETCam.lvclass MainGUI DotNETCamIn]
+|DotNETCamIn
+|
+|===
+
+.User Interface Elements of VI DemoApplication.lvclass:Layout.vi in library or class <<DemoApplication.lvclass>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:DemoApplication.lvclass_Layout_Header.png[DemoApplication.lvclass Layout Header]
+|Header
+|
+
+|image:DemoApplication.lvclass_Layout_ButtonBar.png[DemoApplication.lvclass Layout ButtonBar]
+|ButtonBar
+|
+
+|image:DemoApplication.lvclass_Layout_MainFlexPanel.png[DemoApplication.lvclass Layout MainFlexPanel]
+|MainFlexPanel
+|
+
+|image:DemoApplication.lvclass_Layout_Footer.png[DemoApplication.lvclass Layout Footer]
+|Footer
+|
+|===
+
+.User Interface Elements of VI _Main.vi in library or class <<>>
+[cols="<.<6d,<.<4a,<.<10d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Location |Control Name |Description
+
+|image:__Main_Configuration.png[ _Main Configuration]
+|Configuration
+|
+
+|image:__Main_Version.png[ _Main Version]
+|Version
+|
+
+|image:__Main_Action.png[ _Main Action]
+|Action
+|
+
+|image:__Main_Progress.png[ _Main Progress]
+|Progress
+|
+|===

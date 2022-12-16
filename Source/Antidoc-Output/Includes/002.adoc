@@ -1,34 +1,480 @@
-== BusBase.lvlib
+== Configuration Mockup
 
-*Responsibility:*
-No description found (add content in lvlib description)
+=== Simple Button Bar Configuration
 
-*Version:* 1.0.0.0
+[plantuml, format="svg", align="center"]
+....
 
-.Nested libraries
+
+left to right direction
+rectangle "**root**" as root {
+usecase "**Log On**" as rootbtn1
+usecase "**Exit**" as rootbtn12
+}
+rectangle "**LoggedOn**" as LoggedOn {
+usecase "**Product_Qualification**" as LoggedOnbtn1
+usecase "**Show_Reports**" as LoggedOnbtn3
+usecase "**User_Management**" as LoggedOnbtn5
+usecase "**Configuration_Management**" as LoggedOnbtn6
+usecase "**Service**" as LoggedOnbtn7
+usecase "**Log out**" as LoggedOnbtn12
+}
+rectangle "**ReportViewing**" as ReportViewing {
+usecase "**Back**" as ReportViewingbtn12
+}
+rectangle "**UserManagement**" as UserManagement {
+usecase "**Back**" as UserManagementbtn12
+}
+rectangle "**ConfigurationManagement**" as ConfigurationManagement {
+usecase "**Back**" as ConfigurationManagementbtn12
+}
+rectangle "**Service**" as Service {
+usecase "**Back**" as Servicebtn12
+usecase "**Camera**" as Servicebtn1
+usecase "**FaceDetect**" as Servicebtn2
+}
+rectangle "**Qualification**" as Qualification {
+usecase "**Start_Qualification**" as Qualificationbtn1
+usecase "**Abort_Qualification**" as Qualificationbtn11
+usecase "**Back**" as Qualificationbtn12
+}
+rootbtn1 --> LoggedOn : ""
+rootbtn12 -right-> rootbtn12 : ""
+LoggedOnbtn1 --> Qualification : ""
+LoggedOnbtn3 --> ReportViewing : ""
+LoggedOnbtn5 --> UserManagement : ""
+LoggedOnbtn6 --> ConfigurationManagement : ""
+LoggedOnbtn7 --> Service : ""
+LoggedOnbtn12 --> root : ""
+ReportViewingbtn12 --> LoggedOn : ""
+UserManagementbtn12 --> LoggedOn : ""
+ConfigurationManagementbtn12 --> LoggedOn : ""
+Servicebtn12 --> LoggedOn : ""
+Servicebtn1 -right-> Servicebtn1 : ""
+Servicebtn2 -right-> Servicebtn2 : ""
+Qualificationbtn1 -right-> Qualificationbtn1 : ""
+Qualificationbtn11 -right-> Qualificationbtn11 : ""
+Qualificationbtn12 --> LoggedOn : ""
+
+
+....
+
+=== Extended Button Bar Configuration
+
+[plantuml, format="svg", align="center"]
+....
+
+
+left to right direction
+rectangle "**root**" as root {
+usecase "**Log On**\n|  Button  |  btn 1  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as rootbtn1
+usecase "**Exit**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |  Stop the application  |" as rootbtn12
+}
+rectangle "**LoggedOn**" as LoggedOn {
+usecase "**Product_Qualification**\n|  Button  |  btn 1  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn1
+usecase "**Show_Reports**\n|  Button  |  btn 3  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn3
+usecase "**User_Management**\n|  Button  |  btn 5  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn5
+usecase "**Configuration_Management**\n|  Button  |  btn 6  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn6
+usecase "**Service**\n|  Button  |  btn 7  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn7
+usecase "**Log out**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as LoggedOnbtn12
+}
+rectangle "**ReportViewing**" as ReportViewing {
+usecase "**Back**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as ReportViewingbtn12
+}
+rectangle "**UserManagement**" as UserManagement {
+usecase "**Back**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as UserManagementbtn12
+}
+rectangle "**ConfigurationManagement**" as ConfigurationManagement {
+usecase "**Back**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as ConfigurationManagementbtn12
+}
+rectangle "**Service**" as Service {
+usecase "**Back**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Servicebtn12
+usecase "**Camera**\n|  Button  |  btn 1  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Servicebtn1
+usecase "**FaceDetect**\n|  Button  |  btn 2  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Servicebtn2
+}
+rectangle "**Qualification**" as Qualification {
+usecase "**Start_Qualification**\n|  Button  |  btn 1  |\n|  Enable If  |  QualificationStarted=False  |\n|  Tooltip  |    |" as Qualificationbtn1
+usecase "**Abort_Qualification**\n|  Button  |  btn 11  |\n|  Enable If  |  QualificationStarted=True  |\n|  Tooltip  |    |" as Qualificationbtn11
+usecase "**Back**\n|  Button  |  btn 12  |\n|  Enable If  |  1  |\n|  Tooltip  |    |" as Qualificationbtn12
+}
+rootbtn1 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  UserManager  |    |\n|  Call  |  TRUE  |  UserManager  |  Expression:LoggedOn=True  |"
+rootbtn12 -right-> rootbtn12 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  Call  |  TRUE  |  MasterGUI  |  Exit  |"
+LoggedOnbtn1 --> Qualification : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  QualificationScreen  |  MainFlexPanel  |\n|  Call  |  TRUE  |  UserManager  |  Expression:QualificationStarted=False  |"
+LoggedOnbtn3 --> ReportViewing : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  ReportViewer  |  MainFlexPanel  |"
+LoggedOnbtn5 --> UserManagement : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  UserManager  |  MainFlexPanel  |"
+LoggedOnbtn6 --> ConfigurationManagement : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  ConfigurationManager  |  MainFlexPanel  |"
+LoggedOnbtn7 --> Service : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  ServiceScreen  |  MainFlexPanel  |"
+LoggedOnbtn12 --> root : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  Call  |  TRUE  |  UserManager  |  Expression:LoggedOn=False  |"
+ReportViewingbtn12 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  MainFlexPanel  |  MainFlexPanel  |"
+UserManagementbtn12 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  MainFlexPanel  |  MainFlexPanel  |"
+ConfigurationManagementbtn12 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  MainFlexPanel  |  MainFlexPanel  |"
+Servicebtn12 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  MainFlexPanel  |  MainFlexPanel  |"
+Servicebtn1 -right-> Servicebtn1 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  Cam1  |  MainFlexPanel  |"
+Servicebtn2 -right-> Servicebtn2 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  FaceDetect  |  MainFlexPanel  |"
+Qualificationbtn1 -right-> Qualificationbtn1 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  Call  |  TRUE  |  UserManager  |  Expression:QualificationStarted=True  |"
+Qualificationbtn11 -right-> Qualificationbtn11 : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  Call  |  TRUE  |  UserManager  |  Expression:QualificationStarted=False  |"
+Qualificationbtn12 --> LoggedOn : "<#lightgray>|  ActionType  |  Sync  |  Object  |  Parameter  |\n|  ShowGUI  |  TRUE  |  MainFlexPanel  |  MainFlexPanel  |"
+
+
+....
+
+=== Button Definition Items
+
+.List of unique Target Objects
+[cols="<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Target Objects
+
+|UserManager
+
+|MasterGUI
+
+|QualificationScreen
+
+|ReportViewer
+
+|ConfigurationManager
+
+|ServiceScreen
+
+|MainFlexPanel
+
+|Cam1
+
+|FaceDetect
+|===
+
+.List of unique Captions
+[cols="<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Captions
+
+|Log On
+
+|Exit
+
+|Product_Qualification
+
+|Show_Reports
+
+|User_Management
+
+|Configuration_Management
+
+|Service
+
+|Log out
+
+|Back
+
+|Camera
+
+|FaceDetect
+
+|Start_Qualification
+
+|Abort_Qualification
+|===
+
+.List of unique Enabled Expressions
+[cols="<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Enabled Expressions
+
+|1
+
+|QualificationStarted=False
+
+|QualificationStarted=True
+|===
+
+.List of unique Action Types
+[cols="<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Action Types
+
+|ShowGUI
+
+|Call
+|===
+
+.List of unique Parameters
+[cols="<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Parameters
+
+|
+
+|Expression:LoggedOn=True
+
+|Exit
+
+|MainFlexPanel
+
+|Expression:QualificationStarted=False
+
+|Expression:LoggedOn=False
+
+|Expression:QualificationStarted=True
+|===
+
+=== Object Instances
+
+This configuration contains 15 object instances 
+
+.Object List
 [cols="<.<1d,<.<1d", %autowidth, frame=all, grid=all, stripes=none]
 |===
-|Name |Type
+|Object Instance Name |Class Type
 
-|<<BusBase.lvclass>>
-|LVClass
+|MasterGUI
+|<<DemoApplication.lvclass>>
+
+|TextViewer
+|<<JSONTextViewer.lvclass>>
+
+|ApplicationConfiguration
+|<<AppConfigJSON.lvclass>>
+
+|Tracer
+|<<TraceWindow.lvclass>>
+
+|Header
+|<<HeaderTriekselSoft.lvclass>>
+
+|Footer
+|<<YAFFooter.lvclass>>
+
+|MainFlexPanel
+|<<FlexPanelDefault.lvclass>>
+
+|ConfigurationManager
+|<<Mockup_ConfigurationManager.lvclass>>
+
+|ServiceScreen
+|<<Mockup_ServiceScreen.lvclass>>
+
+|QualificationScreen
+|<<Mockup_QualificationScreen.lvclass>>
+
+|ButtonBar
+|<<VerticalButtonBar.lvclass>>
+
+|UserManager
+|<<UserManager.lvclass>>
+
+|ActivationUpdated
+|<<BusAuthorizationUpdated.lvclass>>
+
+|FaceDetect
+|<<OpenCVFaceDetection.lvclass>>
+
+|Cam1
+|<<OpenCVCam.lvclass>>
 |===
 
-.Functions (non private scope only)
-[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
-|===
-|Name |Connector pane |Description |S. |R. |I.
+[plantuml, format="svg", align="center"]
+....
 
-|Test GUI
-|image:BusBase.lvlib_Test_GUI.vi.png[BusBase.lvlib:Test GUI.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|===
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+class MasterGUI << DemoApplication.lvclass  >>
+class TextViewer << JSONTextViewer.lvclass  >>
+class ApplicationConfiguration << AppConfigJSON.lvclass  >>
+class Tracer << TraceWindow.lvclass  >>
+class Header << HeaderTriekselSoft.lvclass  >>
+class Footer << YAFFooter.lvclass  >>
+class MainFlexPanel << FlexPanelDefault.lvclass  >>
+class ConfigurationManager << Mockup_ConfigurationManager.lvclass  >>
+class ServiceScreen << Mockup_ServiceScreen.lvclass  >>
+class QualificationScreen << Mockup_QualificationScreen.lvclass  >>
+class ButtonBar << VerticalButtonBar.lvclass  >>
+class UserManager << UserManager.lvclass  >>
+class ActivationUpdated << BusAuthorizationUpdated.lvclass  >>
+class FaceDetect << OpenCVFaceDetection.lvclass  >>
+class Cam1 << OpenCVCam.lvclass  >>
+MasterGUI o-- UserManager : IAuthorization.lvclass
+MasterGUI o-- TextViewer : ITAFTextViewer.lvclass
+MasterGUI o-- ApplicationConfiguration : IApplicationConfiguration.lvclass
+MasterGUI o-- Tracer : IFrontPanel.lvclass
+MasterGUI o-- Header : IFrontPanel.lvclass
+MasterGUI o-- ButtonBar : IFrontPanel.lvclass
+MasterGUI o-- Footer : IFrontPanel.lvclass
+MasterGUI o-- MainFlexPanel : IFrontPanel.lvclass
+MasterGUI : (IAuthorization.lvclass) Authorizer: UserManager
+MasterGUI : (ITAFTextViewer.lvclass) TextViewer: TextViewer
+MasterGUI : (IApplicationConfiguration.lvclass) ApplicationConfiguration: ApplicationConfiguration
+MasterGUI : (IFrontPanel.lvclass) Tracer: Tracer
+MasterGUI : (IFrontPanel.lvclass) Header: Header
+MasterGUI : (IFrontPanel.lvclass) ButtonBar: ButtonBar
+MasterGUI : (IFrontPanel.lvclass) Footer: Footer
+MasterGUI : (IFrontPanel.lvclass) MainFlexPanel: MainFlexPanel
+TextViewer o-- ApplicationConfiguration : IApplicationConfiguration.lvclass
+TextViewer : (IApplicationConfiguration.lvclass) ApplicationConfiguration: ApplicationConfiguration
+Footer o-- Tracer : ITAFFilteredTrace.lvclass
+Footer : (ITAFFilteredTrace.lvclass) TracerSource: Tracer
+ButtonBar o-- MasterGUI : IDockGUI.lvclass
+ButtonBar o-- UserManager : IAuthorization.lvclass
+ButtonBar : (IDockGUI.lvclass) IDockGUI: MasterGUI
+ButtonBar : (IAuthorization.lvclass) Authorizer: UserManager
+UserManager o-- ActivationUpdated : IAuthorizationUpdated.lvclass
+UserManager : (IAuthorizationUpdated.lvclass) ActivationUpdated: ActivationUpdated
+ActivationUpdated o-- ButtonBar : IAuthorizationUpdated.lvclass
+ActivationUpdated o-- MasterGUI : IAuthorizationUpdated.lvclass
+ActivationUpdated : (IAuthorizationUpdated.lvclass) TargetClasses_idx_0: ButtonBar
+ActivationUpdated : (IAuthorizationUpdated.lvclass) TargetClasses_idx_1: MasterGUI
+Cam1 o-- FaceDetect : INewOpenCvMat.lvclass
+Cam1 : (INewOpenCvMat.lvclass) INewOpenCvMat: FaceDetect
 
-**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+....
 
-**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+=== Configuration file ActivationUpdated.json
 
-**I**nlining: image:inlined.png[] -> Inlined
+----
+// JSONtext Config File
+{
+  "Dummy":false,
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
+}
+----
+
+=== Configuration file ButtonBar.json
+
+----
+{
+  "ButtonDefinitionFile":"ButtonBarDefinitionMainTest.json",
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
+}
+----
+
+=== Configuration file Cam1.json
+
+----
+// JSONtext Config File
+{
+  "Dummy":0,
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
+}
+----
+
+=== Configuration file FaceDetect.json
+
+----
+// JSONtext Config File
+{
+  "scaleFactor":10,
+  "minNeighbors":10,
+  "Color":255,
+  "Size":{"height":100,"width":100},
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
+}
+----
+
+=== Configuration file Footer.json
+
+----
+// JSONtext Config File
+{
+  "Filter":[
+    {
+      "TraceColumn":1,
+      "FilterFunction":"Exact",
+      "SearchText":"Error"
+    }
+  ],
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
+}
+----
+
+=== Configuration file MasterGUI.json
+
+----
+// JSONtext Config File
+{
+  "StaticDocking":[
+    {
+      "ObjectLabel":"ButtonBar",
+      "SubPanelLabel":"ButtonBar"
+    },
+    {
+      "ObjectLabel":"Footer",
+      "SubPanelLabel":"Footer"
+    },
+    {
+      "ObjectLabel":"Header",
+      "SubPanelLabel":"Header"
+    },
+    {
+      "ObjectLabel":"MainFlexPanel",
+      "SubPanelLabel":"MainFlexPanel"
+    }
+  ],
+  "MenuEnables":[
+    {
+      "MenuTag":"TAF",
+      "MenuExpression":"LoggedOn=True"
+    },
+    {
+      "MenuTag":"Trace Window",
+      "MenuExpression":"LoggedOn=True"
+    }
+  ],
+  "AdditionalMenuItems":[
+    {
+      "Parent":"",
+      "Items":["File"],
+      "ShortCuts":[]
+    }
+  ],
+  "TraceObjectName":"Tracer",
+  "TextDockSubPanelName":"MainFlexPanel",
+  "WindowsProperties":{
+    "WindowsTitle":"TriekselSoft Demo Application",
+    "Centered":true,
+    "Position":{"X":200,"Y":200},
+    "Size":{"X":1024,"Y":768},
+    "Minimizable":true,
+    "State":"Standard",
+    "Resizable":true
+  },
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
+}
+----
+
+=== Configuration file TextViewer.json
+
+----
+// JSONtext Config File
+{
+  "Dummy":false,
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
+}
+----
+
+=== Configuration file Tracer.json
+
+----
+// JSONtext Config File
+{
+  "BufferSize":1000,
+  "Startup":{
+    "OpenAtStartUp":true,
+    "OpenMinimized":true
+  },
+  "OpenAtClosure":false,
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
+}
+----
+
+=== Configuration file UserManager.json
+
+----
+// JSONtext Config File
+{
+  "Dummy":false,
+  "TAFFileInfo":{"Type":"ObjectPersistentData"}
+}
+----

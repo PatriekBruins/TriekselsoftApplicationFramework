@@ -1,4 +1,4 @@
-== ITAFGUIActions.lvclass
+== IPersistentData.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
@@ -15,13 +15,13 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-interface "ITAFGUIActions" {
-{method} +ExecuteButtonAction()
-{method} +GetFrontPanel()
+interface "IPersistentData" {
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
 
 }
-"IFrontPanel" <|.. "ITAFGUIActions"
-interface "IFrontPanel" {}
+"IInterface" <|.. "IPersistentData"
+interface "IInterface" {}
 
 
 
@@ -34,18 +34,18 @@ interface "IFrontPanel" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|ExecuteButtonAction
-|image:ITAFGUIActions.lvclass_ExecuteButtonAction.vi.png[ITAFGUIActions.lvclass:ExecuteButtonAction.vi]
-|No description found (add content in vi description)
+|GetPersistentConfiguration
+|image:IPersistentData.lvclass_GetPersistentConfiguration.vi.png[IPersistentData.lvclass:GetPersistentConfiguration.vi]
+|Retrieve the persistent data of the object. For TAF these are stored in the attributes of the variant
 |image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 
-|GetFrontPanel
-|image:ITAFGUIActions.lvclass_GetFrontPanel.vi.png[ITAFGUIActions.lvclass:GetFrontPanel.vi]
-|No description found (add content in vi description)
+|SetPersistentConfiguration
+|image:IPersistentData.lvclass_SetPersistentConfiguration.vi.png[IPersistentData.lvclass:SetPersistentConfiguration.vi]
+|Sets the persistent data in the object
 |image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 |===
 

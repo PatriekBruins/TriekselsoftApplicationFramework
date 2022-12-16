@@ -1,9 +1,9 @@
-== Mockup_ConfigurationManager.lvclass
+== YActor.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.1
+*Version:* 1.0.0.0
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,15 +15,79 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "Mockup_ConfigurationManager" {
-{field} -Ref : U32
-{method} +GetFrontPanel()
+class "YActor" {
+{field} -CmdQ : NoType
+{field} -Destructor : kLVObjVI
+{field} -ThreadValid : NoType
+{field} -Async Error Handling : Enum U16
+{field} -Inline : Boolean
+{field} -Remote : Cluster
+{field} -AsyncError : NoType
+{field} -ActorRunning : NoType
+{field} -ExitEvent : NoType
+{field} -UIEvent : NoType
+{field} -VIRefnum : kLVObjVI
+{field} -Persistent : Variant
+{field} -Name : String
+{static} {method} #BusyLock()
+{static} {method} -MessageCounter()
+{static} {method} -BinaryTracer()
+{static} {method} -GetVIRef()
+{static} {method} -SendReply()
+{static} {method} -ExecuteMethod()
+{static} {method} -CleanupReferences()
+{static} {method} -CallDestructor()
+{static} {method} -DebugMessage()
+{static} {method} -DebugActions()
+{static} {method} -CommandHistory()
+{static} {method} -GetRemoteVIRef()
+{static} {method} -VINameProperty()
+{static} {method} -CreateLocalVI()
+{static} {method} -ExecuteVI()
+{static} {method} -ExeuteInlineVI()
+{static} {method} -GetMethod()
+{static} {method} -WaitForReply()
+{static} {method} -SendCommand()
+{static} {method} -HandleError()
+{static} {method} -GetQueueName()
+{static} {method} -VIMethodTemplate()
+{static} {method} -GetRemoteVIRefAsync()
+{static} {method} -GetNameOfVI()
+{static} {method} +ReadAsyncErrorHandling()
+{static} {method} +WriteAsyncErrorHandling()
+{static} {method} +YActor_Create()
+{static} {method} +ActorPool()
+{static} {method} +Execute()
+{static} {method} +ActorLightRun()
+{static} {method} +ExeCmd()
+{static} {method} +ExeCmd_sync()
+{static} {method} +ExeCmd_async()
+{static} {method} +ExeCmd_CallCollect()
+{static} {method} +StartActor()
+{static} {method} +Prefix error msg()
+{static} {method} +YActor_Init()
+{static} {method} +SetThreadValid()
+{static} {method} +GetAsyncErrors()
+{static} {method} +SetInlineActor()
+{static} {method} +InlineReferencePool()
+{static} {method} +Valid()
+{static} {method} +SyncClassData()
+{static} {method} +SyncData()
+{static} {method} +QuickCast()
+{static} {method} +ReadAttributes()
+{method} #PrepareForRun()
+{method} #YActor_SendUiEvent()
+{method} +ReadExitEvent()
+{method} +ReadUIEvent()
+{method} +ReadVIRefnum()
+{method} +ReadName()
+{method} +WriteName()
+{method} +WaitUntilExit()
+{method} +SetRemote()
+{method} +DoCreate()
+{method} +Destroy()
 
 }
-"TAFBaseGUI" <|-- "Mockup_ConfigurationManager"
-"ITAFGUIActions" <|.. "Mockup_ConfigurationManager"
-interface "ITAFGUIActions" {}
-
 
 
 
@@ -35,11 +99,235 @@ interface "ITAFGUIActions" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|GetFrontPanel
-|image:Mockup_ConfigurationManager.lvclass_GetFrontPanel.vi.png[Mockup_ConfigurationManager.lvclass:GetFrontPanel.vi]
-|No description found (add content in vi description)
+|PrepareForRun
+|image:YActor.lvclass_PrepareForRun.vi.png[YActor.lvclass:PrepareForRun.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
+
+|BusyLock
+|image:YActor.lvclass_BusyLock.vi.png[YActor.lvclass:BusyLock.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|YActor_SendUiEvent
+|image:YActor.lvclass_YActor_SendUiEvent.vi.png[YActor.lvclass:YActor_SendUiEvent.vi]
+|Sends the selected event to the registered event handler loops in the user interface VI.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadAsyncErrorHandling
+|image:YActor.lvclass_ReadAsyncErrorHandling.vi.png[YActor.lvclass:ReadAsyncErrorHandling.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteAsyncErrorHandling
+|image:YActor.lvclass_WriteAsyncErrorHandling.vi.png[YActor.lvclass:WriteAsyncErrorHandling.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadExitEvent
+|image:YActor.lvclass_ReadExitEvent.vi.png[YActor.lvclass:ReadExitEvent.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadUIEvent
+|image:YActor.lvclass_ReadUIEvent.vi.png[YActor.lvclass:ReadUIEvent.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadVIRefnum
+|image:YActor.lvclass_ReadVIRefnum.vi.png[YActor.lvclass:ReadVIRefnum.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadName
+|image:YActor.lvclass_ReadName.vi.png[YActor.lvclass:ReadName.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteName
+|image:YActor.lvclass_WriteName.vi.png[YActor.lvclass:WriteName.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|YActor_Create
+|image:YActor.lvclass_YActor_Create.vi.png[YActor.lvclass:YActor_Create.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ActorPool
+|image:YActor.lvclass_ActorPool.vi.png[YActor.lvclass:ActorPool.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Execute
+|image:YActor.lvclass_Execute.vi.png[YActor.lvclass:Execute.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WaitUntilExit
+|image:YActor.lvclass_WaitUntilExit.vi.png[YActor.lvclass:WaitUntilExit.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ActorLightRun
+|image:YActor.lvclass_ActorLightRun.vi.png[YActor.lvclass:ActorLightRun.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|ExeCmd_sync
+|image:YActor.lvclass_ExeCmd_sync.vi.png[YActor.lvclass:ExeCmd_sync.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|ExeCmd_async
+|image:YActor.lvclass_ExeCmd_async.vi.png[YActor.lvclass:ExeCmd_async.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|ExeCmd_CallCollect
+|image:YActor.lvclass_ExeCmd_CallCollect.vi.png[YActor.lvclass:ExeCmd_CallCollect.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|StartActor
+|image:YActor.lvclass_StartActor.vi.png[YActor.lvclass:StartActor.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Prefix error msg
+|image:YActor.lvclass_Prefix_error_msg.vi.png[YActor.lvclass:Prefix error msg.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|YActor_Init
+|image:YActor.lvclass_YActor_Init.vi.png[YActor.lvclass:YActor_Init.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|SetThreadValid
+|image:YActor.lvclass_SetThreadValid.vi.png[YActor.lvclass:SetThreadValid.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetAsyncErrors
+|image:YActor.lvclass_GetAsyncErrors.vi.png[YActor.lvclass:GetAsyncErrors.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetInlineActor
+|image:YActor.lvclass_SetInlineActor.vi.png[YActor.lvclass:SetInlineActor.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetRemote
+|image:YActor.lvclass_SetRemote.vi.png[YActor.lvclass:SetRemote.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|InlineReferencePool
+|image:YActor.lvclass_InlineReferencePool.vi.png[YActor.lvclass:InlineReferencePool.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Valid
+|image:YActor.lvclass_Valid.vi.png[YActor.lvclass:Valid.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SyncClassData
+|image:YActor.lvclass_SyncClassData.vi.png[YActor.lvclass:SyncClassData.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|SyncData
+|image:YActor.lvclass_SyncData.vi.png[YActor.lvclass:SyncData.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|QuickCast
+|image:YActor.lvclass_QuickCast.vi.png[YActor.lvclass:QuickCast.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|DoCreate
+|image:YActor.lvclass_DoCreate.vi.png[YActor.lvclass:DoCreate.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Destroy
+|image:YActor.lvclass_Destroy.vi.png[YActor.lvclass:Destroy.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|ReadAttributes
+|image:YActor.lvclass_ReadAttributes.vi.png[YActor.lvclass:ReadAttributes.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 |===
 

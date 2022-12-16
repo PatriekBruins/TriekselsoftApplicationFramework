@@ -1,9 +1,9 @@
-== ErrorCreationTAF.lvclass
+== OpenCVCam.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.0
+*Version:* 1.0.0.4
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,12 +15,38 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "ErrorCreationTAF" {
-{field} -None : Boolean
-{method} #DoCreateError()
+class "OpenCVCam" {
+{field} -ExternalInterfaces : Cluster
+{field} -Local : Cluster
+{field} -Persistent : Cluster
+{static} {method} -OpenCVCam_CastUIEvent()
+{static} {method} -OpenCVCam_ClassCast()
+{static} {method} -OpenCVCam_GetImage()
+{static} {method} #OpenCVCam_SendUiEvent()
+{static} {method} +OpenCVCam_TemplateMethod()
+{static} {method} +OpenCVCam_LiveCapture()
+{static} {method} +OpenCVCam_GetPicture()
+{static} {method} +OpenCVCam_Stop()
+{static} {method} +OpenCVCam_Close()
+{static} {method} +OpenCVCam_Init()
+{static} {method} +OpenCVCam_Start()
+{method} #Destructor()
+{method} #WritePersistentConfiguration()
+{method} #ReadPersistentConfiguration()
+{method} #ReadExternalInterfaces()
+{method} #WriteExternalInterfaces()
+{method} #LiveCapture()
+{method} +TemplateMethod()
+{method} +Start()
+{method} +GetPicture()
+{method} +Stop()
+{method} +Init()
+{method} +Close()
+{method} #MainGUI()
 
 }
-"ErrorCreationExecution" <|-- "ErrorCreationTAF"
+"YAFTAF" <|-- "OpenCVCam"
+"OpenCVCam" *-- "INewOpenCVMat"
 
 
 
@@ -32,9 +58,149 @@ class "ErrorCreationTAF" {
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|DoCreateError
-|image:ErrorCreationTAF.lvclass_DoCreateError.vi.png[ErrorCreationTAF.lvclass:DoCreateError.vi]
-|No description found (add content in vi description)
+|OpenCVCam_SendUiEvent
+|image:OpenCVCam.lvclass_OpenCVCam_SendUiEvent.vi.png[OpenCVCam.lvclass:OpenCVCam_SendUiEvent.vi]
+|Sends the selected event to the registered event handler loops in the user interface VI.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Destructor
+|image:OpenCVCam.lvclass_Destructor.vi.png[OpenCVCam.lvclass:Destructor.vi]
+|Called at the destruction of the object. Use this to clear references or perform action to tidy up the object.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WritePersistentConfiguration
+|image:OpenCVCam.lvclass_WritePersistentConfiguration.vi.png[OpenCVCam.lvclass:WritePersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadPersistentConfiguration
+|image:OpenCVCam.lvclass_ReadPersistentConfiguration.vi.png[OpenCVCam.lvclass:ReadPersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadExternalInterfaces
+|image:OpenCVCam.lvclass_ReadExternalInterfaces.vi.png[OpenCVCam.lvclass:ReadExternalInterfaces.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteExternalInterfaces
+|image:OpenCVCam.lvclass_WriteExternalInterfaces.vi.png[OpenCVCam.lvclass:WriteExternalInterfaces.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|LiveCapture
+|image:OpenCVCam.lvclass_LiveCapture.vi.png[OpenCVCam.lvclass:LiveCapture.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|OpenCVCam_TemplateMethod
+|image:OpenCVCam.lvclass_OpenCVCam_TemplateMethod.vi.png[OpenCVCam.lvclass:OpenCVCam_TemplateMethod.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|OpenCVCam_LiveCapture
+|image:OpenCVCam.lvclass_OpenCVCam_LiveCapture.vi.png[OpenCVCam.lvclass:OpenCVCam_LiveCapture.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|OpenCVCam_GetPicture
+|image:OpenCVCam.lvclass_OpenCVCam_GetPicture.vi.png[OpenCVCam.lvclass:OpenCVCam_GetPicture.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|OpenCVCam_Stop
+|image:OpenCVCam.lvclass_OpenCVCam_Stop.vi.png[OpenCVCam.lvclass:OpenCVCam_Stop.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|OpenCVCam_Close
+|image:OpenCVCam.lvclass_OpenCVCam_Close.vi.png[OpenCVCam.lvclass:OpenCVCam_Close.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|OpenCVCam_Init
+|image:OpenCVCam.lvclass_OpenCVCam_Init.vi.png[OpenCVCam.lvclass:OpenCVCam_Init.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|OpenCVCam_Start
+|image:OpenCVCam.lvclass_OpenCVCam_Start.vi.png[OpenCVCam.lvclass:OpenCVCam_Start.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|TemplateMethod
+|image:OpenCVCam.lvclass_TemplateMethod.vi.png[OpenCVCam.lvclass:TemplateMethod.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Start
+|image:OpenCVCam.lvclass_Start.vi.png[OpenCVCam.lvclass:Start.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|GetPicture
+|image:OpenCVCam.lvclass_GetPicture.vi.png[OpenCVCam.lvclass:GetPicture.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Stop
+|image:OpenCVCam.lvclass_Stop.vi.png[OpenCVCam.lvclass:Stop.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Init
+|image:OpenCVCam.lvclass_Init.vi.png[OpenCVCam.lvclass:Init.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Close
+|image:OpenCVCam.lvclass_Close.vi.png[OpenCVCam.lvclass:Close.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|MainGUI
+|image:OpenCVCam.lvclass_MainGUI.vi.png[OpenCVCam.lvclass:MainGUI.vi]
+|This is the user interface of the object. It will handle the events to update the GUI.
 |image:scope-protected.png[scope-protected.png]
 |image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]

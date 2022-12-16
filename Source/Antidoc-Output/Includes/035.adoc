@@ -1,9 +1,9 @@
-== HeaderTriekselSoft.lvclass
+== ErrorCreationTAF.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.3
+*Version:* 1.0.0.0
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,15 +15,12 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "HeaderTriekselSoft" {
+class "ErrorCreationTAF" {
 {field} -None : Boolean
-{method} +GetFrontPanel()
+{method} #DoCreateError()
 
 }
-"TAFBaseGUI" <|-- "HeaderTriekselSoft"
-"ITAFGUIActions" <|.. "HeaderTriekselSoft"
-interface "ITAFGUIActions" {}
-
+"ErrorCreationExecution" <|-- "ErrorCreationTAF"
 
 
 
@@ -35,11 +32,11 @@ interface "ITAFGUIActions" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|GetFrontPanel
-|image:HeaderTriekselSoft.lvclass_GetFrontPanel.vi.png[HeaderTriekselSoft.lvclass:GetFrontPanel.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|DoCreateError
+|image:ErrorCreationTAF.lvclass_DoCreateError.vi.png[ErrorCreationTAF.lvclass:DoCreateError.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 |===
 

@@ -1,33 +1,58 @@
-== Graph Builder
+== Footer.lvclass
 
-Project website: https://gitlab.com/cgambini/graph-builder[Graph Builder]
+*Responsibility:*
+No description found (add content in lvclass description)
 
-BSD 3-Clause License
+*Version:* 1.0.0.1
 
-Copyright (C) 2020, Cyril GAMBINI
-All rights reserved.
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+skinparam top to bottom direction
+class "Footer" {
+{field} -None : Boolean
+{static} {method} +FooterGUI()
+{method} +GetFrontPanel()
 
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
+}
+"TAFBaseGUI" <|-- "Footer"
+"ITAFGUIActions" <|.. "Footer"
+interface "ITAFGUIActions" {}
 
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
 
-* Neither the name of the copyright holder nor the names of its
-  contributors may be used to endorse or promote products derived from
-  this software without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+@enduml
+....
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|FooterGUI
+|image:Footer.lvclass_FooterGUI.vi.png[Footer.lvclass:FooterGUI.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetFrontPanel
+|image:Footer.lvclass_GetFrontPanel.vi.png[Footer.lvclass:GetFrontPanel.vi]
+|Retrieve the FrontPanelControl for controlling the state of the user interface front panel
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

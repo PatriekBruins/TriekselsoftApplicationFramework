@@ -1,9 +1,9 @@
-== Mockup_UserManager.lvclass
+== VerticalButtonBar.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.0
+*Version:* 1.0.0.1
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,13 +15,40 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "Mockup_UserManager" {
+class "VerticalButtonBar" {
 {field} -Ref : U32
+{static} {method} #StartMainGUI()
+{static} {method} #ExecuteAction()
+{static} {method} #RequestDestroy()
+{static} {method} #MainGUI()
+{static} {method} #StopMainGUI()
+{static} {method} #VerticalButtonBar_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #VerticalButtonBar_GetAttributes()
+{static} {method} #VerticalButtonBar_SendAndReceive()
+{static} {method} +VerticalButtonBar_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} #ReadButtonBar()
+{method} #WriteButtonBar()
+{method} +ReadLabels()
+{method} #ReadIAuthorization()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +ExecuteButtonAction()
 {method} +GetFrontPanel()
+{method} +Create()
+{method} +Destroy()
+{method} +GetButtonDefinitionFile()
+{method} +SetButtonDefinitionFile()
+{method} +AuthorizationUpdated()
 
 }
-"TAFBaseGUI" <|-- "Mockup_UserManager"
-"ITAFGUIActions" <|.. "Mockup_UserManager"
+"TAFBaseGUI" <|-- "VerticalButtonBar"
+"IAuthorizationUpdated" <|.. "VerticalButtonBar"
+interface "IAuthorizationUpdated" {}
+"ITAFGUIActions" <|.. "VerticalButtonBar"
 interface "ITAFGUIActions" {}
 
 
@@ -35,9 +62,200 @@ interface "ITAFGUIActions" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
+|StartMainGUI
+|image:VerticalButtonBar.lvclass_StartMainGUI.vi.png[VerticalButtonBar.lvclass:StartMainGUI.vi]
+|Looks up an existing object matching object name or creates a new object and returns a refnum you can use when calling other class methods.
+
+Objects created with this VI should be destroyed using this class Delete VI.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ExecuteAction
+|image:VerticalButtonBar.lvclass_ExecuteAction.vi.png[VerticalButtonBar.lvclass:ExecuteAction.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|RequestDestroy
+|image:VerticalButtonBar.lvclass_RequestDestroy.vi.png[VerticalButtonBar.lvclass:RequestDestroy.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MainGUI
+|image:VerticalButtonBar.lvclass_MainGUI.vi.png[VerticalButtonBar.lvclass:MainGUI.vi]
+|This is the user interface of the object. It will handle the events to update the GUI.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|StopMainGUI
+|image:VerticalButtonBar.lvclass_StopMainGUI.vi.png[VerticalButtonBar.lvclass:StopMainGUI.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|VerticalButtonBar_New
+|image:VerticalButtonBar.lvclass_VerticalButtonBar_New.vi.png[VerticalButtonBar.lvclass:VerticalButtonBar_New.vi]
+|GOOP4 Attribute container.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|MainGUIRepository
+|image:VerticalButtonBar.lvclass_MainGUIRepository.vi.png[VerticalButtonBar.lvclass:MainGUIRepository.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|VerticalButtonBar_GetAttributes
+|image:VerticalButtonBar.lvclass_VerticalButtonBar_GetAttributes.vi.png[VerticalButtonBar.lvclass:VerticalButtonBar_GetAttributes.vi]
+|Retrieves the object attributes of the by reference class.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|VerticalButtonBar_SendAndReceive
+|image:VerticalButtonBar.lvclass_VerticalButtonBar_SendAndReceive.vim.png[VerticalButtonBar.lvclass:VerticalButtonBar_SendAndReceive.vim]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|ReadButtonBar
+|image:VerticalButtonBar.lvclass_ReadButtonBar.vi.png[VerticalButtonBar.lvclass:ReadButtonBar.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteButtonBar
+|image:VerticalButtonBar.lvclass_WriteButtonBar.vi.png[VerticalButtonBar.lvclass:WriteButtonBar.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadLabels
+|image:VerticalButtonBar.lvclass_ReadLabels.vi.png[VerticalButtonBar.lvclass:ReadLabels.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadIAuthorization
+|image:VerticalButtonBar.lvclass_ReadIAuthorization.vi.png[VerticalButtonBar.lvclass:ReadIAuthorization.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetPersistentConfiguration
+|image:VerticalButtonBar.lvclass_GetPersistentConfiguration.vi.png[VerticalButtonBar.lvclass:GetPersistentConfiguration.vi]
+|Retrieve the persistent data of the object. For TAF these are stored in the attributes of the variant
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetPersistentConfiguration
+|image:VerticalButtonBar.lvclass_SetPersistentConfiguration.vi.png[VerticalButtonBar.lvclass:SetPersistentConfiguration.vi]
+|Sets the persistent data in the object
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaces
+|image:VerticalButtonBar.lvclass_GetExternalInterfaces.vi.png[VerticalButtonBar.lvclass:GetExternalInterfaces.vi]
+|Gets the external interface objects that are used by the object. Each interface is defined by:
+
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterfaces
+|image:VerticalButtonBar.lvclass_SetExternalInterfaces.vi.png[VerticalButtonBar.lvclass:SetExternalInterfaces.vi]
+|Sets the external interface objects that are used by the object. Each interface is defined by:
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|ExecuteButtonAction
+|image:VerticalButtonBar.lvclass_ExecuteButtonAction.vi.png[VerticalButtonBar.lvclass:ExecuteButtonAction.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
 |GetFrontPanel
-|image:Mockup_UserManager.lvclass_GetFrontPanel.vi.png[Mockup_UserManager.lvclass:GetFrontPanel.vi]
-|No description found (add content in vi description)
+|image:VerticalButtonBar.lvclass_GetFrontPanel.vi.png[VerticalButtonBar.lvclass:GetFrontPanel.vi]
+|Retrieve the FrontPanelControl for controlling the state of the user interface front panel
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|VerticalButtonBar_Create
+|image:VerticalButtonBar.lvclass_VerticalButtonBar_Create.vi.png[VerticalButtonBar.lvclass:VerticalButtonBar_Create.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create
+|image:VerticalButtonBar.lvclass_Create.vi.png[VerticalButtonBar.lvclass:Create.vi]
+|Create the object instance
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Destroy
+|image:VerticalButtonBar.lvclass_Destroy.vi.png[VerticalButtonBar.lvclass:Destroy.vi]
+|Destroy the object instance
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|GetButtonDefinitionFile
+|image:VerticalButtonBar.lvclass_GetButtonDefinitionFile.vi.png[VerticalButtonBar.lvclass:GetButtonDefinitionFile.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetButtonDefinitionFile
+|image:VerticalButtonBar.lvclass_SetButtonDefinitionFile.vi.png[VerticalButtonBar.lvclass:SetButtonDefinitionFile.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ControlMainGUIWindow
+|image:VerticalButtonBar.lvclass_ControlMainGUIWindow.vi.png[VerticalButtonBar.lvclass:ControlMainGUIWindow.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|AuthorizationUpdated
+|image:VerticalButtonBar.lvclass_AuthorizationUpdated.vi.png[VerticalButtonBar.lvclass:AuthorizationUpdated.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

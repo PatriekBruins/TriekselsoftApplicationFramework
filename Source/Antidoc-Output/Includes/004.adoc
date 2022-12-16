@@ -1,25 +1,17 @@
-== Expressions.lvlib
+== BusBase.lvlib
 
 *Responsibility:*
 No description found (add content in lvlib description)
 
 *Version:* 1.0.0.0
 
-.Functions (non private scope only)
-[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+.Nested libraries
+[cols="<.<1d,<.<1d", %autowidth, frame=all, grid=all, stripes=none]
 |===
-|Name |Connector pane |Description |S. |R. |I.
+|Name |Type
 
-|EvaluateLabeledExpression
-|image:Expressions.lvlib_EvaluateLabeledExpression.vi.png[Expressions.lvlib:EvaluateLabeledExpression.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|<<BusBase.lvclass>>
+|LVClass
 |===
 
-**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
-
-**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
-
-**I**nlining: image:inlined.png[] -> Inlined
+This library has no functions set to non private scope.

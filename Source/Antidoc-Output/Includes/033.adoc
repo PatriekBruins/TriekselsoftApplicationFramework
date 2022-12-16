@@ -1,9 +1,9 @@
-== Footer.lvclass
+== TAFBaseGUI.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.1
+*Version:* 1.0.0.0
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,15 +15,25 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "Footer" {
-{field} -None : Boolean
-{static} {method} +FooterGUI()
+class "TAFBaseGUI" {
+{field} -Ref : U32
+{static} {method} #UnknownAction()
+{static} {method} #TAFBaseGUI_New()
+{static} {method} #TAFBaseGUI_GetAttributes()
+{static} {method} +TAFBaseGUI_Create()
+{method} +Create()
+{method} +SetName()
+{method} +GetName()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +Destroy()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
 {method} +GetFrontPanel()
 
 }
-"TAFBaseGUI" <|-- "Footer"
-"ITAFGUIActions" <|.. "Footer"
-interface "ITAFGUIActions" {}
+"ITAFObject" <|.. "TAFBaseGUI"
+interface "ITAFObject" {}
 
 
 
@@ -36,16 +46,107 @@ interface "ITAFGUIActions" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|FooterGUI
-|image:Footer.lvclass_FooterGUI.vi.png[Footer.lvclass:FooterGUI.vi]
-|No description found (add content in vi description)
+|UnknownAction
+|image:TAFBaseGUI.lvclass_UnknownAction.vi.png[TAFBaseGUI.lvclass:UnknownAction.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|TAFBaseGUI_New
+|image:TAFBaseGUI.lvclass_TAFBaseGUI_New.vi.png[TAFBaseGUI.lvclass:TAFBaseGUI_New.vi]
+|GOOP4 Attribute container.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|TAFBaseGUI_GetAttributes
+|image:TAFBaseGUI.lvclass_TAFBaseGUI_GetAttributes.vi.png[TAFBaseGUI.lvclass:TAFBaseGUI_GetAttributes.vi]
+|Retrieves the object attributes of the by reference class.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|TAFBaseGUI_Create
+|image:TAFBaseGUI.lvclass_TAFBaseGUI_Create.vi.png[TAFBaseGUI.lvclass:TAFBaseGUI_Create.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
+|Create
+|image:TAFBaseGUI.lvclass_Create.vi.png[TAFBaseGUI.lvclass:Create.vi]
+|Create the object instance
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetName
+|image:TAFBaseGUI.lvclass_SetName.vi.png[TAFBaseGUI.lvclass:SetName.vi]
+|Sets the unique name of this instance of the object
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetName
+|image:TAFBaseGUI.lvclass_GetName.vi.png[TAFBaseGUI.lvclass:GetName.vi]
+|Retrieves the name of the instance of the object
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetPersistentConfiguration
+|image:TAFBaseGUI.lvclass_GetPersistentConfiguration.vi.png[TAFBaseGUI.lvclass:GetPersistentConfiguration.vi]
+|Retrieve the persistent data of the object. For TAF these are stored in the attributes of the variant
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetPersistentConfiguration
+|image:TAFBaseGUI.lvclass_SetPersistentConfiguration.vi.png[TAFBaseGUI.lvclass:SetPersistentConfiguration.vi]
+|Sets the persistent data in the object
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Destroy
+|image:TAFBaseGUI.lvclass_Destroy.vi.png[TAFBaseGUI.lvclass:Destroy.vi]
+|Destroy the object instance
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaces
+|image:TAFBaseGUI.lvclass_GetExternalInterfaces.vi.png[TAFBaseGUI.lvclass:GetExternalInterfaces.vi]
+|Gets the external interface objects that are used by the object. Each interface is defined by:
+
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterfaces
+|image:TAFBaseGUI.lvclass_SetExternalInterfaces.vi.png[TAFBaseGUI.lvclass:SetExternalInterfaces.vi]
+|Sets the external interface objects that are used by the object. Each interface is defined by:
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
 |GetFrontPanel
-|image:Footer.lvclass_GetFrontPanel.vi.png[Footer.lvclass:GetFrontPanel.vi]
-|No description found (add content in vi description)
+|image:TAFBaseGUI.lvclass_GetFrontPanel.vi.png[TAFBaseGUI.lvclass:GetFrontPanel.vi]
+|Retrieve the FrontPanelControl for controlling the state of the user interface front panel
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

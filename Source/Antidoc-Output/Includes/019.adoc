@@ -1,4 +1,4 @@
-== ITAFObject.lvclass
+== INewOpenCVMat.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
@@ -15,23 +15,10 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-interface "ITAFObject" {
-{method} +ConfigureExternalInterfaces()
-{method} +Create()
-{method} +Destroy()
-{method} +GetExternalInterfaces()
-{method} +GetName()
-{method} +GetPersistentConfiguration()
-{method} +SetExternalInterfaces()
-{method} +SetName()
-{method} +SetPersistentConfiguration()
+interface "INewOpenCVMat" {
+{method} +NewMat()
 
 }
-"ICreateDestroy" <|.. "ITAFObject"
-interface "ICreateDestroy" {}
-"IPersistentData" <|.. "ITAFObject"
-interface "IPersistentData" {}
-
 
 
 
@@ -43,67 +30,11 @@ interface "IPersistentData" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|ConfigureExternalInterfaces
-|image:ITAFObject.lvclass_ConfigureExternalInterfaces.vi.png[ITAFObject.lvclass:ConfigureExternalInterfaces.vi]
-|No description found (add content in vi description)
+|NewMat
+|image:INewOpenCVMat.lvclass_NewMat.vi.png[INewOpenCVMat.lvclass:NewMat.vi]
+|-tbd-
 |image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Create
-|image:ITAFObject.lvclass_Create.vi.png[ITAFObject.lvclass:Create.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|Destroy
-|image:ITAFObject.lvclass_Destroy.vi.png[ITAFObject.lvclass:Destroy.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|GetExternalInterfaces
-|image:ITAFObject.lvclass_GetExternalInterfaces.vi.png[ITAFObject.lvclass:GetExternalInterfaces.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|GetName
-|image:ITAFObject.lvclass_GetName.vi.png[ITAFObject.lvclass:GetName.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|GetPersistentConfiguration
-|image:ITAFObject.lvclass_GetPersistentConfiguration.vi.png[ITAFObject.lvclass:GetPersistentConfiguration.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|SetExternalInterfaces
-|image:ITAFObject.lvclass_SetExternalInterfaces.vi.png[ITAFObject.lvclass:SetExternalInterfaces.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|SetName
-|image:ITAFObject.lvclass_SetName.vi.png[ITAFObject.lvclass:SetName.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
-
-|SetPersistentConfiguration
-|image:ITAFObject.lvclass_SetPersistentConfiguration.vi.png[ITAFObject.lvclass:SetPersistentConfiguration.vi]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 |===
 

@@ -1,9 +1,9 @@
-== BusAuthorizationUpdated.lvclass
+== OpenCVFaceDetection.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.3
+*Version:* 1.0.0.4
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,17 +15,31 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "BusAuthorizationUpdated" {
-{field} -BusType : LV Class
-{method} +GetExternalInterfaces()
-{method} +AuthorizationUpdated()
+class "OpenCVFaceDetection" {
+{field} -ExternalInterfaces : Cluster
+{field} -Local : Cluster
+{field} -Persistent : Cluster
+{static} {method} -OpenCVFaceDetection_CastUIEvent()
+{static} {method} -OpenCVFaceDetection_ClassCast()
+{static} {method} #OpenCVFaceDetection_SendUiEvent()
+{static} {method} +OpenCVFaceDetection_TemplateMethod()
+{static} {method} +OpenCVFaceDetection_NewMat()
+{method} #Constructor()
+{method} #Destructor()
+{method} #WritePersistentConfiguration()
+{method} #ReadPersistentConfiguration()
+{method} #ReadExternalInterfaces()
+{method} #WriteExternalInterfaces()
+{method} +NewMat()
+{method} +TemplateMethod()
+{method} #MainGUI()
 
 }
-"BusBase.lvlib:BusBase" <|-- "BusAuthorizationUpdated"
-"IAuthorizationUpdated" <|.. "BusAuthorizationUpdated"
-interface "IAuthorizationUpdated" {}
+"YAFTAF" <|-- "OpenCVFaceDetection"
+"INewOpenCVMat" <|.. "OpenCVFaceDetection"
+interface "INewOpenCVMat" {}
 
-"BusAuthorizationUpdated" *-- "IAuthorizationUpdated"
+"OpenCVFaceDetection" *-- "ITAFObject"
 
 
 
@@ -37,18 +51,88 @@ interface "IAuthorizationUpdated" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|GetExternalInterfaces
-|image:BusAuthorizationUpdated.lvclass_GetExternalInterfaces.vi.png[BusAuthorizationUpdated.lvclass:GetExternalInterfaces.vi]
-|No description found (add content in vi description)
+|OpenCVFaceDetection_SendUiEvent
+|image:OpenCVFaceDetection.lvclass_OpenCVFaceDetection_SendUiEvent.vi.png[OpenCVFaceDetection.lvclass:OpenCVFaceDetection_SendUiEvent.vi]
+|Sends the selected event to the registered event handler loops in the user interface VI.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Constructor
+|image:OpenCVFaceDetection.lvclass_Constructor.vi.png[OpenCVFaceDetection.lvclass:Constructor.vi]
+|Used to initialize the attributes of the object. This is called at the creation of the object. This VI can be overridden by the child classes to initialize their attributesa
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Destructor
+|image:OpenCVFaceDetection.lvclass_Destructor.vi.png[OpenCVFaceDetection.lvclass:Destructor.vi]
+|Called at the destruction of the object. Use this to clear references or perform action to tidy up the object.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WritePersistentConfiguration
+|image:OpenCVFaceDetection.lvclass_WritePersistentConfiguration.vi.png[OpenCVFaceDetection.lvclass:WritePersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadPersistentConfiguration
+|image:OpenCVFaceDetection.lvclass_ReadPersistentConfiguration.vi.png[OpenCVFaceDetection.lvclass:ReadPersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadExternalInterfaces
+|image:OpenCVFaceDetection.lvclass_ReadExternalInterfaces.vi.png[OpenCVFaceDetection.lvclass:ReadExternalInterfaces.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteExternalInterfaces
+|image:OpenCVFaceDetection.lvclass_WriteExternalInterfaces.vi.png[OpenCVFaceDetection.lvclass:WriteExternalInterfaces.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|OpenCVFaceDetection_TemplateMethod
+|image:OpenCVFaceDetection.lvclass_OpenCVFaceDetection_TemplateMethod.vi.png[OpenCVFaceDetection.lvclass:OpenCVFaceDetection_TemplateMethod.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
-|AuthorizationUpdated
-|image:BusAuthorizationUpdated.lvclass_AuthorizationUpdated.vi.png[BusAuthorizationUpdated.lvclass:AuthorizationUpdated.vi]
-|No description found (add content in vi description)
+|OpenCVFaceDetection_NewMat
+|image:OpenCVFaceDetection.lvclass_OpenCVFaceDetection_NewMat.vi.png[OpenCVFaceDetection.lvclass:OpenCVFaceDetection_NewMat.vi]
+|GOOP4 Attribute container.
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|NewMat
+|image:OpenCVFaceDetection.lvclass_NewMat.vi.png[OpenCVFaceDetection.lvclass:NewMat.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|TemplateMethod
+|image:OpenCVFaceDetection.lvclass_TemplateMethod.vi.png[OpenCVFaceDetection.lvclass:TemplateMethod.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|MainGUI
+|image:OpenCVFaceDetection.lvclass_MainGUI.vi.png[OpenCVFaceDetection.lvclass:MainGUI.vi]
+|This is the user interface of the object. It will handle the events to update the GUI.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 |===
 

@@ -1,9 +1,9 @@
-== FlexPanelDefault.lvclass
+== MasterGUI.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.1
+*Version:* 1.0.0.0
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,13 +15,55 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "FlexPanelDefault" {
-{field} -None : Boolean
+class "MasterGUI" {
+{field} -Ref : U32
+{static} {method} #StartMainGUI()
+{static} {method} #DockVI()
+{static} {method} #RequestDestroy()
+{static} {method} #MainGUI()
+{static} {method} #StopMainGUI()
+{static} {method} #MasterGUI_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #MasterGUI_GetAttributes()
+{static} {method} #MasterGUI_SendAndReceive()
+{static} {method} -MasterGUI_MainGUIActive()
+{static} {method} +MasterGUI_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} #SetLayout()
+{method} #RefreshTafMenu()
+{method} #DockMainPanel()
+{method} #DockSubPanel()
+{method} #AddTAFMenu()
+{method} #DockSubPanelFromFrontPanel()
+{method} #PreTAFMenuHook()
+{method} #PostTAFMenuHook()
+{method} #DockStaticSubpanels()
+{method} #ExecuteMenu()
+{method} #ReadMainPanel()
+{method} #WriteMainPanel()
+{method} #ReadWindowsProperties()
+{method} #WriteMenu()
+{method} #ReadMenu()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +ExecuteButtonAction()
+{method} #Layout()
+{method} +Create()
+{method} +Destroy()
+{method} +IsGUIRunning()
+{method} +StartGUI()
+{method} +DockGUI()
 {method} +GetFrontPanel()
 
 }
-"TAFBaseGUI" <|-- "FlexPanelDefault"
-"ITAFGUIActions" <|.. "FlexPanelDefault"
+"TAFBaseGUI" <|-- "MasterGUI"
+"IAuthorizationUpdated" <|.. "MasterGUI"
+interface "IAuthorizationUpdated" {}
+"IDockGUI" <|.. "MasterGUI"
+interface "IDockGUI" {}
+"ITAFGUIActions" <|.. "MasterGUI"
 interface "ITAFGUIActions" {}
 
 
@@ -35,9 +77,284 @@ interface "ITAFGUIActions" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
+|StartMainGUI
+|image:MasterGUI.lvclass_StartMainGUI.vi.png[MasterGUI.lvclass:StartMainGUI.vi]
+|Looks up an existing object matching object name or creates a new object and returns a refnum you can use when calling other class methods.
+
+Objects created with this VI should be destroyed using this class Delete VI.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockVI
+|image:MasterGUI.lvclass_DockVI.vi.png[MasterGUI.lvclass:DockVI.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|RequestDestroy
+|image:MasterGUI.lvclass_RequestDestroy.vi.png[MasterGUI.lvclass:RequestDestroy.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|SetLayout
+|image:MasterGUI.lvclass_SetLayout.vi.png[MasterGUI.lvclass:SetLayout.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|RefreshTafMenu
+|image:MasterGUI.lvclass_RefreshTafMenu.vi.png[MasterGUI.lvclass:RefreshTafMenu.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockMainPanel
+|image:MasterGUI.lvclass_DockMainPanel.vi.png[MasterGUI.lvclass:DockMainPanel.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockSubPanel
+|image:MasterGUI.lvclass_DockSubPanel.vi.png[MasterGUI.lvclass:DockSubPanel.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|AddTAFMenu
+|image:MasterGUI.lvclass_AddTAFMenu.vi.png[MasterGUI.lvclass:AddTAFMenu.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockSubPanelFromFrontPanel
+|image:MasterGUI.lvclass_DockSubPanelFromFrontPanel.vi.png[MasterGUI.lvclass:DockSubPanelFromFrontPanel.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|PreTAFMenuHook
+|image:MasterGUI.lvclass_PreTAFMenuHook.vi.png[MasterGUI.lvclass:PreTAFMenuHook.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|PostTAFMenuHook
+|image:MasterGUI.lvclass_PostTAFMenuHook.vi.png[MasterGUI.lvclass:PostTAFMenuHook.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockStaticSubpanels
+|image:MasterGUI.lvclass_DockStaticSubpanels.vi.png[MasterGUI.lvclass:DockStaticSubpanels.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MainGUI
+|image:MasterGUI.lvclass_MainGUI.vi.png[MasterGUI.lvclass:MainGUI.vi]
+|This is the user interface of the object. It will handle the events to update the GUI.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|StopMainGUI
+|image:MasterGUI.lvclass_StopMainGUI.vi.png[MasterGUI.lvclass:StopMainGUI.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|ExecuteMenu
+|image:MasterGUI.lvclass_ExecuteMenu.vi.png[MasterGUI.lvclass:ExecuteMenu.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MasterGUI_New
+|image:MasterGUI.lvclass_MasterGUI_New.vi.png[MasterGUI.lvclass:MasterGUI_New.vi]
+|GOOP4 Attribute container.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|MainGUIRepository
+|image:MasterGUI.lvclass_MainGUIRepository.vi.png[MasterGUI.lvclass:MainGUIRepository.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MasterGUI_GetAttributes
+|image:MasterGUI.lvclass_MasterGUI_GetAttributes.vi.png[MasterGUI.lvclass:MasterGUI_GetAttributes.vi]
+|Retrieves the object attributes of the by reference class.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MasterGUI_SendAndReceive
+|image:MasterGUI.lvclass_MasterGUI_SendAndReceive.vim.png[MasterGUI.lvclass:MasterGUI_SendAndReceive.vim]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|ReadMainPanel
+|image:MasterGUI.lvclass_ReadMainPanel.vi.png[MasterGUI.lvclass:ReadMainPanel.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteMainPanel
+|image:MasterGUI.lvclass_WriteMainPanel.vi.png[MasterGUI.lvclass:WriteMainPanel.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadWindowsProperties
+|image:MasterGUI.lvclass_ReadWindowsProperties.vi.png[MasterGUI.lvclass:ReadWindowsProperties.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteMenu
+|image:MasterGUI.lvclass_WriteMenu.vi.png[MasterGUI.lvclass:WriteMenu.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadMenu
+|image:MasterGUI.lvclass_ReadMenu.vi.png[MasterGUI.lvclass:ReadMenu.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetPersistentConfiguration
+|image:MasterGUI.lvclass_GetPersistentConfiguration.vi.png[MasterGUI.lvclass:GetPersistentConfiguration.vi]
+|Retrieve the persistent data of the object. For TAF these are stored in the attributes of the variant
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetPersistentConfiguration
+|image:MasterGUI.lvclass_SetPersistentConfiguration.vi.png[MasterGUI.lvclass:SetPersistentConfiguration.vi]
+|Sets the persistent data in the object
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaces
+|image:MasterGUI.lvclass_GetExternalInterfaces.vi.png[MasterGUI.lvclass:GetExternalInterfaces.vi]
+|Gets the external interface objects that are used by the object. Each interface is defined by:
+
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterfaces
+|image:MasterGUI.lvclass_SetExternalInterfaces.vi.png[MasterGUI.lvclass:SetExternalInterfaces.vi]
+|Sets the external interface objects that are used by the object. Each interface is defined by:
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|ExecuteButtonAction
+|image:MasterGUI.lvclass_ExecuteButtonAction.vi.png[MasterGUI.lvclass:ExecuteButtonAction.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Layout
+|image:MasterGUI.lvclass_Layout.vi.png[MasterGUI.lvclass:Layout.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MasterGUI_Create
+|image:MasterGUI.lvclass_MasterGUI_Create.vi.png[MasterGUI.lvclass:MasterGUI_Create.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create
+|image:MasterGUI.lvclass_Create.vi.png[MasterGUI.lvclass:Create.vi]
+|Create the object instance
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Destroy
+|image:MasterGUI.lvclass_Destroy.vi.png[MasterGUI.lvclass:Destroy.vi]
+|Destroy the object instance
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|ControlMainGUIWindow
+|image:MasterGUI.lvclass_ControlMainGUIWindow.vi.png[MasterGUI.lvclass:ControlMainGUIWindow.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|IsGUIRunning
+|image:MasterGUI.lvclass_IsGUIRunning.vi.png[MasterGUI.lvclass:IsGUIRunning.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|StartGUI
+|image:MasterGUI.lvclass_StartGUI.vi.png[MasterGUI.lvclass:StartGUI.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DockGUI
+|image:MasterGUI.lvclass_DockGUI.vi.png[MasterGUI.lvclass:DockGUI.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
 |GetFrontPanel
-|image:FlexPanelDefault.lvclass_GetFrontPanel.vi.png[FlexPanelDefault.lvclass:GetFrontPanel.vi]
-|No description found (add content in vi description)
+|image:MasterGUI.lvclass_GetFrontPanel.vi.png[MasterGUI.lvclass:GetFrontPanel.vi]
+|Retrieve the FrontPanelControl for controlling the state of the user interface front panel
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]

@@ -1,4 +1,4 @@
-== TAFSpecific.lvlib
+== ClusterArrayConversion.lvlib
 
 *Responsibility:*
 No description found (add content in lvlib description)
@@ -10,16 +10,37 @@ No description found (add content in lvlib description)
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|ArrayToExternalInterface
-|image:TAFSpecific.lvlib_ArrayToExternalInterface.vim.png[TAFSpecific.lvlib:ArrayToExternalInterface.vim]
-|No description found (add content in vi description)
+|ArrayToCluster
+|image:ClusterArrayConversion.lvlib_ArrayToCluster.vim.png[ClusterArrayConversion.lvlib:ArrayToCluster.vim]
+|-tbd-
 |image:empty.png[empty.png]
 |image:reentrancy-preallocated.png[reentrancy-preallocated.png]
 |image:inlined.png[inlined.png]
 
-|ExternalInterfaceToArray
-|image:TAFSpecific.lvlib_ExternalInterfaceToArray.vim.png[TAFSpecific.lvlib:ExternalInterfaceToArray.vim]
-|No description found (add content in vi description)
+|BundledArrayToCluster
+|image:ClusterArrayConversion.lvlib_BundledArrayToCluster.vim.png[ClusterArrayConversion.lvlib:BundledArrayToCluster.vim]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|ClusterToArray
+|image:ClusterArrayConversion.lvlib_ClusterToArray.vim.png[ClusterArrayConversion.lvlib:ClusterToArray.vim]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|ClusterToBundledArray
+|image:ClusterArrayConversion.lvlib_ClusterToBundledArray.vim.png[ClusterArrayConversion.lvlib:ClusterToBundledArray.vim]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|TypeCastArray
+|image:ClusterArrayConversion.lvlib_TypeCastArray.vim.png[ClusterArrayConversion.lvlib:TypeCastArray.vim]
+|-tbd-
 |image:empty.png[empty.png]
 |image:reentrancy-preallocated.png[reentrancy-preallocated.png]
 |image:inlined.png[inlined.png]

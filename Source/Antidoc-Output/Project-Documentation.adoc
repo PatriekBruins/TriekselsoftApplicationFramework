@@ -1,5 +1,5 @@
 = Source code documentation
-Antidoc v2.0.3; 
+Antidoc v2.0.4; 
 :doctype: book
 :toc: left
 :imagesdir: Images
@@ -11,13 +11,21 @@ Antidoc v2.0.3;
 
 include::Includes/000.adoc[leveloffset=+0]
 
-== Libraries
+== User Interface Items
 
-This section describes the libraries contained in the project.
+This section describes the user interface components.
 
 include::Includes/001.adoc[leveloffset=+1]
 
+== Configurations
+
+This section describes the interface configurations available contained in the project.
+
 include::Includes/002.adoc[leveloffset=+1]
+
+== Libraries
+
+This section describes the libraries contained in the project.
 
 include::Includes/003.adoc[leveloffset=+1]
 
@@ -35,10 +43,6 @@ include::Includes/009.adoc[leveloffset=+1]
 
 include::Includes/010.adoc[leveloffset=+1]
 
-== Classes
-
-This section describes the classes contained in the project.
-
 include::Includes/011.adoc[leveloffset=+1]
 
 include::Includes/012.adoc[leveloffset=+1]
@@ -46,6 +50,10 @@ include::Includes/012.adoc[leveloffset=+1]
 include::Includes/013.adoc[leveloffset=+1]
 
 include::Includes/014.adoc[leveloffset=+1]
+
+== Classes
+
+This section describes the classes contained in the project.
 
 include::Includes/015.adoc[leveloffset=+1]
 
@@ -115,19 +123,43 @@ include::Includes/047.adoc[leveloffset=+1]
 
 include::Includes/048.adoc[leveloffset=+1]
 
+include::Includes/049.adoc[leveloffset=+1]
+
+include::Includes/050.adoc[leveloffset=+1]
+
+include::Includes/051.adoc[leveloffset=+1]
+
+include::Includes/052.adoc[leveloffset=+1]
+
+include::Includes/053.adoc[leveloffset=+1]
+
+include::Includes/054.adoc[leveloffset=+1]
+
+include::Includes/055.adoc[leveloffset=+1]
+
+include::Includes/056.adoc[leveloffset=+1]
+
+include::Includes/057.adoc[leveloffset=+1]
+
+include::Includes/058.adoc[leveloffset=+1]
+
+include::Includes/059.adoc[leveloffset=+1]
+
+include::Includes/060.adoc[leveloffset=+1]
+
 == Legal Information
 
 === Document creation
 
 This document has been generated using the following tools.
 
-include::Includes/049.adoc[leveloffset=+2]
+include::Includes/061.adoc[leveloffset=+2]
 
-include::Includes/050.adoc[leveloffset=+2]
+include::Includes/062.adoc[leveloffset=+2]
 
-include::Includes/051.adoc[leveloffset=+2]
+include::Includes/063.adoc[leveloffset=+2]
 
-include::Includes/052.adoc[leveloffset=+2]
+include::Includes/064.adoc[leveloffset=+2]
 
 === Product used in the project
 

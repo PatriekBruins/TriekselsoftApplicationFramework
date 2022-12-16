@@ -1,0 +1,172 @@
+== DotNETCam.lvclass
+
+*Responsibility:*
+No description found (add content in lvclass description)
+
+*Version:* 1.0.0.2
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "DotNETCam" {
+{field} -ExternalInterfaces : Cluster
+{field} -Local : Cluster
+{field} -Persistent : Cluster
+{static} {method} -DotNETCam_CastUIEvent()
+{static} {method} -DotNETCam_ClassCast()
+{static} {method} #DotNETCam_SendUiEvent()
+{static} {method} +DotNETCam_TemplateMethod()
+{static} {method} +DotNETCam_GetPicture()
+{static} {method} +DotNETCam_Stop()
+{static} {method} +DotNETCam_Start()
+{method} #WritePersistentConfiguration()
+{method} #WriteExternalInterfaces()
+{method} #ReadExternalInterfaces()
+{method} #ReadPersistentConfiguration()
+{method} #MainGUI()
+{method} #Destructor()
+{method} +TemplateMethod()
+{method} +ook mooi()
+{method} +Start()
+{method} +GetPicture()
+{method} +Stop()
+
+}
+"YAFTAF" <|-- "DotNETCam"
+"DotNETCam" *-- "ITAFObject"
+
+
+
+@enduml
+....
+
+.Functions (non private scope only)
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|DotNETCam_SendUiEvent
+|image:DotNETCam.lvclass_DotNETCam_SendUiEvent.vi.png[DotNETCam.lvclass:DotNETCam_SendUiEvent.vi]
+|Sends the selected event to the registered event handler loops in the user interface VI.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WritePersistentConfiguration
+|image:DotNETCam.lvclass_WritePersistentConfiguration.vi.png[DotNETCam.lvclass:WritePersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|WriteExternalInterfaces
+|image:DotNETCam.lvclass_WriteExternalInterfaces.vi.png[DotNETCam.lvclass:WriteExternalInterfaces.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadExternalInterfaces
+|image:DotNETCam.lvclass_ReadExternalInterfaces.vi.png[DotNETCam.lvclass:ReadExternalInterfaces.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|ReadPersistentConfiguration
+|image:DotNETCam.lvclass_ReadPersistentConfiguration.vi.png[DotNETCam.lvclass:ReadPersistentConfiguration.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MainGUI
+|image:DotNETCam.lvclass_MainGUI.vi.png[DotNETCam.lvclass:MainGUI.vi]
+|This is the user interface of the object. It will handle the events to update the GUI.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Destructor
+|image:DotNETCam.lvclass_Destructor.vi.png[DotNETCam.lvclass:Destructor.vi]
+|Called at the destruction of the object. Use this to clear references or perform action to tidy up the object.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DotNETCam_TemplateMethod
+|image:DotNETCam.lvclass_DotNETCam_TemplateMethod.vi.png[DotNETCam.lvclass:DotNETCam_TemplateMethod.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DotNETCam_GetPicture
+|image:DotNETCam.lvclass_DotNETCam_GetPicture.vi.png[DotNETCam.lvclass:DotNETCam_GetPicture.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DotNETCam_Stop
+|image:DotNETCam.lvclass_DotNETCam_Stop.vi.png[DotNETCam.lvclass:DotNETCam_Stop.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|DotNETCam_Start
+|image:DotNETCam.lvclass_DotNETCam_Start.vi.png[DotNETCam.lvclass:DotNETCam_Start.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|TemplateMethod
+|image:DotNETCam.lvclass_TemplateMethod.vi.png[DotNETCam.lvclass:TemplateMethod.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|ook mooi
+|image:DotNETCam.lvclass_ook_mooi.vi.png[DotNETCam.lvclass:ook mooi.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Start
+|image:DotNETCam.lvclass_Start.vi.png[DotNETCam.lvclass:Start.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|GetPicture
+|image:DotNETCam.lvclass_GetPicture.vi.png[DotNETCam.lvclass:GetPicture.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Stop
+|image:DotNETCam.lvclass_Stop.vi.png[DotNETCam.lvclass:Stop.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined

@@ -1,9 +1,9 @@
-== FooterTriekselSoft.lvclass
+== BusBase.lvclass
 
 *Responsibility:*
 No description found (add content in lvclass description)
 
-*Version:* 1.0.0.1
+*Version:* 1.0.0.0
 
 [plantuml, format="svg", align="center"]
 ....
@@ -15,14 +15,33 @@ skinparam ClassFontColor #000000
 skinparam ClassHeaderBackgroundColor #808080
 
 skinparam top to bottom direction
-class "FooterTriekselSoft" {
-{field} -None : Boolean
-{static} {method} +FooterGUI()
+class "BusBase.lvlib:BusBase" {
+{field} -Ref : U32
+{static} {method} #StartMainGUI()
+{static} {method} #RequestDestroy()
+{static} {method} #MainGUI()
+{static} {method} #StopMainGUI()
+{static} {method} #BusBase_New()
+{static} {method} #MainGUIRepository()
+{static} {method} #BusBase_GetAttributes()
+{static} {method} #BusBase_SendAndReceive()
+{static} {method} -BusBase_MainGUIActive()
+{static} {method} +BusBase_Create()
+{static} {method} +ControlMainGUIWindow()
+{method} #ReadTargetClasses()
+{method} +GetPersistentConfiguration()
+{method} +SetPersistentConfiguration()
+{method} +GetExternalInterfaces()
+{method} +SetExternalInterfaces()
+{method} +ExecuteButtonAction()
 {method} +GetFrontPanel()
+{method} +Create()
+{method} +Destroy()
+{method} +IsGUIRunning()
 
 }
-"TAFBaseGUI" <|-- "FooterTriekselSoft"
-"ITAFGUIActions" <|.. "FooterTriekselSoft"
+"TAFBaseGUI" <|-- "BusBase.lvlib:BusBase"
+"ITAFGUIActions" <|.. "BusBase.lvlib:BusBase"
 interface "ITAFGUIActions" {}
 
 
@@ -36,18 +55,160 @@ interface "ITAFGUIActions" {}
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|FooterGUI
-|image:FooterTriekselSoft.lvclass_FooterGUI.vi.png[FooterTriekselSoft.lvclass:FooterGUI.vi]
-|No description found (add content in vi description)
+|StartMainGUI
+|image:BusBase.lvlib_BusBase.lvclass_StartMainGUI.vi.png[BusBase.lvlib:BusBase.lvclass:StartMainGUI.vi]
+|Looks up an existing object matching object name or creates a new object and returns a refnum you can use when calling other class methods.
+
+Objects created with this VI should be destroyed using this class Delete VI.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|RequestDestroy
+|image:BusBase.lvlib_BusBase.lvclass_RequestDestroy.vi.png[BusBase.lvlib:BusBase.lvclass:RequestDestroy.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|MainGUI
+|image:BusBase.lvlib_BusBase.lvclass_MainGUI.vi.png[BusBase.lvlib:BusBase.lvclass:MainGUI.vi]
+|This is the user interface of the object. It will handle the events to update the GUI.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|StopMainGUI
+|image:BusBase.lvlib_BusBase.lvclass_StopMainGUI.vi.png[BusBase.lvlib:BusBase.lvclass:StopMainGUI.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:empty.png[empty.png]
+
+|BusBase_New
+|image:BusBase.lvlib_BusBase.lvclass_BusBase_New.vi.png[BusBase.lvlib:BusBase.lvclass:BusBase_New.vi]
+|GOOP4 Attribute container.
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|MainGUIRepository
+|image:BusBase.lvlib_BusBase.lvclass_MainGUIRepository.vi.png[BusBase.lvlib:BusBase.lvclass:MainGUIRepository.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|BusBase_GetAttributes
+|image:BusBase.lvlib_BusBase.lvclass_BusBase_GetAttributes.vi.png[BusBase.lvlib:BusBase.lvclass:BusBase_GetAttributes.vi]
+|Retrieves the object attributes of the by reference class.
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|BusBase_SendAndReceive
+|image:BusBase.lvlib_BusBase.lvclass_BusBase_SendAndReceive.vim.png[BusBase.lvlib:BusBase.lvclass:BusBase_SendAndReceive.vim]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|ReadTargetClasses
+|image:BusBase.lvlib_BusBase.lvclass_ReadTargetClasses.vi.png[BusBase.lvlib:BusBase.lvclass:ReadTargetClasses.vi]
+|-tbd-
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|GetPersistentConfiguration
+|image:BusBase.lvlib_BusBase.lvclass_GetPersistentConfiguration.vi.png[BusBase.lvlib:BusBase.lvclass:GetPersistentConfiguration.vi]
+|Retrieve the persistent data of the object. For TAF these are stored in the attributes of the variant
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetPersistentConfiguration
+|image:BusBase.lvlib_BusBase.lvclass_SetPersistentConfiguration.vi.png[BusBase.lvlib:BusBase.lvclass:SetPersistentConfiguration.vi]
+|Sets the persistent data in the object
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|GetExternalInterfaces
+|image:BusBase.lvlib_BusBase.lvclass_GetExternalInterfaces.vi.png[BusBase.lvlib:BusBase.lvclass:GetExternalInterfaces.vi]
+|Gets the external interface objects that are used by the object. Each interface is defined by:
+
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|SetExternalInterfaces
+|image:BusBase.lvlib_BusBase.lvclass_SetExternalInterfaces.vi.png[BusBase.lvlib:BusBase.lvclass:SetExternalInterfaces.vi]
+|Sets the external interface objects that are used by the object. Each interface is defined by:
+
+- the label of the control in the attribute cluster of the object
+
+- the object inself that inherits from the attribute control
+
+- a boolean that indicates if this an array of objects
+
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|ExecuteButtonAction
+|image:BusBase.lvlib_BusBase.lvclass_ExecuteButtonAction.vi.png[BusBase.lvlib:BusBase.lvclass:ExecuteButtonAction.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 
 |GetFrontPanel
-|image:FooterTriekselSoft.lvclass_GetFrontPanel.vi.png[FooterTriekselSoft.lvclass:GetFrontPanel.vi]
-|No description found (add content in vi description)
+|image:BusBase.lvlib_BusBase.lvclass_GetFrontPanel.vi.png[BusBase.lvlib:BusBase.lvclass:GetFrontPanel.vi]
+|Retrieve the FrontPanelControl for controlling the state of the user interface front panel
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|BusBase_Create
+|image:BusBase.lvlib_BusBase.lvclass_BusBase_Create.vi.png[BusBase.lvlib:BusBase.lvclass:BusBase_Create.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Create
+|image:BusBase.lvlib_BusBase.lvclass_Create.vi.png[BusBase.lvlib:BusBase.lvclass:Create.vi]
+|Create the object instance
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|Destroy
+|image:BusBase.lvlib_BusBase.lvclass_Destroy.vi.png[BusBase.lvlib:BusBase.lvclass:Destroy.vi]
+|Destroy the object instance
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
+|image:empty.png[empty.png]
+
+|ControlMainGUIWindow
+|image:BusBase.lvlib_BusBase.lvclass_ControlMainGUIWindow.vi.png[BusBase.lvlib:BusBase.lvclass:ControlMainGUIWindow.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|IsGUIRunning
+|image:BusBase.lvlib_BusBase.lvclass_IsGUIRunning.vi.png[BusBase.lvlib:BusBase.lvclass:IsGUIRunning.vi]
+|-tbd-
+|image:empty.png[empty.png]
+|image:reentrancy-shared.png[reentrancy-shared.png]
 |image:empty.png[empty.png]
 |===
 

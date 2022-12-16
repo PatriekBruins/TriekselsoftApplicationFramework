@@ -1,53 +1,8 @@
-== ClusterArrayConversion.lvlib
+== MasterGUI.lvlib
 
 *Responsibility:*
 No description found (add content in lvlib description)
 
 *Version:* 1.0.0.0
 
-.Functions (non private scope only)
-[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
-|===
-|Name |Connector pane |Description |S. |R. |I.
-
-|ArrayToCluster
-|image:ClusterArrayConversion.lvlib_ArrayToCluster.vim.png[ClusterArrayConversion.lvlib:ArrayToCluster.vim]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:inlined.png[inlined.png]
-
-|BundledArrayToCluster
-|image:ClusterArrayConversion.lvlib_BundledArrayToCluster.vim.png[ClusterArrayConversion.lvlib:BundledArrayToCluster.vim]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:inlined.png[inlined.png]
-
-|ClusterToArray
-|image:ClusterArrayConversion.lvlib_ClusterToArray.vim.png[ClusterArrayConversion.lvlib:ClusterToArray.vim]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:inlined.png[inlined.png]
-
-|ClusterToBundledArray
-|image:ClusterArrayConversion.lvlib_ClusterToBundledArray.vim.png[ClusterArrayConversion.lvlib:ClusterToBundledArray.vim]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:inlined.png[inlined.png]
-
-|TypeCastArray
-|image:ClusterArrayConversion.lvlib_TypeCastArray.vim.png[ClusterArrayConversion.lvlib:TypeCastArray.vim]
-|No description found (add content in vi description)
-|image:empty.png[empty.png]
-|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
-|image:inlined.png[inlined.png]
-|===
-
-**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community
-
-**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
-
-**I**nlining: image:inlined.png[] -> Inlined
+This library has no functions set to non private scope.

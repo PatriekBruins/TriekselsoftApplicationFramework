@@ -1,18 +1,27 @@
-== ButtonBarFlow.lvlib
+== TraceWindow.lvlib
 
 *Responsibility:*
 No description found (add content in lvlib description)
 
 *Version:* 1.0.0.0
 
+.Nested libraries
+[cols="<.<1d,<.<1d", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Type
+
+|<<TraceWindow.lvclass>>
+|LVClass
+|===
+
 .Functions (non private scope only)
 [cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
 |===
 |Name |Connector pane |Description |S. |R. |I.
 
-|CreateButtonBarFlow
-|image:ButtonBarFlow.lvlib_CreateButtonBarFlow.vi.png[ButtonBarFlow.lvlib:CreateButtonBarFlow.vi]
-|No description found (add content in vi description)
+|Test GUI
+|image:TraceWindow.lvlib_Test_GUI.vi.png[TraceWindow.lvlib:Test GUI.vi]
+|-tbd-
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
 |image:empty.png[empty.png]
