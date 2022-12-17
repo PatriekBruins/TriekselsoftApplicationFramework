@@ -23,5 +23,5 @@ VI Packages:
  https://github.com/PatriekBruins/TriekselSoft_Antidoc_Plugin
 
 # Project documentation
-  * https://github.com/PatriekBruins/TriekselsoftApplicationFramework/blob/main/Documentation/Project%20Documentation/Project.html
-  * 
+  * https://htmlpreview.github.io/?https://github.com/PatriekBruins/TriekselsoftApplicationFramework/blob/main/Source/Antidoc-Output/Project-Documentation.html
+  
